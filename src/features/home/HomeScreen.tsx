@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FileText, Package, RotateCcw } from 'lucide-react';
+import { FileText, Package, RotateCcw, ChevronRight } from 'lucide-react';
 import { HeaderCard } from '../../components/domain/HeaderCard';
 import { StarTicker } from '../../components/layout/StarTicker';
 import { ActiveOrderCard } from '../../components/domain/ActiveOrderCard';
@@ -185,26 +185,28 @@ export const HomeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. Why Frontline: title with 1px #D9DCC8 divider between rows */}
+      {/* 7. Why Frontline: Clean 2x2 individual cards with prominent olive number badges */}
       <section className="pt-[24px] px-[12px] flex flex-col gap-[12px]">
         <h2 className="font-display font-semibold text-[20px] leading-[26px] uppercase tracking-[0.02em] text-[#1B1C16]">
           Why Frontline
         </h2>
 
-        <div className="border-t border-[#D9DCC8] flex flex-col">
+        <div className="grid grid-cols-2 gap-[8px]">
           {whyItems.map((item) => (
             <div
               key={item.num}
-              className="py-[12px] flex items-start gap-[14px] border-b border-[#D9DCC8] last:border-b-0"
+              className="bg-white border border-[#D9DCC8] rounded-[10px] p-[12px] flex flex-col justify-between min-h-[116px] hover:border-[#4A5A1E] transition-colors"
             >
-              <span className="w-[28px] shrink-0 font-display font-semibold text-[20px] leading-[24px] text-[#4A5A1E]">
-                {item.num}
-              </span>
-              <div className="flex flex-col">
-                <h4 className="font-sans font-bold text-[14px] leading-[18px] text-[#1B1C16]">
+              <div className="w-[32px] h-[32px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center shrink-0">
+                <span className="font-display font-bold text-[16px] text-[#4A5A1E] leading-none">
+                  {item.num}
+                </span>
+              </div>
+              <div className="mt-2">
+                <h4 className="font-sans font-bold text-[13px] leading-[17px] text-[#1B1C16]">
                   {item.title}
                 </h4>
-                <p className="font-sans text-[12.5px] leading-[17px] text-[#5E6350] mt-[2px]">
+                <p className="font-sans text-[11.5px] leading-[15px] text-[#5E6350] mt-[3px]">
                   {item.description}
                 </p>
               </div>
@@ -213,44 +215,59 @@ export const HomeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. How It Works: title, then 4 equal columns with 6px gap & connector line */}
-      <section className="pt-[24px] px-[12px] flex flex-col gap-[16px]">
+      {/* 8. How It Works: Card-based stepper with circular badges */}
+      <section className="pt-[24px] px-[12px] flex flex-col gap-[14px]">
         <h2 className="font-display font-semibold text-[20px] leading-[26px] uppercase tracking-[0.02em] text-[#1B1C16]">
           How it works
         </h2>
 
-        <div className="grid grid-cols-4 gap-[6px] relative">
-          {/* Dashed connector line behind the rings */}
-          <div className="absolute top-[15px] left-[12%] right-[12%] border-t border-dashed border-[#C9CDB4] pointer-events-none z-0" />
+        <div className="relative">
+          {/* Subtle connecting line across cards on larger screens */}
+          <div className="hidden sm:block absolute top-1/2 left-[8%] right-[8%] -translate-y-1/2 border-t-2 border-dashed border-[#D9DCC8] pointer-events-none z-0" />
 
-          {howItWorksSteps.map((step, idx) => (
-            <div key={step} className="flex flex-col items-center relative z-10">
-              <div className="w-[30px] h-[30px] rounded-full border-2 border-[#4A5A1E] bg-[#F4F3EA] flex items-center justify-center font-display font-semibold text-[14px] text-[#4A5A1E] shrink-0">
-                {idx + 1}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-[8px] relative z-10">
+            {howItWorksSteps.map((step, idx) => (
+              <div
+                key={step}
+                className="bg-white border border-[#D9DCC8] rounded-[10px] p-[12px] flex sm:flex-col items-center sm:text-center gap-[10px] sm:gap-[8px] hover:border-[#4A5A1E] transition-colors min-h-[58px]"
+              >
+                <div className="w-[28px] h-[28px] rounded-full bg-[#4A5A1E] text-white flex items-center justify-center font-display font-bold text-[13px] shrink-0 shadow-sm">
+                  {idx + 1}
+                </div>
+                <span className="font-sans font-bold text-[12.5px] leading-[16px] text-[#1B1C16]">
+                  {step}
+                </span>
               </div>
-              <span className="font-sans font-bold text-[12px] leading-[16px] text-center text-[#1B1C16] mt-[8px]">
-                {step}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 9. Fundraising Card */}
+      {/* 9. Fundraising with Coins: Prominent promotional card with distinct CTA */}
       <section className="pt-[24px] px-[12px]">
-        <div className="bg-[#E7ECD2] border border-[#4A5A1E] rounded-[10px] p-[16px] flex flex-col gap-[8px]">
-          <h3 className="font-display font-semibold text-[18px] leading-[24px] uppercase tracking-[0.02em] text-[#1B1C16]">
-            Fundraising with coins
-          </h3>
-          <p className="font-sans text-[13px] leading-[18px] text-[#3A3D2E]">
-            Sell custom coins to supporters and raise money for your unit or cause.
-          </p>
+        <div className="bg-[#E7ECD2] border border-[#C9CDB4] rounded-[12px] p-[16px] flex flex-col gap-[10px] relative overflow-hidden shadow-subtle">
+          <div className="flex items-center justify-between w-full">
+            <span className="font-display font-semibold text-[11px] uppercase tracking-wider text-[#3D4C11] bg-white/70 border border-[#C9CDB4] px-2 py-0.5 rounded-[4px]">
+              Unit Programs
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-[4px]">
+            <h3 className="font-display font-bold text-[20px] leading-[24px] uppercase tracking-[0.02em] text-[#1B1C16]">
+              Fundraising with Coins
+            </h3>
+            <p className="font-sans text-[13px] leading-[18px] text-[#3A3D2E]">
+              Sell custom coins to supporters and raise money for your unit or cause.
+            </p>
+          </div>
+
           <button
             type="button"
             onClick={() => navigate('/quote')}
-            className="font-sans font-bold text-[13px] leading-[17px] text-[#3D4C11] underline underline-offset-[3px] hover:text-[#4A5A1E] transition-colors cursor-pointer text-left self-start mt-[2px]"
+            className="h-[40px] px-[18px] rounded-[6px] bg-[#4A5A1E] text-white font-display font-semibold text-[13px] uppercase tracking-[0.06em] hover:bg-[#3D4C11] active:translate-y-[1px] transition-all flex items-center justify-center gap-[6px] self-start shadow-sm cursor-pointer mt-1"
           >
-            Start a campaign
+            <span>Start a campaign</span>
+            <ChevronRight className="w-4 h-4" />
           </button>
         </div>
       </section>
