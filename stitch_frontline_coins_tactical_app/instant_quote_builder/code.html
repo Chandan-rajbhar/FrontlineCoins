@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#13140e;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.camo-bg{background-color:#1b1c16;background-image:radial-gradient(ellipse at 20% 50%,rgba(58,66,40,0.35) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(74,90,30,0.25) 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(31,32,26,0.5) 0%,transparent 60%);}@keyframes marquee{0%{transform:translateX(0%);}100%{transform:translateX(-50%);}}.animate-marquee{display:inline-flex;white-space:nowrap;animation:marquee 18s linear infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#e4e3d9", "alert-red": "#B3262E", "primary": "#bbcf85", "tactical-yellow": "#FFCC00", "on-tertiary-fixed": "#251a00", "on-primary-container": "#bdd187", "tactical-yellow-hover": "#E6B800", "tertiary": "#e4c27c", "on-primary": "#283500", "on-secondary-fixed": "#241a00", "surface-container-low": "#1b1c16", "surface-bright": "#393a33", "surface-container-highest": "#34352f", "surface-dim": "#13140e", "secondary-fixed": "#ffe08b", "on-secondary": "#3d2f00", "text-crisp": "#FFFFFF", "surface": "#13140e", "on-secondary-fixed-variant": "#584400", "on-secondary-container": "#6e5700", "tertiary-container": "#695115", "error": "#ffb4ab", "surface-tint": "#bbcf85", "surface-container-high": "#2a2a24", "inverse-on-surface": "#30312a", "on-error": "#690005", "on-surface": "#e4e3d9", "error-container": "#93000a", "on-background": "#e4e3d9", "tertiary-fixed-dim": "#e4c27c", "tertiary-fixed": "#ffdf9d", "border-tactical": "#3A4228", "outline": "#909283", "on-primary-fixed": "#161f00", "primary-fixed-dim": "#bbcf85", "primary-container": "#4a5a1e", "surface-charcoal": "#1B1C16", "on-surface-variant": "#c6c8b8", "on-error-container": "#ffdad6", "secondary": "#ffecc0", "surface-container-lowest": "#0e0f09", "on-tertiary-container": "#e7c57e", "primary-fixed": "#d7eb9f", "surface-elevated": "#23261C", "background": "#13140e", "background-deep": "#323D18", "on-tertiary": "#3f2e00", "outline-variant": "#45483c", "tactical-yellow-dim": "rgba(255, 204, 0, 0.15)", "text-muted": "#A2A795", "secondary-container": "#fecb00", "on-primary-fixed-variant": "#3d4c11", "surface-container": "#1f201a", "secondary-fixed-dim": "#f1c100", "inverse-primary": "#546527", "on-tertiary-fixed-variant": "#5a4307", "surface-variant": "#34352f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-sm": "0.75rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "margin-desktop": "2rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["DM Sans"], "ticker": ["DM Sans"], "label-sm": ["Oswald"], "body-lg": ["DM Sans"], "headline-sm": ["Oswald"], "label-md": ["Oswald"], "label-lg": ["Oswald"], "headline-xl": ["Oswald"], "headline-lg": ["Oswald"], "headline-md": ["Oswald"], "headline-lg-mobile": ["Oswald"], "body-sm": ["DM Sans"], "headline-xl-mobile": ["Oswald"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "ticker": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.10em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "46px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_4px_16px_rgba(0,0,0,0.4)]"><div class="camo-bg px-margin h-16 flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Frontline Coins USA Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVsxmPwGZbiOX8EDZ-kCRv0c7iiVodWW1Sp-Awc43kpbJ6IEy47GSxUQi7v_DXn2BAJJb0COPtG4Amk9GmBGcyQfiM1JDse6FEkWlQEWvNTqzeuLEd-FajBd0lEWQAHdauOmCoHLogKPijEUX3uAxMzxBbEMHvMutTyWgrYNjlVcq9MuJFiMHosbIBJvlLc0v6WHepD20VrLH5ESp1wfGLpZ5NsZeW_Hj_hNbyr4"/><div class="flex flex-col"><span class="font-label-md text-label-md text-tactical-yellow uppercase tracking-widest leading-none">Frontline Coins</span><span class="font-headline-sm text-headline-sm text-text-crisp uppercase leading-none truncate max-w-[130px]">Quote Builder</span></div></div><div class="flex items-center gap-space-xs"><a class="hidden min-[370px]:flex items-center justify-center h-8 px-space-sm bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.25)]" data-path="quote-builder" href="#">Quote</a><button class="relative w-11 h-11 flex items-center justify-center text-text-muted hover:text-tactical-yellow"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tactical-yellow ring-2 ring-surface-dim"></span></button><div class="w-8 h-8 rounded-full overflow-hidden p-0.5 bg-border-tactical"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_uYc9qjE270vtbgZunF_2cjvcAX2IdaWewrXUUKsoVavUX5KsOBUKieMq0MG_m8Rfw9WiPwkdHIOzg4Z3tdpXfoGdp8g4f0CI7G_tYBQiR2XdA62E7IG-JGNEHgJFmgmyjTYEgdl7xcEMKKV6LfJlC6JNtFn4lG7-720d2rIUWMKLQEXomxo5sAG5X2-Fz5g1zLn9pATs2L0eJ_FlYYB2XxyDpxArSzY2pgKbc"/></div></div></div><div class="h-8 w-full bg-background-deep overflow-hidden flex items-center shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]"><div class="animate-marquee flex items-center text-text-crisp font-ticker text-ticker uppercase"><span class="text-tactical-yellow mx-space-sm">★</span><span>A Verified and Approved Vendor for the U.S. Federal Government</span><span class="text-tactical-yellow mx-space-sm">★</span><span>Law Enforcement Owned &amp; Operated</span><span class="text-tactical-yellow mx-space-sm">★</span><span>A Verified and Approved Vendor for the U.S. Federal Government</span><span class="text-tactical-yellow mx-space-sm">★</span><span>Law Enforcement Owned &amp; Operated</span><span class="text-tactical-yellow mx-space-sm">★</span></div></div></header><main class="flex flex-col relative w-full pt-24 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Tactical Stepper Progress Header -->
+<div class="bg-surface-charcoal px-margin pt-space-sm pb-space-md shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-tactical-yellow text-surface-dim font-label-sm text-label-sm font-bold">2</span>
+<span class="font-label-md text-label-md text-tactical-yellow uppercase tracking-wider">Mission Step 2 of 5</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">40% Assembled</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden p-0.5">
+<div class="bg-tactical-yellow h-full rounded-full transition-all duration-300 shadow-[0_0_8px_#FFCC00]" style="width: 40%"></div>
+</div>
+<div class="flex justify-between items-center mt-space-sm">
+<h1 class="font-headline-md text-headline-md text-text-crisp uppercase tracking-wide">Size, Quantity &amp; Finishes</h1>
+<span class="material-symbols-outlined text-tactical-yellow text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<!-- Active Product Selection Summary Banner -->
+<div class="px-margin pt-space-md">
+<div class="flex items-center justify-between p-space-sm bg-surface-elevated rounded-lg shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-background-deep flex items-center justify-center flex-shrink-0 text-tactical-yellow">
+<span class="material-symbols-outlined text-[20px]">token</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Active Specs Base</span>
+<span class="font-headline-sm text-headline-sm text-text-crisp uppercase truncate">Custom Challenge Coins</span>
+</div>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest text-tactical-yellow font-label-sm text-label-sm uppercase rounded transition-colors flex-shrink-0" type="button">
+        Change
+      </button>
+</div>
+</div>
+<!-- Main Wizard Form Container -->
+<div class="flex flex-col px-margin pt-space-lg gap-space-lg">
+<!-- 1. Coin Dimension / Size Selection -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">straighten</span>
+          Coin Diameter (Size)
+        </label>
+<span class="font-body-sm text-body-sm text-text-muted">Scale diagram</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm" id="size-options-container">
+<!-- 1.50" -->
+<button class="size-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all relative overflow-hidden group" data-size="1.5" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-crisp">1.50"</span>
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-text-muted">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+</svg>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Compact Commemorative</span>
+<div class="indicator-dot absolute top-2 right-2 w-2 h-2 rounded-full bg-tactical-yellow opacity-0 group-data-[selected=true]:opacity-100"></div>
+</button>
+<!-- 1.75" (Most Popular) -->
+<button class="size-btn flex flex-col p-space-sm bg-primary-container rounded-lg text-left transition-all relative overflow-hidden shadow-[0_2px_8px_rgba(255,204,0,0.15)] group" data-selected="true" data-size="1.75" type="button">
+<div class="absolute -top-1 -right-1 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm px-1.5 py-0.5 rounded-bl uppercase font-bold tracking-tight">
+            ★ Most Popular
+          </div>
+<div class="flex items-center justify-between w-full mb-space-xs pt-1">
+<span class="font-headline-sm text-headline-sm text-text-crisp">1.75"</span>
+<div class="w-6 h-6 rounded-full bg-surface-dim/40 flex items-center justify-center text-tactical-yellow">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+</svg>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">Military Field Standard</span>
+<div class="indicator-dot absolute bottom-2 right-2 w-2 h-2 rounded-full bg-tactical-yellow opacity-100"></div>
+</button>
+<!-- 2.00" -->
+<button class="size-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all relative overflow-hidden group" data-size="2.0" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-crisp">2.00"</span>
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-text-muted">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10.5"></circle>
+</svg>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Heavyweight Badge Cut</span>
+</button>
+<!-- 2.25" -->
+<button class="size-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all relative overflow-hidden group" data-size="2.25" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-text-crisp">2.25"</span>
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-text-muted">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="11"></circle>
+</svg>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Command Presentation</span>
+</button>
+</div>
+<!-- Custom Size Row -->
+<button class="w-full flex items-center justify-between p-space-sm bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors" type="button">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">aspect_ratio</span>
+<span class="font-label-md text-label-md uppercase">Need Custom Shape or Oversized Cut?</span>
+</div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase flex items-center">Custom <span class="material-symbols-outlined text-[16px]">chevron_right</span></span>
+</button>
+</div>
+<!-- 2. Coin Thickness Selector -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">layers</span>
+          Gauge Thickness
+        </label>
+<span class="font-body-sm text-body-sm text-tactical-yellow" id="thickness-display">3.5 mm (Optimal)</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs" id="thickness-container">
+<button class="thickness-btn py-space-sm px-space-xs bg-surface-elevated rounded text-center transition-colors" data-val="3.0mm" type="button">
+<span class="font-label-md text-label-md block text-text-crisp">3.0 mm</span>
+<span class="font-body-sm text-body-sm block text-text-muted mt-0.5">Classic Light</span>
+</button>
+<button class="thickness-btn py-space-sm px-space-xs bg-primary-container rounded text-center shadow-sm" data-active="true" data-val="3.5mm" type="button">
+<span class="font-label-md text-label-md block text-tactical-yellow font-bold">3.5 mm</span>
+<span class="font-body-sm text-body-sm block text-on-surface mt-0.5">Tactical Feel</span>
+</button>
+<button class="thickness-btn py-space-sm px-space-xs bg-surface-elevated rounded text-center transition-colors" data-val="4.0mm" type="button">
+<span class="font-label-md text-label-md block text-text-crisp">4.0 mm</span>
+<span class="font-body-sm text-body-sm block text-text-muted mt-0.5">Heavy Gauge</span>
+</button>
+</div>
+</div>
+<!-- 3. Quantity Tiers with Volume Savings -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">inventory</span>
+          Quantity &amp; Volume Pricing
+        </label>
+<span class="font-body-sm text-body-sm text-text-muted">Includes Free Mold</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm" id="qty-container">
+<!-- 50 pcs -->
+<button class="qty-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all" data-price="5.20" data-qty="50" type="button">
+<span class="font-headline-sm text-headline-sm text-text-crisp">50 Pieces</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-label-md text-tactical-yellow">$5.20<span class="font-body-sm text-body-sm text-text-muted font-normal">/ea</span></span>
+<span class="font-body-sm text-body-sm text-text-muted">Base Tier</span>
+</div>
+</button>
+<!-- 100 pcs (Best Value) -->
+<button class="qty-btn flex flex-col p-space-sm bg-primary-container rounded-lg text-left transition-all relative overflow-hidden shadow-sm" data-active="true" data-price="3.95" data-qty="100" type="button">
+<div class="absolute top-0 right-0 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm px-1.5 py-0.5 rounded-bl uppercase font-bold tracking-tight">
+            ★ Best Value
+          </div>
+<span class="font-headline-sm text-headline-sm text-text-crisp pt-0.5">100 Pieces</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-label-md text-tactical-yellow">$3.95<span class="font-body-sm text-body-sm text-text-crisp font-normal">/ea</span></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Save 24%</span>
+</div>
+</button>
+<!-- 250 pcs -->
+<button class="qty-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all" data-price="2.85" data-qty="250" type="button">
+<span class="font-headline-sm text-headline-sm text-text-crisp">250 Pieces</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-label-md text-tactical-yellow">$2.85<span class="font-body-sm text-body-sm text-text-muted font-normal">/ea</span></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Save 45%</span>
+</div>
+</button>
+<!-- 500+ pcs -->
+<button class="qty-btn flex flex-col p-space-sm bg-surface-elevated rounded-lg text-left transition-all" data-price="2.15" data-qty="500" type="button">
+<span class="font-headline-sm text-headline-sm text-text-crisp">500+ Pieces</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-label-md text-tactical-yellow">$2.15<span class="font-body-sm text-body-sm text-text-muted font-normal">/ea</span></span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Save 58%</span>
+</div>
+</button>
+</div>
+</div>
+<!-- 4. Plating & Finishes Selection with Photographic Placeholders -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">palette</span>
+          Plating &amp; Surface Finish
+        </label>
+<span class="font-body-sm text-body-sm text-tactical-yellow" id="plating-display">Antique Brass</span>
+</div>
+<!-- Horizontal scrolling finishes gallery -->
+<div class="flex gap-space-sm overflow-x-auto pb-space-xs -mx-margin px-margin" id="plating-container">
+<!-- Antique Brass -->
+<button class="plating-card flex-shrink-0 w-32 flex flex-col p-space-xs bg-primary-container rounded-lg text-left shadow-sm" data-plating="Antique Brass" data-selected="true" type="button">
+<div class="w-full h-20 rounded bg-surface-charcoal overflow-hidden mb-space-xs relative">
+<img class="w-full h-full object-cover" data-alt="Close up detailed macro shot of an antique brass challenge coin with deep recessed bronze patina, tactical US military relief engraving, studio rim lighting, matte dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-Jh3kjeDS8KxhUVsSmGifURGYEMG4AJZurtwckiZLii2ErVRQsSVAK1aVfFfvnBtX3AhBhDX0culd6e09ml4uDlM0c18r-NOa8d8bPWfINqD8ayIbAATn6o6NtiRsDU72NDiU7Kfuo-zsiKxBAFmIozXmPUPNFcQPLzYZPzMN3JJsIg9aXr5yGVpQJuhFol3KbXHNSZ1gAOIdmJV1ya2kMWbIs0_JDk2BZOB-Xs"/>
+<div class="absolute bottom-1 right-1 bg-surface-dim/80 rounded-full p-0.5 text-tactical-yellow">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold truncate">Antique Brass</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[11px]">Rugged Patina</span>
+</button>
+<!-- Shiny Gold -->
+<button class="plating-card flex-shrink-0 w-32 flex flex-col p-space-xs bg-surface-elevated rounded-lg text-left" data-plating="Shiny Gold" type="button">
+<div class="w-full h-20 rounded bg-surface-charcoal overflow-hidden mb-space-xs relative">
+<img class="w-full h-full object-cover" data-alt="Polished mirror finish shiny gold military ceremonial coin reflecting warm yellow highlights, high relief presidential emblem on dark charcoal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn0nVH7a8ld4ququtRrTW-fbF87MJ7-2KUMCWbHOKNz35J01pCFWUmcsrBPgIBO-_GYgW0Wwa_-Sirx4D8H11TpAxIZQRE8ZBWZkGMlW6tIuM8e_4Cyaub8t6ET3yuQQDf2OF46H_t_2yNxIEfxeOM8ETjxkmDf7lwpZFLzSptq3Fh5_eDsgAp2nXzeNHQFsBy0f_a7LdskuAM7GrulXE3tJ3A37fHP-bz3YU1fYk"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold truncate">Shiny Gold</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[11px]">High Polish VIP</span>
+</button>
+<!-- Antique Silver -->
+<button class="plating-card flex-shrink-0 w-32 flex flex-col p-space-xs bg-surface-elevated rounded-lg text-left" data-plating="Antique Silver" type="button">
+<div class="w-full h-20 rounded bg-surface-charcoal overflow-hidden mb-space-xs relative">
+<img class="w-full h-full object-cover" data-alt="Antique pewter silver challenge coin with darkened crevices, tactical law enforcement star badge crest in silver relief, high contrast product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSDLbKjkhAVERFGZfteaKvQ413WrPT_PkGzkgHoLS_yFucuvPqw2eOSX0L9KmPq0EHzEwLFYdmRx_hrg8dn0tIyGYDW1Knl2llaZLis38FyTVfrvtf9uEM7M5fKjPV-sS8Eh-_dTCSZ2ZIGZ8ZNRJZOsUo4MdvbGu2r-1ua-II1cQaZmIxlNM_w_Gie_xUZN7_WRJ5DDDy-rW2kXH_e1EKXSuFkmwTXby8YhJfWPw"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold truncate">Antique Silver</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[11px]">Tactical Duty</span>
+</button>
+<!-- Dual Plating -->
+<button class="plating-card flex-shrink-0 w-32 flex flex-col p-space-xs bg-surface-elevated rounded-lg text-left" data-plating="Dual Plating (Gold/Silver)" type="button">
+<div class="w-full h-20 rounded bg-surface-charcoal overflow-hidden mb-space-xs relative">
+<img class="w-full h-full object-cover" data-alt="Dual plated custom challenge coin featuring polished 24k gold inner core with antique brushed silver outer rim, intricate federal emblem artwork, tactical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXzO28J8fjjAiPTdmTtHU0TMQXRp3mb8FIeUvppD90cVhw6uLathbxdL6RK63bDgPTiki5tH8dgJ4dSHscYQiyA8RmuOUiE2vj1wbgduNu3Cw-Q2YPWcnsCDzCX124cBN9gEcnY32HVmVhEN2cD1YkOB1s1GfYzEBJLGrQheeOk0Ol2ioPE-YAw5NG4hJu6I6wbqe28sEJkRlXRnmAGDeu7oYY3cRKxF8-xnAOj3M"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold truncate">Dual Plating</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[11px]">Gold + Silver</span>
+</button>
+<!-- Black Nickel -->
+<button class="plating-card flex-shrink-0 w-32 flex flex-col p-space-xs bg-surface-elevated rounded-lg text-left" data-plating="Black Nickel" type="button">
+<div class="w-full h-20 rounded bg-surface-charcoal overflow-hidden mb-space-xs relative">
+<img class="w-full h-full object-cover" data-alt="Gunmetal dark black nickel military stealth coin with deep glossy dark reflections and precision cut 3D eagle insignia on muted olive backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQBKcprZkyL2atcdb0jmvTlbVGA7CrsyoDWOXs_nHG7nMC1E9gU_96UUBYDvdp8czgWkJLEuXP0shRrJCm6x2yBtldGomJiUHXgxiqz5OLGFre5cy7NtftqQQ7sD_eQjjOZVC-g-5XgsjVeC7mEHMSNM02v4ls1uBWF1Tz_-oOlcyJpx7iV68kfvGzukFMBbrDVnTSenAPuygt7dNWrsm-IEfzWNJE0RtmdF5r9Hs"/>
+</div>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold truncate">Black Nickel</span>
+<span class="font-body-sm text-body-sm text-text-muted text-[11px]">Stealth Gunmetal</span>
+</button>
+</div>
+</div>
+<!-- 5. Tactical Coin Edge Options -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">trip_origin</span>
+        Edge Detailing
+      </label>
+<div class="grid grid-cols-2 gap-space-sm" id="edge-container">
+<button class="edge-btn flex items-center justify-between p-space-sm bg-primary-container rounded-lg text-left shadow-sm" data-edge="Standard Flat" data-selected="true" type="button">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-crisp uppercase">Standard Flat</span>
+<span class="font-body-sm text-body-sm text-on-surface">Smooth edge cut</span>
+</div>
+<span class="material-symbols-outlined text-tactical-yellow text-[20px]">check_circle</span>
+</button>
+<button class="edge-btn flex items-center justify-between p-space-sm bg-surface-elevated rounded-lg text-left" data-edge="Diamond Cross Cut" type="button">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-crisp uppercase">Diamond Cut</span>
+<span class="font-body-sm text-body-sm text-text-muted">Faceted border</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</button>
+<button class="edge-btn flex items-center justify-between p-space-sm bg-surface-elevated rounded-lg text-left" data-edge="Rope Edge" type="button">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-crisp uppercase">Rope Edge</span>
+<span class="font-body-sm text-body-sm text-text-muted">Naval braid motif</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</button>
+<button class="edge-btn flex items-center justify-between p-space-sm bg-surface-elevated rounded-lg text-left" data-edge="Beveled Cut" type="button">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-crisp uppercase">Beveled Angle</span>
+<span class="font-body-sm text-body-sm text-text-muted">Angled rim bevel</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- 6. Artwork & Sketch Upload Zone -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-text-crisp uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tactical-yellow text-[18px]">cloud_upload</span>
+          Artwork &amp; Reference Files
+        </label>
+<span class="font-body-sm text-body-sm text-text-muted">Optional Now</span>
+</div>
+<!-- Tactical Dashed Dropzone -->
+<div class="p-space-lg bg-surface-container rounded-lg flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high transition-colors relative overflow-hidden group" id="dropzone">
+<div class="w-12 h-12 rounded-full bg-surface-elevated flex items-center justify-center mb-space-sm group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-tactical-yellow text-[28px]">upload_file</span>
+</div>
+<p class="font-label-md text-label-md text-text-crisp uppercase mb-0.5">Upload Department Patch, Sketch, or Photo</p>
+<p class="font-body-sm text-body-sm text-text-muted max-w-[280px]">Drop files here or browse phone storage (Supports PDF, PNG, AI, JPEG up to 25MB)</p>
+<div class="mt-space-sm inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-elevated rounded text-tactical-yellow font-label-sm text-label-sm uppercase">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+          Select From Gallery
+        </div>
+<input accept="image/*,.pdf,.ai" class="hidden" id="file-input" multiple="" type="file"/>
+</div>
+<!-- Uploaded files status preview list (interactive demo container) -->
+<div class="hidden flex-col gap-space-xs" id="upload-status">
+<div class="flex items-center justify-between p-space-sm bg-surface-elevated rounded">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tactical-yellow text-[20px]">description</span>
+<span class="font-body-md text-body-md text-text-crisp truncate max-w-[200px]" id="uploaded-filename">k9_unit_insignia_vector.ai</span>
+</div>
+<button class="text-text-muted hover:text-alert-red transition-colors" id="remove-file-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 7. Timeline & Delivery Target -->
+<div class="p-space-md bg-surface-elevated rounded-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tactical-yellow text-[20px]">calendar_month</span>
+<span class="font-label-md text-label-md text-text-crisp uppercase">Target In-Hands Date</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Standard 18-21 Days</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex-1 bg-surface-charcoal p-space-sm rounded flex items-center justify-between">
+<span class="font-body-md text-body-md text-text-crisp" id="target-date-label">October 24, 2025</span>
+<span class="material-symbols-outlined text-text-muted text-[18px]">edit_calendar</span>
+</div>
+</div>
+<!-- Rush Service Toggle -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container rounded">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-background-deep flex items-center justify-center text-tactical-yellow">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-crisp uppercase font-bold">Need in under 14 days?</span>
+<span class="font-body-sm text-body-sm text-text-muted">Expedited Priority Line</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="rush-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-text-crisp after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tactical-yellow"></div>
+</label>
+</div>
+</div>
+<!-- 8. Frontline Honor Guarantee Callout -->
+<div class="p-space-md bg-background-deep rounded-lg flex items-start gap-space-sm shadow-sm">
+<div class="w-9 h-9 rounded-full bg-tactical-yellow flex items-center justify-center flex-shrink-0 text-surface-dim font-bold shadow-[0_0_10px_rgba(255,204,0,0.3)]">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tactical-yellow uppercase tracking-wide">100% Free Digital Proof Included</span>
+<span class="font-body-sm text-body-sm text-primary-fixed mt-0.5 leading-snug">
+          Our veteran art team creates precision 2D/3D mockups with unlimited revisions before you ever pay a single cent.
+        </span>
+</div>
+</div>
+</div>
+<!-- Interactive Sticky Quote Estimator Footer -->
+<div class="sticky bottom-0 z-40 bg-surface-charcoal/95 backdrop-blur-xl px-margin py-space-sm shadow-[0_-4px_20px_rgba(0,0,0,0.6)] mt-space-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Estimated Unit Rate</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-tactical-yellow font-bold" id="footer-unit-price">$3.95</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ ea</span>
+<span class="font-label-sm text-label-sm text-text-crisp uppercase ml-1" id="footer-total-summary">(100 pcs = $395.00)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block px-2 py-0.5 bg-background-deep text-tactical-yellow font-label-sm text-label-sm uppercase rounded">
+          Gov / LEO Rate
+        </span>
+</div>
+</div>
+<button class="w-full h-12 bg-tactical-yellow hover:bg-tactical-yellow-hover text-surface-dim font-label-lg text-label-lg rounded uppercase tracking-wider flex items-center justify-center gap-space-xs shadow-[0_4px_14px_rgba(255,204,0,0.35)] transition-all active:scale-[0.99]" id="proceed-btn" type="button">
+<span>PROCEED TO CONTACT &amp; REVIEW</span>
+<span class="material-symbols-outlined text-[20px] font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+  (function initQuoteBuilder() {
+    let currentQty = 100;
+    let baseRate = 3.95;
+    let isRush = false;
+
+    const unitPriceEl = document.getElementById('footer-unit-price');
+    const totalSummaryEl = document.getElementById('footer-total-summary');
+    const platingDisplay = document.getElementById('plating-display');
+    const thicknessDisplay = document.getElementById('thickness-display');
+
+    function updateCalculations() {
+      let multiplier = isRush ? 1.2 : 1.0;
+      let effectiveRate = (baseRate * multiplier).toFixed(2);
+      let totalAmount = (effectiveRate * currentQty).toFixed(2);
+
+      unitPriceEl.textContent = '$' + effectiveRate;
+      totalSummaryEl.textContent = `(${currentQty} pcs = $${totalAmount})`;
+    }
+
+    // Size Selector Click
+    const sizeButtons = document.querySelectorAll('.size-btn');
+    sizeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'shadow-[0_2px_8px_rgba(255,204,0,0.15)]');
+          b.classList.add('bg-surface-elevated');
+        });
+        btn.classList.add('bg-primary-container', 'shadow-[0_2px_8px_rgba(255,204,0,0.15)]');
+        btn.classList.remove('bg-surface-elevated');
+      });
+    });
+
+    // Thickness Selector Click
+    const thicknessBtns = document.querySelectorAll('.thickness-btn');
+    thicknessBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        thicknessBtns.forEach(b => {
+          b.classList.remove('bg-primary-container', 'shadow-sm');
+          b.classList.add('bg-surface-elevated');
+          const title = b.querySelector('.font-label-md');
+          if (title) {
+            title.classList.remove('text-tactical-yellow', 'font-bold');
+            title.classList.add('text-text-crisp');
+          }
+        });
+        btn.classList.add('bg-primary-container', 'shadow-sm');
+        btn.classList.remove('bg-surface-elevated');
+        const title = btn.querySelector('.font-label-md');
+        if (title) {
+          title.classList.add('text-tactical-yellow', 'font-bold');
+          title.classList.remove('text-text-crisp');
+        }
+        thicknessDisplay.textContent = btn.dataset.val + ' (Selected)';
+      });
+    });
+
+    // Quantity Selector Click
+    const qtyBtns = document.querySelectorAll('.qty-btn');
+    qtyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        qtyBtns.forEach(b => {
+          b.classList.remove('bg-primary-container', 'shadow-sm');
+          b.classList.add('bg-surface-elevated');
+        });
+        btn.classList.add('bg-primary-container', 'shadow-sm');
+        btn.classList.remove('bg-surface-elevated');
+
+        currentQty = parseInt(btn.dataset.qty, 10);
+        baseRate = parseFloat(btn.dataset.price);
+        updateCalculations();
+      });
+    });
+
+    // Plating Selectors
+    const platingCards = document.querySelectorAll('.plating-card');
+    platingCards.forEach(card => {
+      card.addEventListener('click', () => {
+        platingCards.forEach(c => {
+          c.classList.remove('bg-primary-container', 'shadow-sm');
+          c.classList.add('bg-surface-elevated');
+        });
+        card.classList.add('bg-primary-container', 'shadow-sm');
+        card.classList.remove('bg-surface-elevated');
+        platingDisplay.textContent = card.dataset.plating;
+      });
+    });
+
+    // Edge Selectors
+    const edgeBtns = document.querySelectorAll('.edge-btn');
+    edgeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        edgeBtns.forEach(b => {
+          b.classList.remove('bg-primary-container', 'shadow-sm');
+          b.classList.add('bg-surface-elevated');
+          const icon = b.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = 'radio_button_unchecked';
+            icon.classList.remove('text-tactical-yellow');
+            icon.classList.add('text-outline');
+          }
+        });
+        btn.classList.add('bg-primary-container', 'shadow-sm');
+        btn.classList.remove('bg-surface-elevated');
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.classList.add('text-tactical-yellow');
+          icon.classList.remove('text-outline');
+        }
+      });
+    });
+
+    // Rush Toggle
+    const rushToggle = document.getElementById('rush-toggle');
+    if (rushToggle) {
+      rushToggle.addEventListener('change', (e) => {
+        isRush = e.target.checked;
+        updateCalculations();
+      });
+    }
+
+    // Simulated Dropzone trigger
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file-input');
+    const uploadStatus = document.getElementById('upload-status');
+    const uploadedFilename = document.getElementById('uploaded-filename');
+    const removeFileBtn = document.getElementById('remove-file-btn');
+
+    if (dropzone && fileInput) {
+      dropzone.addEventListener('click', () => fileInput.click());
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+          uploadedFilename.textContent = e.target.files[0].name;
+          uploadStatus.classList.remove('hidden');
+          uploadStatus.classList.add('flex');
+        }
+      });
+    }
+
+    if (removeFileBtn) {
+      removeFileBtn.addEventListener('click', () => {
+        fileInput.value = '';
+        uploadStatus.classList.add('hidden');
+        uploadStatus.classList.remove('flex');
+      });
+    }
+
+    // Interactive Button Feedback
+    const proceedBtn = document.getElementById('proceed-btn');
+    if (proceedBtn) {
+      proceedBtn.addEventListener('click', () => {
+        proceedBtn.classList.add('opacity-90');
+        proceedBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+          <span>COMPILING MOCKUP REQ...</span>
+        `;
+        setTimeout(() => {
+          proceedBtn.innerHTML = `
+            <span>PROCEED TO CONTACT & REVIEW</span>
+            <span class="material-symbols-outlined text-[20px] font-bold">arrow_forward</span>
+          `;
+          proceedBtn.classList.remove('opacity-90');
+        }, 800);
+      });
+    }
+
+    updateCalculations();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-charcoal/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.45)]" data-active-classes="text-tactical-yellow relative after:content-[''] after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-7 after:h-0.5 after:bg-tactical-yellow after:shadow-[0_0_8px_#FFCC00]"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">shield</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="shop-catalog" href="#"><span class="material-symbols-outlined text-[20px]">military_tech</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Shop</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full group transition-colors text-tactical-yellow relative after:content-[''] after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-7 after:h-0.5 after:bg-tactical-yellow after:shadow-[0_0_8px_#FFCC00]" data-path="quote-builder" href="#"><div class="w-9 h-9 rounded-full bg-primary-container/60 group-hover:bg-tactical-yellow/20 flex items-center justify-center shadow-[0_0_10px_rgba(255,204,0,0.2)]"><span class="material-symbols-outlined text-[20px] text-tactical-yellow">calculate</span></div><span class="font-label-sm text-label-sm uppercase mt-0.5 text-tactical-yellow font-bold">Quote</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Orders</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Account</span></a></div></nav></body></html>

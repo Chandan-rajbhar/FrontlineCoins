@@ -1,0 +1,314 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#fbbc2b", "on-tertiary": "#26341e", "secondary-fixed-dim": "#fabc35", "surface-variant": "#31362c", "surface-dim": "#10150c", "on-tertiary-fixed": "#121f0b", "inverse-surface": "#e0e4d5", "on-error-container": "#ffdad6", "surface-bright": "#363b30", "on-primary-fixed-variant": "#5d4200", "on-secondary": "#412d00", "on-secondary-fixed": "#271900", "on-primary-fixed": "#261900", "error": "#ffb4ab", "on-primary-container": "#5b4100", "error-container": "#93000a", "surface-container-high": "#262c21", "inverse-on-surface": "#2d3227", "surface": "#10150c", "on-surface-variant": "#d4c4ad", "surface-container-lowest": "#0b1007", "on-background": "#e0e4d5", "secondary": "#fabc35", "inverse-primary": "#7b5900", "outline": "#9c8f79", "secondary-fixed": "#ffdea5", "primary-fixed": "#ffdea4", "outline-variant": "#504533", "on-error": "#690005", "on-secondary-container": "#4a3300", "primary-container": "#e5a910", "tertiary-fixed": "#d7e8c8", "on-tertiary-fixed-variant": "#3c4b33", "primary": "#ffc64d", "surface-tint": "#fbbc2b", "on-secondary-fixed-variant": "#5d4200", "on-tertiary-container": "#3b4932", "tertiary-container": "#a7b89a", "on-primary": "#412d00", "surface-container": "#1c2117", "background": "#10150c", "secondary-container": "#cf9700", "tertiary": "#c3d4b4", "surface-container-highest": "#31362c", "surface-container-low": "#181d13", "on-surface": "#e0e4d5", "tertiary-fixed-dim": "#bbccad" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, fontFamily: { "label-lg": ["Barlow Condensed"], "headline-lg": ["Barlow Condensed"], "headline-md": ["Barlow Condensed"], "headline-xl": ["Barlow Condensed"], "body-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Barlow Condensed"], "headline-sm": ["Barlow Condensed"], "caption": ["Inter"], "label-sm": ["Barlow Condensed"] }, fontSize: { "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.06em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "30px", letterSpacing: "0.02em", fontWeight: "700" }], "headline-md": ["22px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-xl": ["32px", { lineHeight: "36px", letterSpacing: "0.02em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "22px", letterSpacing: "0.01em", fontWeight: "600" }], "caption": ["11px", { lineHeight: "14px", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "12px", letterSpacing: "0.1em", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined text-[22px]">shield</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider truncate">FRONTLINE COINS</span></div><div class="flex items-center gap-1"><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Gov / LEO Verified</span></div></div></div><div class="flex items-center gap-1 flex-shrink-0"><button aria-label="Request Quote" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">request_quote</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Verified Gov / CAGE Trust Ribbon -->
+
+<!-- Hero Module -->
+<div class="relative w-full rounded-xl bg-surface-container overflow-hidden p-space-md shadow-md flex flex-col gap-space-md">
+<!-- Ambient subtle grid accent -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1.5 self-start px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        LEO Owned &amp; Operated • Est. 2012
+      </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">
+        Precision Custom Coins &amp; Badges
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Engineered for federal commands, tactical units, and premier honors programs. Zero mold fees, complimentary 24h vector proofs, and certified die-struck craftsmanship.
+      </p>
+</div>
+<!-- Quick Hero Action Group -->
+<div class="relative z-10 flex flex-col sm:flex-row gap-space-sm pt-1">
+<a class="h-12 px-space-md bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider rounded flex items-center justify-center gap-2 active:bg-secondary-container transition-colors shadow-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Start Instant Quote</span>
+</a>
+<a class="h-12 px-space-md bg-surface-container-high text-on-surface font-headline-sm text-headline-sm uppercase tracking-wider rounded flex items-center justify-center gap-2 hover:bg-surface-container-highest active:bg-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+<span>Explore Catalog</span>
+</a>
+</div>
+<!-- Proof turnaround micro-indicator -->
+<div class="relative z-10 flex items-center justify-between pt-1 border-t-0 bg-surface-container-low/70 px-3 py-2 rounded">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-primary text-[15px]">electric_bolt</span>
+<span>Average Digital Mockup: <strong class="text-on-surface">3h 42m</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">100% Free Art</span>
+</div>
+</div>
+<!-- Operational Utility Strip -->
+
+<!-- Institutional Assurance Pillars -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Procurement Standards</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">Federal Spec-810H</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="p-3 bg-surface-container rounded flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">brush</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">Free Art &amp; Revisions</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">$0 COST</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unlimited vector adjustments until your board, squad, or commander formally signs off.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-3 bg-surface-container rounded flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">toll</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">Zero Mold / Tooling Fees</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">LIFETIME VAULT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We mill high-density steel dies at no added setup expense. Dies archived for seamless restocks.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-3 bg-surface-container rounded flex items-start gap-3 shadow-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">14-Day Rush Dispatch</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">MISSION READY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strict schedule compliance for retirements, change-of-command, and national academy graduations.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Catalog Grid -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Category Portfolio</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">6 LINES</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary uppercase flex items-center gap-0.5" href="#">
+<span>View Specs</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Challenge Coins -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Tactical top-down photography of a high relief military command challenge coin with brass roped bezel, deep navy and crimson soft enamel, sitting on a dark tactical nylon chest rig with low dramatic warm studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXiQuwpLwJl8SNdA0MEcxR2VcAmneU5z8LbWpgV6LW5s34gbT4tCBCifxG5_Vl-B2z2v5urnbabbRbuI5bpcraSHkltbyJXD87cWOXMRmazrkh7dxFk6rfLPuHUdYmJ3PPLhUPpl_EyEtWMYjVyHySGxxdXZ2M82MAeKun5XAaSXSOjZPae8lbIebJOsfWujZUcQdM_VJbBWVkJkaGYrkwqtk5AkkRqKmsoXcTgw8">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Die-Struck
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Challenge Coins</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 50 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $2.85/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Badges -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up high-detail photograph of a solid brass police shield badge with deeply engraved sunburst rays, polished gold plating, custom blue seal inset, and curved banner lettering on a textured slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByBgnqVvZhCVsAkfMvsZg3gier6WXiBiE8SEEI7SfS--IwFx1FrJexYbDJ2s4cQhxT52uHfM9wimOLfmnbsfBnDfHv5n6m-qsfV4LHgiaIfvHpcmdj69reA-ZLXDIfRtpFhEPoXE9ODs3E8EPOvcT31Y53Ktt0XtT9jIa6tat-Dwb9RE1C5qRjrbOh12JjxaC-hlYOe93aG3TJUCtFN-JAUIaM6hXfypOS2JFXlPQ">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Jeweled
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">LEO &amp; Sheriff Badges</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 25 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $24.50/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Lapel Pins -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro photography of precision hard enamel commemorative lapel pins with military clutch backs, polished silver edge finish, and dark navy emblem resting on olive green ripstop uniform fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2R_G2ov9eRo3qWMWFLbxgzecpZWuFGm3AD0nuS7IiBwMX4JC4HXs67pf-lQxj1I3LGdvzITHuOGqaH2NSPE0UepBS0fdjKQdYEYAS7Zx7YmJOf1WbKa0tWb97ndzC7EX2Zjnk7DBarGy7eJMTHCxwVaKptB7Tr95GtwYsQ6NvkNyHm0VVVyVsbT48mY_HO74dCioJT8TBYpWUUim_FeoksJ8edOEXQrBo2TiYzc">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Hard Enamel
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Lapel &amp; Unit Pins</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 100 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $1.45/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Medals -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High resolution tactical product shot of an antique bronze service commendation medal with a striped grosgrain neck ribbon drape, suspended neatly on a black anodized steel presentation case." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWcTEtMWcF3ZjLK9IBEup1w5PTv6RmwID5ERCz7GXuAebtFyvf_V3F14m5tSuNAbsu6kLyHNod9vw8Pn8tYR9s-Go0IhtmgtvzFybLy1W7uzj0lm2_ac6Df2SfbxRi2WIJrHIw3znpGa2Q7mkG6SEOe6tifqGYYjmyCwiwguBZiDm553shqPPzwa8GcKPxVJg5nMbGci0dvljXgdKfc5-qqOHtmzIacwtNWKHqoEo">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Ribbon Drape
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Valorous Medals</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 50 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $5.10/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Vehicle Badges -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Heavy zinc alloy automotive grille badge with weatherproof UV epoxy coating and threaded bolt mount system, detailed eagle crest, sitting on a matte black patrol vehicle hood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmx5pDDpIQEPp3SQaqVYKFVnmejPVc108E_X5UX6zdoO22U5NmroBfp2XhXgqVc2H2c1dXvVKXz6tliHR1HDOCD9vLs-h4zgQQfbVLm0DZY92ZC9S4jb98OlRK5ARyFwUHMjZ-MC06YI9FOwrxFYMV-UcfPxoZIeVdjjrY39lcAM7tkNnHI95ZjmsKwMuNyF4Ck9Wgn9t5m8xPVk0SQOWIkzOKWtzweOkyGg2Cn4M">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Weatherproof
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Vehicle Badges</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 25 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $12.20/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Utility Openers -->
+<div class="bg-surface-container rounded overflow-hidden flex flex-col shadow-sm group">
+<div class="relative w-full aspect-square bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Heavyweight functioning coin bottle opener crafted from antiqued copper with 3D embossed skull and crossed rifles insignia, lying next to spent brass casing rounds on diamond-plate steel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfdmrFXSMegaeKMfR07UkykNyx2umr779glJfgv6EtJvCd12EGuCBmB0DO09pSii8LzrdZkMOiMfBDrreBnVNFWcA_PNNxzIK4N0bQbjz8K3_E5_V05i3WSJeucwUwon0EDxPSf8BkmMNdXROk74_0tSBpHJICcyU7cR-4b7RusrQruD6PAgpo3yYfCD-2IGdCLB1pT5hjJtpl58LRvu07m1PA3bt4T2zCJDXGodA">
+<span class="absolute top-2 right-2 px-1.5 py-0.5 bg-surface-dim/90 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+            Heavy 4.5mm
+          </span>
+</div>
+<div class="p-2.5 flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface truncate">Utility Openers</span>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption uppercase">Min 50 pcs</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">From $3.75/ea</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Tiered Batch Price Estimator -->
+<div class="w-full bg-surface-container p-space-md rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">Direct Batch Estimator</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">2.0" Standard 3.5mm Coin</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">Includes free 2D/3D dual-side tooling, high-polish plating, and velvet presentation pouches.</p>
+</div>
+<!-- Quantity Tier Segmented Controls -->
+<div class="grid grid-cols-4 gap-1.5 p-1 bg-surface-container-low rounded">
+<button class="tier-btn py-2 text-center rounded bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase transition-all shadow-sm" data-qty="50" data-unit="4.45" type="button">50</button>
+<button class="tier-btn py-2 text-center rounded text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm uppercase transition-all" data-qty="100" data-unit="3.85" type="button">100</button>
+<button class="tier-btn py-2 text-center rounded text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm uppercase transition-all" data-qty="250" data-unit="3.15" type="button">250</button>
+<button class="tier-btn py-2 text-center rounded text-on-surface-variant hover:text-on-surface font-headline-sm text-headline-sm uppercase transition-all" data-qty="500" data-unit="2.40" type="button">500+</button>
+</div>
+<!-- Calculation Readout Panel -->
+<div class="p-space-sm bg-surface-container-high rounded flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Unit Tier Rate</span>
+<span class="font-headline-lg text-headline-lg text-primary" id="unitRateDisplay">$4.45 <span class="font-caption text-caption text-on-surface-variant font-normal">/ coin</span></span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Estimated Total</span>
+<span class="font-headline-lg text-headline-lg text-on-surface" id="totalDisplay">$222.50</span>
+</div>
+</div>
+<!-- Lock Rate Action -->
+<button class="h-12 w-full bg-primary-container text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider rounded flex items-center justify-center gap-2 active:bg-secondary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>Lock In Volume Pricing</span>
+</button>
+</div>
+<!-- Verified Agency Testimonials -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-wide">Duty Field Reviews</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Quote 1 -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-2 shadow-sm">
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+          “Our department had a 9-day window for our annual fallen officer gala. Frontline adjusted the mold overnight, waived extra revision fees, and delivered 300 flawless dual-plated coins two days early. Unmatched integrity.”
+        </p>
+<div class="flex items-center justify-between pt-1 border-t-0 bg-surface-container-high/40 px-2 py-1.5 rounded">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">Chief Marcus V.</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Metro Police Bureau</span>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-2 shadow-sm">
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+          “The die depth and cross-hatch rope edge work exceeded any standard defense vendor we have contracted through GSA before. CAGE verification made sovereign requisition frictionless.”
+        </p>
+<div class="flex items-center justify-between pt-1 border-t-0 bg-surface-container-high/40 px-2 py-1.5 rounded">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+</div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">Commander E. Hayes</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Joint Tactical Task Force</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Consultation Contact Footprint -->
+
+</div>
+<script>
+  (function initCalculator() {
+    const buttons = document.querySelectorAll('.tier-btn');
+    const unitRateDisplay = document.getElementById('unitRateDisplay');
+    const totalDisplay = document.getElementById('totalDisplay');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+
+        const qty = parseInt(btn.getAttribute('data-qty'), 10);
+        const unit = parseFloat(btn.getAttribute('data-unit'));
+        const total = (qty * unit).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        unitRateDisplay.innerHTML = `$${unit.toFixed(2)} <span class="font-caption text-caption text-on-surface-variant font-normal">/ coin</span>`;
+        totalDisplay.innerText = `$${total}`;
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.45)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-sm text-label-sm uppercase">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalog" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm uppercase">Catalog</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="instant-quote" href="#"><span class="material-symbols-outlined text-[20px]">calculate</span><span class="font-label-sm text-label-sm uppercase">Quote</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">token</span><span class="font-label-sm text-label-sm uppercase">Orders</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-sm text-label-sm uppercase">Profile</span></a></div></nav>
+
+</body></html>

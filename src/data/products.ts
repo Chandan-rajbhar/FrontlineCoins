@@ -1,0 +1,168 @@
+import { Product } from '../types';
+import coinDhs from '../assets/coin-dhs.jpg';
+import coinSheriff from '../assets/coin-sheriff.jpg';
+import coinEagle from '../assets/coin-eagle.jpg';
+import coinTactical from '../assets/coin-tactical.jpg';
+
+export const mockProducts: Product[] = [
+  {
+    id: 'prod-1',
+    name: 'DHS Air Marshal coin',
+    category: 'Challenge Coins',
+    categorySlug: 'challenge-coins',
+    headline: 'Dual Enamel & Gold Rope Cut Edge',
+    description: 'High-relief 3D die cast coin with cobalt and scarlet enamel and antique gold plating.',
+    startingPrice: 3.95,
+    images: [coinDhs],
+    specs: {
+      size: '2.0 in',
+      metal: 'Solid Brass Core',
+      plating: 'Antique brass',
+      edge: 'CNC Diamond Rope Cut',
+    },
+    quantityTiers: [
+      { quantity: 50, pricePerUnit: 5.20, badge: 'Standard Run' },
+      { quantity: 100, pricePerUnit: 3.95, savingsPercent: 24, badge: 'Most Popular' },
+      { quantity: 250, pricePerUnit: 2.85, savingsPercent: 45, badge: 'Best Value' },
+      { quantity: 500, pricePerUnit: 2.15, savingsPercent: 58, badge: 'Volume Rate' },
+    ],
+  },
+  {
+    id: 'prod-2',
+    name: 'K9 explosive detection coin',
+    category: 'Challenge Coins',
+    categorySlug: 'challenge-coins',
+    headline: 'High-Relief 3D Die Cast Antique Silver',
+    description: 'Detailed 3D die cast antique silver challenge coin with raised rim lettering.',
+    startingPrice: 3.75,
+    images: [coinSheriff],
+    specs: {
+      size: '1.75 in',
+      metal: 'Die-Cast Zinc Alloy',
+      plating: 'Antique silver',
+      edge: 'Standard Beveled Cut',
+    },
+    quantityTiers: [
+      { quantity: 50, pricePerUnit: 4.80 },
+      { quantity: 100, pricePerUnit: 3.75, badge: 'Recommended' },
+      { quantity: 250, pricePerUnit: 2.70 },
+      { quantity: 500, pricePerUnit: 2.05 },
+    ],
+  },
+  {
+    id: 'prod-3',
+    name: "Sheriff's office coin",
+    category: 'Challenge Coins',
+    categorySlug: 'challenge-coins',
+    headline: 'Law Enforcement Duty Spec Badge',
+    description: 'Precision stamped commemorative star badge with deep engraved unit numbers.',
+    startingPrice: 4.25,
+    images: [coinTactical],
+    specs: {
+      size: '2.0 in',
+      metal: 'Heavy Duty Zinc Alloy',
+      plating: 'Dual plating',
+      edge: 'Precision Die Cut Edge',
+    },
+    quantityTiers: [
+      { quantity: 25, pricePerUnit: 24.00 },
+      { quantity: 50, pricePerUnit: 21.00 },
+      { quantity: 100, pricePerUnit: 18.50, badge: 'Agency Tier' },
+      { quantity: 250, pricePerUnit: 15.50 },
+    ],
+  },
+  {
+    id: 'prod-4',
+    name: 'Agency eagle coin',
+    category: 'Challenge Coins',
+    categorySlug: 'challenge-coins',
+    headline: 'Pantone Matched Hard Enamel Pin',
+    description: 'Hand-polished hard enamel lapel pin with dual military clutch attachments.',
+    startingPrice: 3.85,
+    images: [coinEagle],
+    specs: {
+      size: '1.75 in',
+      metal: 'Jewelry Grade Brass',
+      plating: 'Soft enamel',
+      edge: 'Die Cut Perimeter',
+    },
+    quantityTiers: [
+      { quantity: 100, pricePerUnit: 2.45 },
+      { quantity: 250, pricePerUnit: 1.85, badge: 'Popular' },
+      { quantity: 500, pricePerUnit: 1.35 },
+      { quantity: 1000, pricePerUnit: 0.98 },
+    ],
+  },
+  {
+    id: 'prod-5',
+    name: 'Engine Co. 14 IAFF Medal',
+    category: 'Medals & Drapes',
+    categorySlug: 'medals',
+    headline: 'Antique Brass Commemorative Drape',
+    description: 'Custom commemorative medal complete with woven neck ribbon and pin bar.',
+    startingPrice: 5.50,
+    images: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAoTY4yWF27OB-z58p_ZaJYl7W4tr3Oz2sNPeRYvhY-xD3JVFfMz4BcejC2P528mce5Q4JiaXjh_o9rKw9IsofmEACw2o06aVB-SqZ6FOzjCzJfFwjo--MVob61o6ceEeTHaRKU7uEHEm-y_sp2_MuSk4iltAjWzDB4-9pjjcB-atkIri0LjCVzhVqlNSm-ALwvnZ2iIxsbdrK9EoBEiszlJgkblzurUbBGLt0Ew0w',
+    ],
+    specs: {
+      size: '2.50" (63.5 mm)',
+      metal: 'Die Struck Brass',
+      plating: 'Antique Brass Finish',
+      edge: 'Smooth Polished Rim',
+    },
+    quantityTiers: [
+      { quantity: 50, pricePerUnit: 7.20 },
+      { quantity: 100, pricePerUnit: 5.50, badge: 'Standard Tier' },
+      { quantity: 250, pricePerUnit: 4.30 },
+      { quantity: 500, pricePerUnit: 3.50 },
+    ],
+  },
+  {
+    id: 'prod-6',
+    name: 'Heavy Cast Bottle Opener Coin',
+    category: 'Bottle Openers',
+    categorySlug: 'bottle-openers',
+    headline: 'Functional Cut-Out EDC Opener',
+    description: 'Thick gauge challenge coin with integrated steel opener notch and dual-sided 3D relief.',
+    startingPrice: 4.25,
+    images: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuD_1SGFFt9KWnbY7DX9IXuGyikLOd71M1GUmGlqbX0LJWOuDSgBYyWO06lv76kp9tBngI32cTuUeiICRE7lSMfBK49RQ4tYpzCD24HxEBPstmf5uY_Qcvo0NuOKAomGtE9t95-K7Itlrc5Tu27ZkbIRN0pGt8Q6M3WGgqf8BqABCT1oNCGdA_pmQbL2YAB6rGKYJVZKLKfgESjUVbRRiC_J4fQG1t5C3N9aodaTM6I',
+    ],
+    specs: {
+      size: '2.25" (57.1 mm)',
+      metal: 'Hardened Zinc Alloy',
+      plating: 'Antique Copper Finish',
+      edge: 'Heavy 4.0mm Gauge Cut',
+    },
+    quantityTiers: [
+      { quantity: 50, pricePerUnit: 5.60 },
+      { quantity: 100, pricePerUnit: 4.25, badge: 'Popular' },
+      { quantity: 250, pricePerUnit: 3.40 },
+      { quantity: 500, pricePerUnit: 2.75 },
+    ],
+  },
+  {
+    id: 'prod-7',
+    name: 'Special Ops Tactical Key Chain',
+    category: 'Key Chains',
+    categorySlug: 'keychains',
+    headline: 'Heavy Duty Metal Key Fob',
+    description: 'Solid brass medallion mounted on heavy duty stainless key ring with reinforced link.',
+    startingPrice: 3.10,
+    images: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAWHMOFyXdKOEhSvDvG7CGeoGO2RSpXiuxzVzP_dSruQ_DKO5Z6JYtv14HCQcE_rMaT3AbbJqd2EdXE0m3ZNzxJReZV_K5hLbvFSWTVMgOIMs_6Dl36aDpopAw8pi_LtQ4q7f1xRGY1MBESiTwa4RXNTUtqiFUE4HCUAQAISaEEBWXql-9kwf-3jJidABdvTWpx-_S4h_ZOo0rCSU3G0WMiDEVD7iwywjeHC4XBQSg',
+    ],
+    specs: {
+      size: '1.50" (38.1 mm)',
+      metal: 'Solid Brass Core',
+      plating: 'Antique Bronze Finish',
+      edge: 'Spur Cut Bevel',
+    },
+    quantityTiers: [
+      { quantity: 50, pricePerUnit: 4.10 },
+      { quantity: 100, pricePerUnit: 3.10, badge: 'Standard Tier' },
+      { quantity: 250, pricePerUnit: 2.30 },
+      { quantity: 500, pricePerUnit: 1.85 },
+    ],
+  },
+];

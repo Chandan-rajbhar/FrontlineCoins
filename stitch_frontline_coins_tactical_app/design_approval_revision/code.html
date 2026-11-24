@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#13140e;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.camo-bg{background-color:#1b1c16;background-image:radial-gradient(ellipse at 20% 50%,rgba(58,66,40,0.35) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(74,90,30,0.25) 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(31,32,26,0.5) 0%,transparent 60%);}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#e4e3d9", "alert-red": "#B3262E", "primary": "#bbcf85", "tactical-yellow": "#FFCC00", "on-tertiary-fixed": "#251a00", "on-primary-container": "#bdd187", "tactical-yellow-hover": "#E6B800", "tertiary": "#e4c27c", "on-primary": "#283500", "on-secondary-fixed": "#241a00", "surface-container-low": "#1b1c16", "surface-bright": "#393a33", "surface-container-highest": "#34352f", "surface-dim": "#13140e", "secondary-fixed": "#ffe08b", "on-secondary": "#3d2f00", "text-crisp": "#FFFFFF", "surface": "#13140e", "on-secondary-fixed-variant": "#584400", "on-secondary-container": "#6e5700", "tertiary-container": "#695115", "error": "#ffb4ab", "surface-tint": "#bbcf85", "surface-container-high": "#2a2a24", "inverse-on-surface": "#30312a", "on-error": "#690005", "on-surface": "#e4e3d9", "error-container": "#93000a", "on-background": "#e4e3d9", "tertiary-fixed-dim": "#e4c27c", "tertiary-fixed": "#ffdf9d", "border-tactical": "#3A4228", "outline": "#909283", "on-primary-fixed": "#161f00", "primary-fixed-dim": "#bbcf85", "primary-container": "#4a5a1e", "surface-charcoal": "#1B1C16", "on-surface-variant": "#c6c8b8", "on-error-container": "#ffdad6", "secondary": "#ffecc0", "surface-container-lowest": "#0e0f09", "on-tertiary-container": "#e7c57e", "primary-fixed": "#d7eb9f", "surface-elevated": "#23261C", "background": "#13140e", "background-deep": "#323D18", "on-tertiary": "#3f2e00", "outline-variant": "#45483c", "tactical-yellow-dim": "rgba(255, 204, 0, 0.15)", "text-muted": "#A2A795", "secondary-container": "#fecb00", "on-primary-fixed-variant": "#3d4c11", "surface-container": "#1f201a", "secondary-fixed-dim": "#f1c100", "inverse-primary": "#546527", "on-tertiary-fixed-variant": "#5a4307", "surface-variant": "#34352f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-sm": "0.75rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "margin-desktop": "2rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["DM Sans"], "ticker": ["DM Sans"], "label-sm": ["Oswald"], "body-lg": ["DM Sans"], "headline-sm": ["Oswald"], "label-md": ["Oswald"], "label-lg": ["Oswald"], "headline-xl": ["Oswald"], "headline-lg": ["Oswald"], "headline-md": ["Oswald"], "headline-lg-mobile": ["Oswald"], "body-sm": ["DM Sans"], "headline-xl-mobile": ["Oswald"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "ticker": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.10em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "46px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_4px_16px_rgba(0,0,0,0.4)]"><div class="camo-bg px-gutter-sm h-16 flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-text-muted hover:text-tactical-yellow transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Frontline Coins USA Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVsxmPwGZbiOX8EDZ-kCRv0c7iiVodWW1Sp-Awc43kpbJ6IEy47GSxUQi7v_DXn2BAJJb0COPtG4Amk9GmBGcyQfiM1JDse6FEkWlQEWvNTqzeuLEd-FajBd0lEWQAHdauOmCoHLogKPijEUX3uAxMzxBbEMHvMutTyWgrYNjlVcq9MuJFiMHosbIBJvlLc0v6WHepD20VrLH5ESp1wfGLpZ5NsZeW_Hj_hNbyr4"/><h1 class="font-headline-sm text-headline-sm text-text-crisp uppercase truncate max-w-[170px]">Artwork Approval</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full overflow-hidden p-0.5 bg-border-tactical"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_uYc9qjE270vtbgZunF_2cjvcAX2IdaWewrXUUKsoVavUX5KsOBUKieMq0MG_m8Rfw9WiPwkdHIOzg4Z3tdpXfoGdp8g4f0CI7G_tYBQiR2XdA62E7IG-JGNEHgJFmgmyjTYEgdl7xcEMKKV6LfJlC6JNtFn4lG7-720d2rIUWMKLQEXomxo5sAG5X2-Fz5g1zLn9pATs2L0eJ_FlYYB2XxyDpxArSzY2pgKbc"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Federal Star Ribbon -->
+<div class="bg-background-deep px-margin py-1.5 flex items-center justify-between shadow-sm overflow-hidden select-none">
+<div class="flex items-center gap-space-xs text-tactical-yellow">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-ticker text-ticker text-text-crisp uppercase tracking-wider text-center truncate px-2">
+      OFFICIAL PROOFING DESK • QUOTE #FLC-8492
+    </p>
+<div class="flex items-center gap-space-xs text-tactical-yellow">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Status Header Card -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-elevated p-space-md rounded-xl shadow-md flex items-center justify-between">
+<div class="flex flex-col gap-0.5 min-w-0">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Specification Docket</span>
+<h2 class="font-headline-sm text-headline-sm text-text-crisp uppercase truncate">Humboldt Co. Sheriff Star</h2>
+</div>
+<div class="flex items-center gap-1.5 bg-secondary-container/20 px-2.5 py-1.5 rounded-full shrink-0">
+<span class="w-2 h-2 rounded-full bg-tactical-yellow animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-wider">Awaiting Approval</span>
+</div>
+</div>
+</div>
+<!-- Revision Switcher Tabs (Horizontal Scrollable) -->
+<div class="px-margin pt-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 select-none no-scrollbar">
+<button class="rev-tab shrink-0 px-3 py-2 bg-surface-container-high text-text-muted font-label-md text-label-md uppercase rounded-lg transition-all flex items-center gap-1.5" onclick="switchRevision(1, this)">
+<span>Rev 1</span>
+<span class="font-body-sm text-body-sm opacity-60">(Initial)</span>
+</button>
+<button class="rev-tab shrink-0 px-3 py-2 bg-surface-container-high text-text-muted font-label-md text-label-md uppercase rounded-lg transition-all flex items-center gap-1.5" onclick="switchRevision(2, this)">
+<span>Rev 2</span>
+<span class="font-body-sm text-body-sm opacity-60">(Color Adj)</span>
+</button>
+<button class="rev-tab shrink-0 px-3.5 py-2 bg-primary-container text-text-crisp font-label-md text-label-md uppercase rounded-lg shadow-sm transition-all flex items-center gap-2" onclick="switchRevision(3, this)">
+<span class="w-1.5 h-1.5 rounded-full bg-tactical-yellow"></span>
+<span>Rev 3</span>
+<span class="bg-tactical-yellow/20 text-tactical-yellow font-ticker text-ticker px-1 rounded">LATEST</span>
+</button>
+</div>
+</div>
+<!-- Interactive 2D/3D Mockup Stage -->
+<div class="px-margin pt-space-md flex flex-col gap-space-sm">
+<div class="bg-surface-elevated rounded-xl p-space-md shadow-md relative overflow-hidden flex flex-col items-center">
+<!-- Top Action Overlay Controls inside Canvas -->
+<div class="w-full flex items-center justify-between z-20">
+<div class="flex items-center bg-surface-charcoal/90 backdrop-blur-md rounded-full p-0.5 shadow-sm">
+<button class="px-3 py-1 font-label-sm text-label-sm uppercase rounded-full bg-tactical-yellow text-surface-charcoal transition-all" id="side-front-btn" onclick="toggleSide('front')">Front Obverse</button>
+<button class="px-3 py-1 font-label-sm text-label-sm uppercase rounded-full text-text-muted hover:text-text-crisp transition-all" id="side-reverse-btn" onclick="toggleSide('reverse')">Reverse Side</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-full bg-surface-charcoal/90 text-text-muted hover:text-tactical-yellow flex items-center justify-center shadow-sm transition-colors" id="pin-tool-btn" onclick="togglePinTool()" title="Pin feedback point">
+<span class="material-symbols-outlined text-[18px]">push_pin</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-charcoal/90 text-text-muted hover:text-text-crisp flex items-center justify-center shadow-sm transition-colors" onclick="toggleZoom()" title="Zoom In">
+<span class="material-symbols-outlined text-[18px]" id="zoom-icon">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-charcoal/90 text-text-muted hover:text-text-crisp flex items-center justify-center shadow-sm transition-colors" onclick="toggleFullscreenProof()" title="Inspect Fullscreen">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Coin Render Container with Pins -->
+<div class="relative w-64 h-64 my-4 flex items-center justify-center transition-transform duration-300" id="coin-viewport">
+<!-- Coin Visual Shadow Base -->
+<div class="absolute w-56 h-56 rounded-full bg-surface-container-lowest/80 blur-xl translate-y-4"></div>
+<!-- Front Side Artwork Display -->
+<div class="relative w-56 h-56 rounded-full overflow-hidden transition-opacity duration-300" id="coin-front">
+<img class="w-full h-full object-cover select-none pointer-events-none" data-alt="High-resolution, ultra-detailed physical mockup of a heavy 2.0 inch military challenge coin for Humboldt County Sheriff, 3D raised dual plated antique gold and polished chrome star, deep midnight navy blue soft enamel inlay, diamond wave textured edge, photorealistic studio lighting with crisp metallic reflections, front obverse perspective on dark tactical surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2SUV6u7xI8eGsuM0AcJ06ZfmadioAoobQhg6wvrb9tVCB1-2SetK-zK4jZxcT-ymrbcCUyDv-A8dQho6sQKTxsVhhX7TkRZpvPxn7mPujooaMrcg2aT_fxMKRYgT0Aqfcpy7RzR-zYKMjZcM1f0HbwcHbEKnV_WHpKYW4oTOIJhn0NWn1X6k8WRj9nIyaGbGZ-1rycY4fVIK1F2JV9p7mmTSdYTmdka2Yuuo-Eng"/>
+<!-- Annotation Pin 1 -->
+<div class="absolute -translate-x-1/2 -translate-y-1/2 z-10 group cursor-pointer" onclick="togglePinDetail(1)" style="top: 28%; left: 46%;">
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-tactical-yellow opacity-40"></span>
+<div class="w-6 h-6 rounded-full bg-tactical-yellow text-surface-charcoal font-headline-sm text-body-sm font-bold flex items-center justify-center shadow-lg">1</div>
+</div>
+</div>
+<!-- Annotation Pin 2 -->
+<div class="absolute -translate-x-1/2 -translate-y-1/2 z-10 group cursor-pointer" onclick="togglePinDetail(2)" style="top: 72%; left: 74%;">
+<div class="relative flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-primary-container text-primary-fixed font-headline-sm text-body-sm font-bold flex items-center justify-center shadow-lg">2</div>
+</div>
+</div>
+</div>
+<!-- Reverse Side Artwork Display (Hidden initially) -->
+<div class="relative w-56 h-56 rounded-full overflow-hidden transition-opacity duration-300 hidden opacity-0" id="coin-reverse">
+<img class="w-full h-full object-cover select-none pointer-events-none" data-alt="High-resolution realistic product photograph of the reverse back side of Humboldt County challenge coin, featuring an intricate eagle with laser-engraved department motto, antique gold recessed metal, diamond cut edge rim, studio product photography against dark tactical texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD77YcnYBf8sjdD-SrWm-UNeQye2U9HioxFcJxElIrLIMgO4o7rmH6woiMhO8WKfxQvmuTHDjKlAOCEUnaa1zc9oy1rY_IC6k0XXya3VGph2ybHMPcMRaVugBWBG68BVbzg2kADQXCM7U2sWtkmKDz8YVxkoFQ2oOMNslYNp6oSv3uSNTDUNToYrtsDwC26wcn4uronmSgqqlaTmZLGNb_mktZVIkfU9aj7OAXPF10"/>
+</div>
+</div>
+<!-- Stage Feedback Prompt Bar -->
+<div class="w-full py-1.5 px-3 bg-surface-container rounded-lg flex items-center justify-between text-text-muted" id="pin-prompt-banner">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tactical-yellow text-[16px]">touch_app</span>
+<span class="font-body-sm text-body-sm">Tap anywhere on coin to drop a revision pin</span>
+</div>
+<span class="font-ticker text-ticker text-tactical-yellow uppercase bg-tactical-yellow/10 px-1.5 py-0.5 rounded">3D Proof v3.4</span>
+</div>
+</div>
+<!-- Active Pin Feedback Card (Collapsible/Toggled) -->
+<div class="bg-surface-elevated rounded-xl p-space-md shadow-sm flex flex-col gap-2 transition-all" id="pin-detail-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tactical-yellow text-surface-charcoal font-headline-sm text-[11px] flex items-center justify-center">1</div>
+<span class="font-headline-sm text-headline-sm text-text-crisp uppercase">Pin 1: Star Enamel Hue</span>
+</div>
+<span class="bg-primary-container/40 text-on-primary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm uppercase">Resolved in Rev 3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        "Sheriff Star central field enamel shifted from royal blue to Pantone 289 C (Deep Midnight Navy) as requested in note #2."
+      </p>
+<div class="flex items-center justify-between pt-1 text-text-muted font-body-sm text-body-sm">
+<span>Artist: Dave K. (Senior Badge Specialist)</span>
+<button class="text-tactical-yellow hover:underline font-label-sm text-label-sm uppercase" onclick="highlightPin(1)">Focus Point</button>
+</div>
+</div>
+</div>
+<!-- Production Spec Sheet Drawer / Bento Panel -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-elevated rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="toggleSpecDrawer()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tactical-yellow text-[20px]">precision_manufacturing</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase">Certified Production Specs</h3>
+</div>
+<span class="material-symbols-outlined text-text-muted transition-transform" id="spec-chevron">expand_less</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1" id="spec-content">
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Coin Diameter</span>
+<span class="font-headline-sm text-headline-sm text-text-crisp">2.0" (50.8mm)</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">Heavy Gauge 4.0mm</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Plating Duo</span>
+<span class="font-headline-sm text-headline-sm text-text-crisp">Dual Plated</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">Antique Gold / Polished Silver</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Edge Treatment</span>
+<span class="font-headline-sm text-headline-sm text-text-crisp">Diamond Wave Cut</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">Custom CNC Beveled</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Color Inlays</span>
+<span class="font-headline-sm text-headline-sm text-text-crisp">5 Pantone Soft</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">PMS 289C, 186C, 871C</span>
+</div>
+<div class="col-span-2 bg-surface-container p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Packaging Standard</span>
+<span class="font-body-md text-body-md text-text-crisp">Custom Black Velvet Display Clamshell</span>
+</div>
+</div>
+<span class="bg-surface-container-high px-2 py-1 rounded font-ticker text-ticker text-tactical-yellow uppercase">INCLUDED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat & Revision Thread with Master Designer -->
+<div class="px-margin pt-space-md">
+<div class="bg-surface-elevated rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<!-- Artist Profile Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of senior military badge artist Dave K. wearing dark olive tactical fleece in a precision engraving design workshop with challenge coin molds in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzLmLRFz7dndgoUQKlLkNN8KuqrtqC6UoAXHEbcGwmJdOF2S3uFdbYNigvE9nBqcHiwA1VLIe-9p7gU5e6Hjmy35JBxAMBmQ4TwGXFglqQux6s-IBI8oLyvrmqqt_e_fefElIQMWJ-hSQpMHDxhNUwvC-R4GxPeGK8n_WWaemmI6LwPCHUaz1AgQl3VzEWULbCalGYQt4wi90EMXXP2y260XchwkBDLUh2vDlA3vo"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tactical-yellow rounded-full ring-2 ring-surface-elevated"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-text-crisp truncate">Dave K.</span>
+<span class="bg-primary-container px-1.5 py-0.2 rounded font-ticker text-ticker text-primary-fixed uppercase">Senior Artist</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Master Mint Technician • Online</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container text-text-muted hover:text-tactical-yellow flex items-center justify-center transition-colors" onclick="requestCall()" title="Schedule Consultation">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</button>
+</div>
+<!-- Messages Timeline -->
+<div class="flex flex-col gap-space-sm max-h-60 overflow-y-auto pr-1">
+<!-- Designer Message -->
+<div class="flex flex-col gap-1 items-start max-w-[85%]">
+<div class="bg-surface-container p-3 rounded-xl rounded-tl-sm flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase">Dave K. • 10:42 AM</span>
+<p class="font-body-md text-body-md text-on-surface">
+              Morning Chief! I have updated the Star point bevels and darkened the center enamel to navy. Also thickened the perimeter text by 15% for crisper relief casting. Ready for your review on Rev 3!
+            </p>
+</div>
+</div>
+<!-- Client Message -->
+<div class="flex flex-col gap-1 items-end self-end max-w-[85%]">
+<div class="bg-primary-container p-3 rounded-xl rounded-tr-sm flex flex-col gap-1 text-right">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase">You • 11:05 AM</span>
+<p class="font-body-md text-body-md text-text-crisp text-left">
+              The star looks sharp now. Checking the back text spacing with the association board right now.
+            </p>
+</div>
+</div>
+</div>
+<!-- Message Composer Bar -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="w-10 h-10 rounded-lg bg-surface-container text-text-muted hover:text-tactical-yellow flex items-center justify-center shrink-0 transition-colors" title="Attach insignia or photo reference">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<div class="relative flex-1">
+<input class="w-full h-10 bg-surface-container text-text-crisp placeholder:text-text-muted font-body-md text-body-md px-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-tactical-yellow transition-all" id="chat-input" placeholder="Type design feedback to Dave..." type="text"/>
+</div>
+<button class="w-10 h-10 rounded-lg bg-tactical-yellow text-surface-charcoal flex items-center justify-center shrink-0 hover:bg-tactical-yellow-hover shadow-sm transition-all" onclick="sendFeedbackMsg()" title="Send Revision Note">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action Dock -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-charcoal/95 backdrop-blur-xl px-margin py-3 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
+<div class="max-w-md mx-auto flex items-center gap-space-sm">
+<!-- Request Revision Button -->
+<button class="flex-1 h-12 rounded-lg bg-surface-container-high text-text-crisp font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-1.5 hover:bg-surface-bright transition-all active:scale-95" onclick="openChangeRequestModal()">
+<span class="material-symbols-outlined text-[18px] text-tactical-yellow">edit_note</span>
+<span>Revise</span>
+</button>
+<!-- High-Impact Approve Button -->
+<button class="flex-[2] h-12 rounded-lg bg-tactical-yellow text-surface-charcoal font-label-lg text-label-lg uppercase tracking-widest font-bold flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(255,204,0,0.35)] hover:bg-tactical-yellow-hover transition-all active:scale-95" onclick="openMintApprovalModal()">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Approve &amp; Mint</span>
+</button>
+</div>
+</div>
+<!-- Approval Confirmation Modal Overlay -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-gutter" id="approval-modal">
+<div class="bg-surface-elevated max-w-sm w-full rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md transform transition-all scale-95 opacity-0 duration-200" id="approval-modal-box">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-tactical-yellow/20 text-tactical-yellow flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase">Production Authorization</span>
+<h3 class="font-headline-md text-headline-md text-text-crisp uppercase">Proceed to Mint?</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        By authorizing Quote <strong class="text-text-crisp font-bold">#FLC-8492</strong> (Rev 3), physical master dies will be engraved per specs. Production lead time begins immediately.
+      </p>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1 text-body-sm font-body-sm text-text-muted">
+<div class="flex justify-between">
+<span>Batch Quantity:</span>
+<span class="text-text-crisp font-bold">250 Challenge Coins</span>
+</div>
+<div class="flex justify-between">
+<span>Plating Spec:</span>
+<span class="text-text-crisp font-bold">Antique Gold / Dual Chrome</span>
+</div>
+<div class="flex justify-between">
+<span>Estimated Dispatch:</span>
+<span class="text-tactical-yellow font-bold">14 Business Days</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 h-11 rounded-lg bg-surface-container text-text-muted hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-colors" onclick="closeMintApprovalModal()">
+          Cancel
+        </button>
+<button class="flex-[1.5] h-11 rounded-lg bg-tactical-yellow text-surface-charcoal font-label-md text-label-md uppercase tracking-wider font-bold shadow-md hover:bg-tactical-yellow-hover flex items-center justify-center gap-1 transition-all" onclick="confirmMintOrder()">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+          Authorize Mint
+        </button>
+</div>
+</div>
+</div>
+<!-- Change Request Drawer Overlay -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-end justify-center" id="changes-drawer">
+<div class="bg-surface-elevated w-full max-w-md rounded-t-2xl p-space-lg shadow-2xl flex flex-col gap-space-md pb-safe">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tactical-yellow text-[22px]">history_edu</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase">Submit Revision Instructions</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container text-text-muted hover:text-text-crisp flex items-center justify-center" onclick="closeChangeRequestModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+        Your notes will be dispatched directly to Dave K. for Revision 4 drafting. Include color codes or specific mold coordinates.
+      </p>
+<textarea class="w-full bg-surface-container text-text-crisp placeholder:text-text-muted font-body-md text-body-md p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-tactical-yellow resize-none" placeholder="e.g., Please widen the text banner curve and check star point 4 spacing..." rows="4"></textarea>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-11 rounded-lg bg-surface-container text-text-muted font-label-md text-label-md uppercase" onclick="closeChangeRequestModal()">
+          Discard
+        </button>
+<button class="flex-1 h-11 rounded-lg bg-tactical-yellow text-surface-charcoal font-label-md text-label-md uppercase font-bold" onclick="submitChangeRequest()">
+          Send to Artist
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let isZoomed = false;
+  let activeSide = 'front';
+  let isPinModeActive = false;
+
+  function toggleSide(side) {
+    const frontEl = document.getElementById('coin-front');
+    const revEl = document.getElementById('coin-reverse');
+    const frontBtn = document.getElementById('side-front-btn');
+    const revBtn = document.getElementById('side-reverse-btn');
+
+    if (side === 'front') {
+      activeSide = 'front';
+      frontEl.classList.remove('hidden');
+      setTimeout(() => frontEl.classList.remove('opacity-0'), 10);
+      revEl.classList.add('opacity-0');
+      setTimeout(() => revEl.classList.add('hidden'), 200);
+
+      frontBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase rounded-full bg-tactical-yellow text-surface-charcoal transition-all";
+      revBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase rounded-full text-text-muted hover:text-text-crisp transition-all";
+    } else {
+      activeSide = 'reverse';
+      revEl.classList.remove('hidden');
+      setTimeout(() => revEl.classList.remove('opacity-0'), 10);
+      frontEl.classList.add('opacity-0');
+      setTimeout(() => frontEl.classList.add('hidden'), 200);
+
+      revBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase rounded-full bg-tactical-yellow text-surface-charcoal transition-all";
+      frontBtn.className = "px-3 py-1 font-label-sm text-label-sm uppercase rounded-full text-text-muted hover:text-text-crisp transition-all";
+    }
+  }
+
+  function toggleZoom() {
+    const viewport = document.getElementById('coin-viewport');
+    const zoomIcon = document.getElementById('zoom-icon');
+    isZoomed = !isZoomed;
+
+    if (isZoomed) {
+      viewport.style.transform = 'scale(1.28)';
+      zoomIcon.textContent = 'zoom_out';
+      zoomIcon.classList.add('text-tactical-yellow');
+    } else {
+      viewport.style.transform = 'scale(1)';
+      zoomIcon.textContent = 'zoom_in';
+      zoomIcon.classList.remove('text-tactical-yellow');
+    }
+  }
+
+  function togglePinTool() {
+    isPinModeActive = !isPinModeActive;
+    const btn = document.getElementById('pin-tool-btn');
+    const banner = document.getElementById('pin-prompt-banner');
+
+    if (isPinModeActive) {
+      btn.classList.add('bg-tactical-yellow', 'text-surface-charcoal');
+      btn.classList.remove('bg-surface-charcoal/90', 'text-text-muted');
+      banner.classList.add('bg-primary-container');
+    } else {
+      btn.classList.remove('bg-tactical-yellow', 'text-surface-charcoal');
+      btn.classList.add('bg-surface-charcoal/90', 'text-text-muted');
+      banner.classList.remove('bg-primary-container');
+    }
+  }
+
+  function togglePinDetail(pinId) {
+    const card = document.getElementById('pin-detail-card');
+    card.classList.toggle('ring-1');
+    card.classList.toggle('ring-tactical-yellow');
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function highlightPin(id) {
+    const viewport = document.getElementById('coin-viewport');
+    viewport.style.transform = 'scale(1.15)';
+    setTimeout(() => {
+      if (!isZoomed) viewport.style.transform = 'scale(1)';
+    }, 1200);
+  }
+
+  function switchRevision(revNum, element) {
+    document.querySelectorAll('.rev-tab').forEach(tab => {
+      tab.className = "rev-tab shrink-0 px-3 py-2 bg-surface-container-high text-text-muted font-label-md text-label-md uppercase rounded-lg transition-all flex items-center gap-1.5";
+    });
+
+    element.className = "rev-tab shrink-0 px-3.5 py-2 bg-primary-container text-text-crisp font-label-md text-label-md uppercase rounded-lg shadow-sm transition-all flex items-center gap-2";
+  }
+
+  function toggleSpecDrawer() {
+    const content = document.getElementById('spec-content');
+    const icon = document.getElementById('spec-chevron');
+    content.classList.toggle('hidden');
+    icon.textContent = content.classList.contains('hidden') ? 'expand_more' : 'expand_less';
+  }
+
+  function openMintApprovalModal() {
+    const modal = document.getElementById('approval-modal');
+    const box = document.getElementById('approval-modal-box');
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      box.classList.remove('scale-95', 'opacity-0');
+      box.classList.add('scale-100', 'opacity-100');
+    }, 10);
+  }
+
+  function closeMintApprovalModal() {
+    const modal = document.getElementById('approval-modal');
+    const box = document.getElementById('approval-modal-box');
+    box.classList.add('scale-95', 'opacity-0');
+    box.classList.remove('scale-100', 'opacity-100');
+    setTimeout(() => modal.classList.add('hidden'), 200);
+  }
+
+  function confirmMintOrder() {
+    closeMintApprovalModal();
+    const btn = event.currentTarget;
+    alert("Authorization confirmed! Order #FLC-8492 is officially queued for minting.");
+  }
+
+  function openChangeRequestModal() {
+    document.getElementById('changes-drawer').classList.remove('hidden');
+  }
+
+  function closeChangeRequestModal() {
+    document.getElementById('changes-drawer').classList.add('hidden');
+  }
+
+  function submitChangeRequest() {
+    closeChangeRequestModal();
+    alert("Feedback sent to Dave K. Your Revision 4 mockups will be rendered within 4 business hours.");
+  }
+
+  function sendFeedbackMsg() {
+    const input = document.getElementById('chat-input');
+    if (!input.value.trim()) return;
+    input.value = '';
+    alert('Note posted to Dave K.');
+  }
+
+  function requestCall() {
+    alert("Phone consultation requested with Dave K. You will receive an SMS when the artist is ready to review live.");
+  }
+
+  function toggleFullscreenProof() {
+    toggleZoom();
+  }
+</script></main></body></html>

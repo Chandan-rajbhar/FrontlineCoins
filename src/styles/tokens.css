@@ -1,0 +1,49 @@
+:root {
+  /* Light Theme System Colors */
+  --color-bg: #F4F3EA;
+  --color-surface: #FFFFFF;
+  --color-surface-dim: #F4F3EA;
+  --color-surface-charcoal: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-container-lowest: #E6E5DA;
+  --color-surface-container-low: #F4F3EA;
+  --color-surface-container: #E7ECD2;
+  --color-surface-container-high: #D9DCC8;
+  --color-surface-container-highest: #C9CDB4;
+  --color-background-deep: #4A5A1E;
+
+  --color-primary: #4A5A1E;
+  --color-primary-container: #E7ECD2;
+  --color-on-primary-container: #3D4C11;
+  --color-olive-tint: #E7ECD2;
+  --color-olive-dark: #3D4C11;
+
+  --color-tactical-yellow: #FFCC00;
+  --color-tactical-yellow-hover: #E6B800;
+  --color-tactical-yellow-edge: #B38F00;
+  --color-tactical-yellow-dim: rgba(255, 204, 0, 0.15);
+  --color-yellow-tint: #FFF3BF;
+
+  --color-text-crisp: #1B1C16;
+  --color-text: #1B1C16;
+  --color-text-muted: #5E6350;
+  --color-text-secondary: #3A3D2E;
+  --color-on-surface: #1B1C16;
+  --color-on-surface-variant: #3A3D2E;
+
+  --color-border-tactical: #D9DCC8;
+  --color-border-strong: #C9CDB4;
+  --color-alert-red: #B3262E;
+  --color-success: #4A5A1E;
+  --color-tertiary: #4A5A1E;
+
+  /* Typography */
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Subtle Card & UI Shadows */
+  --shadow-subtle: 0 1px 2px rgba(27, 28, 22, 0.06);
+  --shadow-tactical-yellow: 0 2px 0 #B38F00;
+  --shadow-tactical-sm: 0 1px 0 #B38F00;
+  --shadow-tactical-modal: 0 8px 24px rgba(27, 28, 22, 0.15), 0 0 0 1px #D9DCC8;
+}

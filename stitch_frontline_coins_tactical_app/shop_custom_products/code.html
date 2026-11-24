@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Oswald:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#13140e;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.camo-bg{background-color:#1b1c16;background-image:radial-gradient(ellipse at 20% 50%,rgba(58,66,40,0.35) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(74,90,30,0.25) 0%,transparent 50%),radial-gradient(ellipse at 50% 80%,rgba(31,32,26,0.5) 0%,transparent 60%);}@keyframes marquee{0%{transform:translateX(0%);}100%{transform:translateX(-50%);}}.animate-marquee{display:inline-flex;white-space:nowrap;animation:marquee 18s linear infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-surface": "#e4e3d9", "alert-red": "#B3262E", "primary": "#bbcf85", "tactical-yellow": "#FFCC00", "on-tertiary-fixed": "#251a00", "on-primary-container": "#bdd187", "tactical-yellow-hover": "#E6B800", "tertiary": "#e4c27c", "on-primary": "#283500", "on-secondary-fixed": "#241a00", "surface-container-low": "#1b1c16", "surface-bright": "#393a33", "surface-container-highest": "#34352f", "surface-dim": "#13140e", "secondary-fixed": "#ffe08b", "on-secondary": "#3d2f00", "text-crisp": "#FFFFFF", "surface": "#13140e", "on-secondary-fixed-variant": "#584400", "on-secondary-container": "#6e5700", "tertiary-container": "#695115", "error": "#ffb4ab", "surface-tint": "#bbcf85", "surface-container-high": "#2a2a24", "inverse-on-surface": "#30312a", "on-error": "#690005", "on-surface": "#e4e3d9", "error-container": "#93000a", "on-background": "#e4e3d9", "tertiary-fixed-dim": "#e4c27c", "tertiary-fixed": "#ffdf9d", "border-tactical": "#3A4228", "outline": "#909283", "on-primary-fixed": "#161f00", "primary-fixed-dim": "#bbcf85", "primary-container": "#4a5a1e", "surface-charcoal": "#1B1C16", "on-surface-variant": "#c6c8b8", "on-error-container": "#ffdad6", "secondary": "#ffecc0", "surface-container-lowest": "#0e0f09", "on-tertiary-container": "#e7c57e", "primary-fixed": "#d7eb9f", "surface-elevated": "#23261C", "background": "#13140e", "background-deep": "#323D18", "on-tertiary": "#3f2e00", "outline-variant": "#45483c", "tactical-yellow-dim": "rgba(255, 204, 0, 0.15)", "text-muted": "#A2A795", "secondary-container": "#fecb00", "on-primary-fixed-variant": "#3d4c11", "surface-container": "#1f201a", "secondary-fixed-dim": "#f1c100", "inverse-primary": "#546527", "on-tertiary-fixed-variant": "#5a4307", "surface-variant": "#34352f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-sm": "0.75rem", "gutter-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "gutter": "1rem", "margin-desktop": "2rem", "space-xl": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "body-md": ["DM Sans"], "ticker": ["DM Sans"], "label-sm": ["Oswald"], "body-lg": ["DM Sans"], "headline-sm": ["Oswald"], "label-md": ["Oswald"], "label-lg": ["Oswald"], "headline-xl": ["Oswald"], "headline-lg": ["Oswald"], "headline-md": ["Oswald"], "headline-lg-mobile": ["Oswald"], "body-sm": ["DM Sans"], "headline-xl-mobile": ["Oswald"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "ticker": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.10em", "fontWeight": "600" }], "label-lg": ["15px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "46px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_4px_16px_rgba(0,0,0,0.4)]"><div class="camo-bg px-margin h-16 flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Frontline Coins USA Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVsxmPwGZbiOX8EDZ-kCRv0c7iiVodWW1Sp-Awc43kpbJ6IEy47GSxUQi7v_DXn2BAJJb0COPtG4Amk9GmBGcyQfiM1JDse6FEkWlQEWvNTqzeuLEd-FajBd0lEWQAHdauOmCoHLogKPijEUX3uAxMzxBbEMHvMutTyWgrYNjlVcq9MuJFiMHosbIBJvlLc0v6WHepD20VrLH5ESp1wfGLpZ5NsZeW_Hj_hNbyr4"/><div class="flex flex-col"><span class="font-label-md text-label-md text-tactical-yellow uppercase tracking-widest leading-none">Frontline Coins</span><span class="font-headline-sm text-headline-sm text-text-crisp uppercase leading-none truncate max-w-[130px]">Shop Catalog</span></div></div><div class="flex items-center gap-space-xs"><a class="hidden min-[370px]:flex items-center justify-center h-8 px-space-sm bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.25)]" data-path="quote-builder" href="#">Quote</a><button class="relative w-11 h-11 flex items-center justify-center text-text-muted hover:text-tactical-yellow"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tactical-yellow ring-2 ring-surface-dim"></span></button><div class="w-8 h-8 rounded-full overflow-hidden p-0.5 bg-border-tactical"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_uYc9qjE270vtbgZunF_2cjvcAX2IdaWewrXUUKsoVavUX5KsOBUKieMq0MG_m8Rfw9WiPwkdHIOzg4Z3tdpXfoGdp8g4f0CI7G_tYBQiR2XdA62E7IG-JGNEHgJFmgmyjTYEgdl7xcEMKKV6LfJlC6JNtFn4lG7-720d2rIUWMKLQEXomxo5sAG5X2-Fz5g1zLn9pATs2L0eJ_FlYYB2XxyDpxArSzY2pgKbc"/></div></div></div><div class="h-8 w-full bg-background-deep overflow-hidden flex items-center shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]"><div class="animate-marquee flex items-center text-text-crisp font-ticker text-ticker uppercase"><span class="text-tactical-yellow mx-space-sm">★</span><span>A Verified and Approved Vendor for the U.S. Federal Government</span><span class="text-tactical-yellow mx-space-sm">★</span><span>Law Enforcement Owned &amp; Operated</span><span class="text-tactical-yellow mx-space-sm">★</span><span>A Verified and Approved Vendor for the U.S. Federal Government</span><span class="text-tactical-yellow mx-space-sm">★</span><span>Law Enforcement Owned &amp; Operated</span><span class="text-tactical-yellow mx-space-sm">★</span></div></div></header><main class="flex flex-col relative w-full pt-24 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-20 pt-2 space-y-space-md">
+<!-- Search and Mission Quick Info -->
+<div class="flex items-center gap-space-xs bg-surface-elevated rounded-xl p-space-xs shadow-md">
+<div class="flex items-center justify-center w-9 h-9 text-tactical-yellow">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="bg-transparent text-text-crisp font-body-md text-body-md placeholder:text-text-muted focus:outline-none w-full pr-space-xs" placeholder="Search insignia, coin shapes, finishes..." type="text"/>
+<button class="flex items-center justify-center h-8 px-space-xs bg-surface-container rounded text-text-muted hover:text-tactical-yellow transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- Horizontal Scrollable Category Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5 -mx-margin px-margin">
+<button class="cat-pill active flex-shrink-0 px-space-md py-1.5 rounded bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase tracking-wider shadow-[0_2px_8px_rgba(255,204,0,0.3)] transition-all">
+      All Products
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Challenge Coins
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Badges
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Lapel Pins
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Medals
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Bottle Openers
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Keychains
+    </button>
+<button class="cat-pill flex-shrink-0 px-space-md py-1.5 rounded bg-surface-elevated text-on-surface-variant hover:text-text-crisp font-label-md text-label-md uppercase tracking-wider transition-all">
+      Poker Chips
+    </button>
+</div>
+<!-- Tactical Specification Bar (Filter Drawer Trigger & Active Badges) -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-xs rounded-xl shadow-inner">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-1 bg-surface-elevated px-2 py-1 rounded text-text-muted">
+<span class="font-label-sm text-label-sm uppercase">Finish:</span>
+<span class="font-label-sm text-label-sm text-tactical-yellow">Antique Brass</span>
+<button class="text-text-muted hover:text-tactical-yellow ml-0.5"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<div class="flex items-center gap-1 bg-surface-elevated px-2 py-1 rounded text-text-muted">
+<span class="font-label-sm text-label-sm uppercase">Edge:</span>
+<span class="font-label-sm text-label-sm text-tactical-yellow">Rope Cut</span>
+<button class="text-text-muted hover:text-tactical-yellow ml-0.5"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 pl-space-xs">
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Sort:</span>
+<span class="font-label-sm text-label-sm text-text-crisp font-bold uppercase">Popular</span>
+</div>
+</div>
+<!-- 2-Column Tactical Product Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Card 1: US Federal Marshal Air Service Coin -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up high-angle macro photograph of a military challenge coin labeled Department of Homeland Security United States Federal Air Marshal with vivid blue and red enamel, deep gold rope edge relief, resting on an olive drab Cordura tactical ballistic nylon bag and dark steel diamond plate surface, dramatic cinematic side lighting, realistic shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATcqtAg-OVwzlBTKgRDgqXEeUr5rHkxo9N9ygMZvReLOo67c3QdbX6Qo0dnmE-7UlS0IXySW8qQg_t7T3PMeW-K0leYFz0PcUrA9Ko9auOyZmn8JGoL_5DoTLfohKSD0u5K-kbu06ao38ayTifd5aujaQnrS00-EAom_30d-YREQiKXXrA_VKmlCGazx6giQQ458HWwkD1fiCDQb9dy3JxvvBslPgma54qExTaZ-Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-background-deep text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">Free Mold</span>
+<span class="px-1.5 py-0.5 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase font-bold tracking-wider">Free Design</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(124)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">Challenge Coin</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">Air Marshal Coin</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">Diamond cut edges &amp; dual plating</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$3.95</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 50 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Sheriff Office Honor Guard Badge -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Detailed macro product photo of an ornate gold police officer badge with deep sculpted star and law enforcement eagle emblem, heavy metal 3D finish resting on dark olive tactical duty gear and tactical flashlight, industrial military workshop lighting with sharp highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAedZ-fdHGIupKONcDBEkmMwmZBKbCgnnynzwjstblfd0WMxtFDAIriXFEiWoNVTcxkIs_TEuODG0n2Xg4DXJq9FVn27Mppf3bnrrwoeOC7m145YHrZsTOfpKpaMJlwjV-3BX13uxp-pcgtmduGEFHXwDl0o7PzRMDJPl37aSqPDNRc1TP5wfs4wYPK8FsGSXNdRBb0KMfT4RT9xH1LcWi8Vc0oAru8cA3NIx6tZzM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-primary-container text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">Heavy Zinc</span>
+<span class="px-1.5 py-0.5 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase font-bold tracking-wider">Duty Grade</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(89)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">LEO Badges</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">Sheriff Guard Badge</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">Heavyweight Die-Cast Zinc Alloy</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$18.50</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 25 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: First Responder Whiskey Society Pin -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Macro close up shot of a circular navy and silver soft enamel lapel pin titled First Responder Whiskey Society on tan cordura pouch next to a folding tactical multi-tool and spent brass shell casings, moody warm atmospheric lighting, high fidelity texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_zThoN9SHbcq55bIITXaUYSffVUHNn0rp2ik6ECdNUuHuO-XF86puNXec1BTVDtio-5Eklx9PGJyW3ywG6d6k8oMM7cb6brQLc_u6gyxFmqB32cCLJv4HBpVL-eEnnJ3JxKImVzK4FO53HxzRHWFIdz38OA-E7QhckkfUDqFDKPhocJDw2rcZJUfGoZmH8c5RKe5S5JgliIscGv3wNAq88QgnyfRMnuiHKz5dhD8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-background-deep text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">No Mold Fee</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star_half</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(210)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">Lapel Pins</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">Responder Pin</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">Soft Enamel with Butterfly Clutch</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$1.85</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 100 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Tactical K9 Explosive Detection Coin -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Stunning 3D die-cast military commemorative coin featuring a sculpted Belgian Malinois K9 unit silhouette with matte black and antique bronze finishes, placed on dark steel tread pattern background next to paracord lanyard, warm tactical mood lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjwlvTTSbPVRXSIChxJbTOlMYJfy7nvgRpnYLK5toQTzxRro-sDxtfsYMfq1MefccpkCLISWZ0mL18mdMgFB1vhcE0m-LhPfGLB6Cj7IUTCzyh2Jbri3ITdhpdfmYIUVTFzM-WfjYzZhzHt5bszJ4O_t-YLOQdb6EBpzWkX8b6YP0peZtsvjrv_zIEz4JPNupRYJPQx7N7AC1wtD92MfxsUdH8LIIB7eqybn3OzF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-background-deep text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">3D Relief</span>
+<span class="px-1.5 py-0.5 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase font-bold tracking-wider">Top Rated</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(340)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">K9 Unit</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">K9 Detection Coin</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">3D Sculpted high relief zinc</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$4.20</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 50 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Heavy Metal Bottle Opener Coin -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Cutout military tactical heavy metal bottle opener coin shaped with custom notch cut and antique brass patina lying on top of field camouflage gear and knife sheath, rugged professional military photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwiQuiiXvd5f-Xx85DvA9A7BAliocGgrIJf0aF_uxn_3pBYLYvtp0b-s7Av9CT27Ftr2jxYVMjUUMMZQW_TUa-74zy-sfhdzL6edz1RVvphbWLggR3qmBll9f5I7lrc1qbtClB79stYvWSzYWiHoNV2NXjhjhXWDzD2L1IbGNcsmFk4NG57EZV_2rgfkKAkF5tj_9kcyQsl7_MQ1H9WmF2JtP6aORPGyH9RxVthkg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-background-deep text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">Custom Cut</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(178)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">Utility Coin</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">Opener Challenge Coin</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">Functional steel cutout core</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$4.75</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 50 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Special Forces Commemorative Medallion -->
+<div class="flex flex-col bg-surface-elevated rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-200">
+<div class="relative w-full h-44 bg-surface-charcoal overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Antique bronze commemorative military medallion with woven neck ribbon hanging over diamond plate steel texture, sharp detail on sculpted crossed arrows and dagger insignia, dark dramatic vignette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDisCrnri0rIaYL0KV8pPojN0_gtp-y_hwu4wfguUOADFHNf62WHpgU7CaIqx3KuDtzUI4LrZUxYNIhaf0BATimqBJSoN7n8AsSUmLMlotA49IuWypwN_qH50n018twDQ1dzGPwtJG8QZ1taR14L84D22Z0JTTRyBiRkIqVD0qm7_LT0yKWtJ2HYUq3ag_UV0T0ST_U0j0yOOW-Jo-ln_neHsPI4VDn5YWXO50xI5o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-1.5 py-0.5 bg-primary-container text-text-crisp font-label-sm text-label-sm rounded uppercase tracking-wider">Ribbon Incl.</span>
+<span class="px-1.5 py-0.5 bg-tactical-yellow text-surface-dim font-label-sm text-label-sm rounded uppercase font-bold tracking-wider">Ant. Bronze</span>
+</div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-tactical-yellow">
+<div class="flex text-[12px]">
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+<span class="material-symbols-outlined text-[13px] fill-current">star</span>
+</div>
+<span class="text-text-muted font-body-sm text-body-sm">(95)</span>
+</div>
+</div>
+<div class="p-2.5 flex flex-col justify-between flex-1 space-y-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-widest block">Medals</span>
+<h3 class="font-headline-sm text-headline-sm text-text-crisp uppercase line-clamp-1 leading-snug">Forces Medallion</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-1">Custom grosgrain neck ribbon</p>
+</div>
+<div class="pt-1">
+<div class="flex items-baseline justify-between">
+<span class="font-body-sm text-body-sm text-text-muted">From</span>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-tactical-yellow">$5.10</span>
+<span class="font-body-sm text-body-sm text-text-muted">/ea</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted text-right">Min. 50 pcs</p>
+<button class="w-full mt-2 py-2 bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase rounded tracking-wider font-bold hover:bg-tactical-yellow-hover shadow-[0_2px_8px_rgba(255,204,0,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Quick Quote</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Custom Department Spec Callout / Order Assistance -->
+<div class="bg-gradient-to-r from-background-deep to-surface-elevated p-space-md rounded-xl shadow-lg flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tactical-yellow/20 flex items-center justify-center flex-shrink-0 text-tactical-yellow">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-tactical-yellow uppercase tracking-wider font-bold">Government GSA / Agency Orders</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">
+        Need official agency purchase orders or custom tax-exempt military billing?
+      </p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tactical-yellow uppercase tracking-wider mt-1 hover:underline" href="#">
+<span>Connect with Agency Specialist</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Sticky Floating Quick Custom Quote Action Bar -->
+<div class="fixed bottom-20 left-0 right-0 px-margin z-40 pointer-events-none">
+<div class="pointer-events-auto bg-surface-charcoal/95 backdrop-blur-md rounded-xl p-space-xs shadow-[0_4px_24px_rgba(0,0,0,0.7)] flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs pl-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-tactical-yellow animate-pulse"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-crisp uppercase tracking-wider leading-none">Instant Estimator</span>
+<span class="font-body-sm text-body-sm text-text-muted leading-tight">Digital mockups in &lt; 2 hrs</span>
+</div>
+</div>
+<button class="h-10 px-space-md bg-tactical-yellow text-surface-dim font-label-md text-label-md uppercase font-bold tracking-wider rounded hover:bg-tactical-yellow-hover shadow-[0_2px_10px_rgba(255,204,0,0.35)] flex items-center gap-1 active:scale-95 transition-all">
+<span>Start Quote</span>
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple Pill Selection Handler
+  document.querySelectorAll('.cat-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        p.classList.remove('bg-tactical-yellow', 'text-surface-dim', 'shadow-[0_2px_8px_rgba(255,204,0,0.3)]');
+        p.classList.add('bg-surface-elevated', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-elevated', 'text-on-surface-variant');
+      this.classList.add('bg-tactical-yellow', 'text-surface-dim', 'shadow-[0_2px_8px_rgba(255,204,0,0.3)]');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-charcoal/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.45)]" data-active-classes="text-tactical-yellow relative after:content-[''] after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-7 after:h-0.5 after:bg-tactical-yellow after:shadow-[0_0_8px_#FFCC00]"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">shield</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full transition-colors text-tactical-yellow relative after:content-[''] after:absolute after:top-0 after:left-1/2 after:-translate-x-1/2 after:w-7 after:h-0.5 after:bg-tactical-yellow after:shadow-[0_0_8px_#FFCC00]" data-path="shop-catalog" href="#"><span class="material-symbols-outlined text-[20px]">military_tech</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Shop</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-tactical-yellow group transition-colors" data-path="quote-builder" href="#"><div class="w-9 h-9 rounded-full bg-primary-container/60 group-hover:bg-tactical-yellow/20 flex items-center justify-center shadow-[0_0_10px_rgba(255,204,0,0.2)]"><span class="material-symbols-outlined text-[20px] text-tactical-yellow">calculate</span></div><span class="font-label-sm text-label-sm uppercase mt-0.5 text-tactical-yellow font-bold">Quote</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Orders</span></a><a class="flex flex-col items-center justify-center flex-1 h-full text-text-muted hover:text-on-surface transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-label-sm text-label-sm uppercase mt-0.5">Account</span></a></div></nav></body></html>

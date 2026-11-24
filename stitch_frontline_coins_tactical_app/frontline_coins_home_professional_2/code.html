@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0B0C10;color:#F3F4F6;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        darkbg: "#0B0C10",
+        surfaceCard: "#16171D",
+        accentAmber: "#F59E0B",
+        accentOrange: "#FF6B00",
+        goldGlow: "#EAB308",
+      },
+      borderRadius: {
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
+      }
+    }
+  }
+};
+</script><style>
+  body {
+    min-height: max(884px, 100dvh);
+  }
+</style>
+</head><body class="bg-[#0B0C10] text-[#E4E4E7] flex flex-col min-h-screen selection:bg-amber-500 selection:text-black relative overflow-x-hidden">
+<!-- Ambient Warm Glowing Gradients (matching reference image) -->
+<div class="fixed top-0 right-[-20%] w-[380px] h-[380px] bg-gradient-to-b from-[#e5530e]/30 via-[#c74000]/15 to-transparent blur-[120px] rounded-full pointer-events-none z-0"></div>
+<div class="fixed top-[320px] left-[-25%] w-[340px] h-[340px] bg-gradient-to-tr from-[#f59e0b]/20 via-[#b45309]/10 to-transparent blur-[100px] rounded-full pointer-events-none z-0"></div>
+<!-- Sleek Glassmorphic Floating Top Header -->
+<header class="fixed top-0 w-full z-50 bg-[#0B0C10]/75 backdrop-blur-2xl border-b border-white/[0.06] pt-safe transition-all">
+<div class="h-16 px-5 flex items-center justify-between gap-3 max-w-md mx-auto">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.2)] flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-[15px] tracking-tight text-white truncate">FRONTLINE COINS</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 font-medium text-[10px] tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>Gov / LEO Verified
+          </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button aria-label="Request Quote" class="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-white/[0.1] transition-all">
+<span class="material-symbols-outlined text-[19px]">request_quote</span>
+</button>
+<button aria-label="Notifications" class="w-10 h-10 rounded-full bg-white/[0.05] border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-white/[0.1] transition-all relative">
+<span class="material-symbols-outlined text-[19px]">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
+</button>
+<div class="w-9 h-9 rounded-full bg-gradient-to-b from-amber-400 to-amber-600 p-[1px] shadow-sm flex-shrink-0">
+<div class="w-full h-full rounded-full bg-[#181920] flex items-center justify-center text-amber-300">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full px-4 pt-20 pb-28 min-h-screen max-w-md mx-auto z-10">
+<div class="flex flex-col w-full gap-5">
+<!-- Hero Module Inspired by Reference (Luminous warm amber background card with glowing coin centerpiece aura) -->
+<div class="relative w-full rounded-3xl bg-gradient-to-b from-[#3a1a0e]/90 via-[#1c1412]/80 to-[#14151b]/90 border border-white/[0.08] overflow-hidden p-5 shadow-[0_20px_40px_-15px_rgba(234,88,12,0.25)] flex flex-col gap-4 backdrop-blur-xl">
+<!-- Radiant Amber/Orange Orb in Hero -->
+<div class="absolute top-[-30px] left-1/2 -translate-x-1/2 w-48 h-48 bg-gradient-to-b from-amber-500/40 via-orange-600/30 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-2 pt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.08] border border-white/10 text-amber-300 font-semibold text-[11px] tracking-wider uppercase backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_#f59e0b]"></span>
+          LEO Owned &amp; Operated • Est. 2012
+        </div>
+<h1 class="font-extrabold text-[27px] leading-[33px] text-white tracking-tight mt-1">
+          Precision Custom <span class="bg-gradient-to-r from-amber-200 via-amber-400 to-orange-400 bg-clip-text text-transparent">Coins &amp; Badges</span>
+</h1>
+<p class="font-normal text-[13.5px] leading-relaxed text-neutral-300 max-w-[320px]">
+          Engineered for federal commands, tactical units, and premier honors programs. Zero mold fees, complimentary 24h vector proofs, and certified die-struck craftsmanship.
+        </p>
+</div>
+<!-- Quick Hero Action Group: High contrast white pill button & translucent secondary -->
+<div class="relative z-10 flex flex-col gap-2.5 pt-1">
+<a class="h-12 w-full bg-white text-black font-bold text-[14px] tracking-wide rounded-full flex items-center justify-center gap-2 hover:bg-neutral-100 active:scale-[0.98] transition-all shadow-[0_4px_20px_rgba(255,255,255,0.2)]" href="#">
+<span class="material-symbols-outlined text-[19px] text-neutral-900">calculate</span>
+<span>Start Instant Quote</span>
+</a>
+<a class="h-11 w-full bg-white/[0.06] hover:bg-white/[0.1] text-neutral-200 font-semibold text-[13.5px] tracking-wide rounded-full flex items-center justify-center gap-2 border border-white/10 active:scale-[0.98] transition-all" href="#">
+<span class="material-symbols-outlined text-[18px] text-amber-400">grid_view</span>
+<span>Explore Catalog</span>
+</a>
+</div>
+<!-- Turnaround Micro Indicator Banner -->
+<div class="relative z-10 flex items-center justify-between bg-black/40 backdrop-blur-md px-3.5 py-2.5 rounded-2xl border border-white/[0.06]">
+<div class="flex items-center gap-1.5 text-neutral-300 text-[12px]">
+<span class="material-symbols-outlined text-amber-400 text-[16px]">electric_bolt</span>
+<span>Average Digital Mockup: <strong class="text-white font-semibold">3h 42m</strong></span>
+</div>
+<span class="text-[11px] font-bold text-amber-400 tracking-wider uppercase bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-400/20">100% Free Art</span>
+</div>
+</div>
+<!-- Institutional Assurance Pillars -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<span class="font-bold text-[16px] text-white tracking-tight">Procurement Standards</span>
+<span class="text-[11px] font-bold tracking-wider text-amber-400 uppercase bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">Federal Spec-810H</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Item 1 -->
+<div class="p-3.5 bg-[#14151B]/80 hover:bg-[#1A1B23]/90 transition-colors border border-white/[0.07] rounded-2xl flex items-center gap-3.5 backdrop-blur-lg">
+<div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+<span class="material-symbols-outlined text-[20px]">brush</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-[14px] text-white">Free Art &amp; Revisions</span>
+<span class="text-[11px] font-extrabold text-amber-400 tracking-wide">$0 COST</span>
+</div>
+<p class="text-[12px] text-neutral-400 leading-snug mt-0.5">Unlimited vector adjustments until your board, squad, or commander formally signs off.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-3.5 bg-[#14151B]/80 hover:bg-[#1A1B23]/90 transition-colors border border-white/[0.07] rounded-2xl flex items-center gap-3.5 backdrop-blur-lg">
+<div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+<span class="material-symbols-outlined text-[20px]">toll</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-[14px] text-white">Zero Mold / Tooling Fees</span>
+<span class="text-[11px] font-extrabold text-amber-400 tracking-wide">LIFETIME VAULT</span>
+</div>
+<p class="text-[12px] text-neutral-400 leading-snug mt-0.5">We mill high-density steel dies at no added setup expense. Dies archived for seamless restocks.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-3.5 bg-[#14151B]/80 hover:bg-[#1A1B23]/90 transition-colors border border-white/[0.07] rounded-2xl flex items-center gap-3.5 backdrop-blur-lg">
+<div class="w-10 h-10 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-[14px] text-white">14-Day Rush Dispatch</span>
+<span class="text-[11px] font-extrabold text-amber-400 tracking-wide">MISSION READY</span>
+</div>
+<p class="text-[12px] text-neutral-400 leading-snug mt-0.5">Strict schedule compliance for retirements, change-of-command, and national academy graduations.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Catalog Grid -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="font-bold text-[16px] text-white tracking-tight">Category Portfolio</span>
+<span class="px-2 py-0.5 rounded-full bg-white/[0.08] text-neutral-300 font-semibold text-[11px]">6 Lines</span>
+</div>
+<a class="text-[12px] font-semibold text-amber-400 flex items-center gap-1 hover:text-amber-300 transition-colors" href="#">
+<span>View Specs</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1: Challenge Coins -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tactical top-down photography of a high relief military command challenge coin with brass roped bezel, deep navy and crimson soft enamel, sitting on a dark tactical nylon chest rig with low dramatic warm studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXiQuwpLwJl8SNdA0MEcxR2VcAmneU5z8LbWpgV6LW5s34gbT4tCBCifxG5_Vl-B2z2v5urnbabbRbuI5bpcraSHkltbyJXD87cWOXMRmazrkh7dxFk6rfLPuHUdYmJ3PPLhUPpl_EyEtWMYjVyHySGxxdXZ2M82MAeKun5XAaSXSOjZPae8lbIebJOsfWujZUcQdM_VJbBWVkJkaGYrkwqtk5AkkRqKmsoXcTgw8"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Die-Struck
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">Challenge Coins</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 50 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $2.85/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Badges -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up high-detail photograph of a solid brass police shield badge with deeply engraved sunburst rays, polished gold plating, custom blue seal inset, and curved banner lettering on a textured slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByBgnqVvZhCVsAkfMvsZg3gier6WXiBiE8SEEI7SfS--IwFx1FrJexYbDJ2s4cQhxT52uHfM9wimOLfmnbsfBnDfHv5n6m-qsfV4LHgiaIfvHpcmdj69reA-ZLXDIfRtpFhEPoXE9ODs3E8EPOvcT31Y53Ktt0XtT9jIa6tat-Dwb9RE1C5qRjrbOh12JjxaC-hlYOe93aG3TJUCtFN-JAUIaM6hXfypOS2JFXlPQ"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Jeweled
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">LEO &amp; Sheriff Badges</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 25 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $24.50/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Lapel Pins -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Macro photography of precision hard enamel commemorative lapel pins with military clutch backs, polished silver edge finish, and dark navy emblem resting on olive green ripstop uniform fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2R_G2ov9eRo3qWMWFLbxgzecpZWuFGm3AD0nuS7IiBwMX4JC4HXs67pf-lQxj1I3LGdvzITHuOGqaH2NSPE0UepBS0fdjKQdYEYAS7Zx7YmJOf1WbKa0tWb97ndzC7EX2Zjnk7DBarGy7eJMTHCxwVaKptB7Tr95GtwYsQ6NvkNyHm0VVVyVsbT48mY_HO74dCioJT8TBYpWUUim_FeoksJ8edOEXQrBo2TiYzc"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Hard Enamel
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">Lapel &amp; Unit Pins</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 100 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $1.45/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Medals -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High resolution tactical product shot of an antique bronze service commendation medal with a striped grosgrain neck ribbon drape, suspended neatly on a black anodized steel presentation case." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWcTEtMWcF3ZjLK9IBEup1w5PTv6RmwID5ERCz7GXuAebtFyvf_V3F14m5tSuNAbsu6kLyHNod9vw8Pn8tYR9s-Go0IhtmgtvzFybLy1W7uzj0lm2_ac6Df2SfbxRi2WIJrHIw3znpGa2Q7mkG6SEOe6tifqGYYjmyCwiwguBZiDm553shqPPzwa8GcKPxVJg5nMbGci0dvljXgdKfc5-qqOHtmzIacwtNWKHqoEo"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Ribbon Drape
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">Valorous Medals</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 50 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $5.10/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Vehicle Badges -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Heavy zinc alloy automotive grille badge with weatherproof UV epoxy coating and threaded bolt mount system, detailed eagle crest, sitting on a matte black patrol vehicle hood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmx5pDDpIQEPp3SQaqVYKFVnmejPVc108E_X5UX6zdoO22U5NmroBfp2XhXgqVc2H2c1dXvVKXz6tliHR1HDOCD9vLs-h4zgQQfbVLm0DZY92ZC9S4jb98OlRK5ARyFwUHMjZ-MC06YI9FOwrxFYMV-UcfPxoZIeVdjjrY39lcAM7tkNnHI95ZjmsKwMuNyF4Ck9Wgn9t5m8xPVk0SQOWIkzOKWtzweOkyGg2Cn4M"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Weatherproof
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">Vehicle Badges</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 25 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $12.20/ea</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Utility Openers -->
+<div class="bg-[#14151B]/80 border border-white/[0.08] rounded-2xl overflow-hidden flex flex-col group backdrop-blur-md hover:border-amber-500/40 transition-all">
+<div class="relative w-full aspect-square bg-[#0E0F14] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Heavyweight functioning coin bottle opener crafted from antiqued copper with 3D embossed skull and crossed rifles insignia, lying next to spent brass casing rounds on diamond-plate steel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfdmrFXSMegaeKMfR07UkykNyx2umr779glJfgv6EtJvCd12EGuCBmB0DO09pSii8LzrdZkMOiMfBDrreBnVNFWcA_PNNxzIK4N0bQbjz8K3_E5_V05i3WSJeucwUwon0EDxPSf8BkmMNdXROk74_0tSBpHJICcyU7cR-4b7RusrQruD6PAgpo3yYfCD-2IGdCLB1pT5hjJtpl58LRvu07m1PA3bt4T2zCJDXGodA"/>
+<span class="absolute top-2 right-2 px-2 py-0.5 bg-black/75 backdrop-blur-md border border-white/10 rounded-full text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+              Heavy 4.5mm
+            </span>
+</div>
+<div class="p-3 flex flex-col gap-1">
+<span class="font-semibold text-[13.5px] text-white truncate">Utility Openers</span>
+<div class="flex items-center justify-between text-neutral-400 pt-0.5">
+<span class="text-[11px]">Min 50 pcs</span>
+<span class="text-[12px] font-bold text-amber-400">From $3.75/ea</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Tiered Batch Price Estimator (Translucent Glassmorphic Style) -->
+<div class="w-full bg-[#14151B]/85 border border-white/[0.08] p-5 rounded-3xl shadow-xl flex flex-col gap-4 backdrop-blur-xl relative overflow-hidden">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-bold text-[16px] text-white tracking-tight">Direct Batch Estimator</span>
+<span class="text-[11px] font-bold text-amber-400 uppercase bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">2.0" 3.5mm Coin</span>
+</div>
+<p class="text-[12px] text-neutral-400 leading-snug">Includes free 2D/3D dual-side tooling, high-polish plating, and velvet presentation pouches.</p>
+</div>
+<!-- Quantity Tier Segmented Controls - Rounded Pill style -->
+<div class="grid grid-cols-4 gap-1.5 p-1 bg-black/40 border border-white/[0.06] rounded-full">
+<button class="tier-btn py-2 text-center rounded-full bg-white text-black font-bold text-[13px] transition-all shadow-sm" data-qty="50" data-unit="4.45" type="button">50</button>
+<button class="tier-btn py-2 text-center rounded-full text-neutral-400 hover:text-white font-medium text-[13px] transition-all" data-qty="100" data-unit="3.85" type="button">100</button>
+<button class="tier-btn py-2 text-center rounded-full text-neutral-400 hover:text-white font-medium text-[13px] transition-all" data-qty="250" data-unit="3.15" type="button">250</button>
+<button class="tier-btn py-2 text-center rounded-full text-neutral-400 hover:text-white font-medium text-[13px] transition-all" data-qty="500" data-unit="2.40" type="button">500+</button>
+</div>
+<!-- Calculation Readout Panel -->
+<div class="p-4 bg-white/[0.03] border border-white/[0.06] rounded-2xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Unit Tier Rate</span>
+<span class="text-[22px] font-bold text-amber-400 leading-tight mt-0.5" id="unitRateDisplay">$4.45 <span class="text-[12px] text-neutral-400 font-normal">/ coin</span></span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Estimated Total</span>
+<span class="text-[22px] font-extrabold text-white leading-tight mt-0.5" id="totalDisplay">$222.50</span>
+</div>
+</div>
+<!-- Lock Rate Action: Solid Pill Button -->
+<button class="h-12 w-full bg-white text-black font-bold text-[14px] tracking-wide rounded-full flex items-center justify-center gap-2 hover:bg-neutral-100 active:scale-[0.98] transition-all shadow-[0_4px_16px_rgba(255,255,255,0.15)]" type="button">
+<span class="material-symbols-outlined text-[19px] text-neutral-900">lock_clock</span>
+<span>Lock In Volume Pricing</span>
+</button>
+</div>
+<!-- Verified Agency Testimonials -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<span class="font-bold text-[16px] text-white tracking-tight">Duty Field Reviews</span>
+<div class="flex items-center gap-1 text-amber-400">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Quote 1 -->
+<div class="p-4 bg-[#14151B]/80 border border-white/[0.07] rounded-2xl flex flex-col gap-3 backdrop-blur-md">
+<p class="text-[13px] text-neutral-200 italic leading-relaxed">
+            “Our department had a 9-day window for our annual fallen officer gala. Frontline adjusted the mold overnight, waived extra revision fees, and delivered 300 flawless dual-plated coins two days early. Unmatched integrity.”
+          </p>
+<div class="flex items-center justify-between pt-2.5 border-t border-white/[0.06]">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+</div>
+<span class="font-bold text-[13px] text-white">Chief Marcus V.</span>
+</div>
+<span class="text-[11px] text-neutral-400">Metro Police Bureau</span>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="p-4 bg-[#14151B]/80 border border-white/[0.07] rounded-2xl flex flex-col gap-3 backdrop-blur-md">
+<p class="text-[13px] text-neutral-200 italic leading-relaxed">
+            “The die depth and cross-hatch rope edge work exceeded any standard defense vendor we have contracted through GSA before. CAGE verification made sovereign requisition frictionless.”
+          </p>
+<div class="flex items-center justify-between pt-2.5 border-t border-white/[0.06]">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+</div>
+<span class="font-bold text-[13px] text-white">Commander E. Hayes</span>
+</div>
+<span class="text-[11px] text-neutral-400">Joint Tactical Task Force</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Dark Pill Navigation Bar (Matching Reference Image) -->
+<div class="fixed bottom-4 inset-x-0 z-50 flex justify-center px-4 pb-safe pointer-events-none">
+<nav class="pointer-events-auto h-16 bg-[#16171E]/90 backdrop-blur-2xl border border-white/10 rounded-full px-2 py-1.5 flex items-center gap-1 shadow-[0_12px_32px_rgba(0,0,0,0.65)] max-w-sm w-full justify-between">
+<!-- Home (Active white pill tab) -->
+<a aria-current="page" class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-sm transition-all" data-path="home" href="#">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<!-- Catalog -->
+<a class="w-11 h-11 rounded-full text-neutral-400 hover:text-white hover:bg-white/[0.06] flex items-center justify-center transition-all" data-path="catalog" href="#">
+<span class="material-symbols-outlined text-[21px]">photo_camera</span>
+</a>
+<!-- Instant Quote (Grid View) -->
+<a class="w-11 h-11 rounded-full text-neutral-400 hover:text-white hover:bg-white/[0.06] flex items-center justify-center transition-all" data-path="instant-quote" href="#">
+<span class="material-symbols-outlined text-[21px]">grid_view</span>
+</a>
+<!-- Orders -->
+<a class="w-11 h-11 rounded-full text-neutral-400 hover:text-white hover:bg-white/[0.06] flex items-center justify-center transition-all" data-path="orders" href="#">
+<span class="material-symbols-outlined text-[21px]">token</span>
+</a>
+<!-- Floating Circular Action Button (+) matching ref image -->
+<a class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.4)] transition-all ml-1" data-path="profile" href="#">
+<span class="material-symbols-outlined text-[24px] font-bold">add</span>
+</a>
+</nav>
+</div>
+<script>
+  (function initCalculator() {
+    const buttons = document.querySelectorAll('.tier-btn');
+    const unitRateDisplay = document.getElementById('unitRateDisplay');
+    const totalDisplay = document.getElementById('totalDisplay');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-white', 'text-black', 'font-bold', 'shadow-sm');
+          b.classList.add('text-neutral-400', 'font-medium');
+        });
+        btn.classList.add('bg-white', 'text-black', 'font-bold', 'shadow-sm');
+        btn.classList.remove('text-neutral-400', 'font-medium');
+
+        const qty = parseInt(btn.getAttribute('data-qty'), 10);
+        const unit = parseFloat(btn.getAttribute('data-unit'));
+        const total = (qty * unit).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        unitRateDisplay.innerHTML = `$${unit.toFixed(2)} <span class="text-[12px] text-neutral-400 font-normal">/ coin</span>`;
+        totalDisplay.innerText = `$${total}`;
+      });
+    });
+  })();
+</script>
+</body></html>

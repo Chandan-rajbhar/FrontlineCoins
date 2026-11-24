@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#0b0b0e;color:#f3f4f6;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "brand-amber": "#ff9e24", "brand-orange": "#ea580c", "brand-gold": "#fbbf24", "surface-dark": "#121217", "surface-glass": "rgba(255, 255, 255, 0.05)", "surface-glass-active": "rgba(255, 255, 255, 0.12)", "border-glass": "rgba(255, 255, 255, 0.08)" }, fontFamily: { sans: ["Plus Jakarta Sans", "sans-serif"] }, borderRadius: { "2xl": "1.25rem", "3xl": "1.75rem", "4xl": "2.25rem" } } } };</script></head><body class="bg-[#09090c] text-white font-sans flex flex-col min-h-screen relative overflow-x-hidden selection:bg-brand-amber selection:text-black">
+<!-- Ambient Glow Orbs from Reference (Warm Amber / Deep Orange) -->
+<div class="fixed top-0 right-[-15%] w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#ea580c]/25 via-[#ff9e24]/15 to-transparent blur-[110px] pointer-events-none -z-10"></div>
+<div class="fixed top-[45%] left-[-20%] w-[380px] h-[380px] rounded-full bg-[#f97316]/10 blur-[130px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[340px] h-[340px] rounded-full bg-[#e11d48]/10 blur-[120px] pointer-events-none -z-10"></div>
+<!-- Top Bar -->
+<header class="fixed top-0 w-full z-40 bg-[#09090c]/70 backdrop-blur-2xl pt-safe border-b border-white/[0.06]">
+<div class="h-16 px-4 flex items-center justify-between gap-3">
+<!-- Brand Avatar & Title -->
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-full p-[1.5px] bg-gradient-to-tr from-brand-amber via-yellow-400 to-white/30 flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(255,158,36,0.25)]">
+<div class="w-full h-full rounded-full bg-[#141418] flex items-center justify-center text-brand-gold">
+<span class="material-symbols-outlined text-[19px]">token</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-[15px] tracking-tight text-white uppercase font-sans truncate">Frontline Coins</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-amber"></span>
+</div>
+<span class="text-[10px] text-zinc-400 tracking-wider uppercase font-medium">Gov / LEO Verified</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button aria-label="Request Quote" class="w-9 h-9 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-white/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">request_quote</span>
+</button>
+<button aria-label="Notifications" class="w-9 h-9 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-white/10 active:scale-95 transition-all relative">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+<span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-brand-amber ring-2 ring-[#09090c]"></span>
+</button>
+<div class="w-9 h-9 rounded-full overflow-hidden border border-white/20 p-[1px] ml-0.5">
+<img alt="Profile" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiy6ik7cRXK068lvfxa0nLVaCvoDULIBK5Vmx2LV0B7kYc1bFHicJI8_UrrORf0Z0tEyfdEOA_fDnN9hgyWKJ2cm8dWnwVYRnJCvgeTfl4n3SqJt34BV4EZzVXyiQAzAWZZrdmCdB9-HQhjJIbqxQmqI_KNeeLFNue3snp7PztUAKDJ_lortIAeAd4g3xNQDtxVubfVEnLjlK0OB_M63kvfm51Zsgf9M8tB3wAELE"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full pt-[76px] pb-28 px-4">
+<div class="flex flex-col w-full">
+<!-- Headline matching Kinix reference style -->
+<div class="pt-2 pb-4">
+<h1 class="text-[25px] font-bold tracking-tight text-white leading-tight">
+        Discover Verified <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">Coins &amp; Badges</span>
+</h1>
+<p class="text-zinc-400 text-[12px] mt-1">Official defense, duty insignia &amp; instant institutional pricing</p>
+</div>
+<!-- Sleek Rounded Search Bar from Reference -->
+<div class="relative flex items-center gap-2 mb-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 text-[19px]">search</span>
+<input class="w-full h-11 pl-10 pr-10 rounded-full bg-white/[0.07] border border-white/10 text-white placeholder:text-zinc-400 text-[13px] focus:outline-none focus:border-brand-amber/50 focus:ring-1 focus:ring-brand-amber/40 transition-all backdrop-blur-md" placeholder="Search seals, police badges, finishes..." type="search"/>
+<button aria-label="Voice / quick action" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-zinc-300">
+<span class="material-symbols-outlined text-[13px]">mic</span>
+</button>
+</div>
+<button aria-label="Filter products" class="h-11 w-11 flex-shrink-0 rounded-full bg-white/[0.07] border border-white/10 text-white flex items-center justify-center hover:bg-white/[0.12] active:scale-95 transition-all relative backdrop-blur-md">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-brand-amber"></span>
+</button>
+</div>
+<!-- Sleek Rounded-Full Category Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 -mx-4 px-4 scrollbar-none no-scrollbar">
+<button class="px-4 py-1.5 rounded-full bg-white text-black font-semibold text-[12px] tracking-tight flex-shrink-0 shadow-[0_2px_12px_rgba(255,255,255,0.2)] transition-transform active:scale-95">All Products</button>
+<button class="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 hover:text-white font-medium text-[12px] tracking-tight flex-shrink-0 transition-colors backdrop-blur-md whitespace-nowrap">Challenge Coins</button>
+<button class="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 hover:text-white font-medium text-[12px] tracking-tight flex-shrink-0 transition-colors backdrop-blur-md whitespace-nowrap">Duty Badges</button>
+<button class="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 hover:text-white font-medium text-[12px] tracking-tight flex-shrink-0 transition-colors backdrop-blur-md whitespace-nowrap">Lapel Pins</button>
+<button class="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 hover:text-white font-medium text-[12px] tracking-tight flex-shrink-0 transition-colors backdrop-blur-md whitespace-nowrap">Medallions</button>
+<button class="px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 hover:text-white font-medium text-[12px] tracking-tight flex-shrink-0 transition-colors backdrop-blur-md whitespace-nowrap">Gear &amp; Swag</button>
+</div>
+<!-- Active Filters & Sorting Status -->
+<div class="flex items-center justify-between gap-2 py-3 mb-1">
+<div class="flex items-center gap-1.5 overflow-x-auto min-w-0 pr-1 no-scrollbar">
+<span class="inline-flex items-center gap-1 pl-2.5 pr-1.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-zinc-200 text-[11px] font-medium flex-shrink-0 backdrop-blur-sm">
+          Antique Brass
+          <button aria-label="Remove Antique Brass filter" class="w-4 h-4 rounded-full flex items-center justify-center text-zinc-400 hover:text-white">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 pl-2.5 pr-1.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-zinc-200 text-[11px] font-medium flex-shrink-0 backdrop-blur-sm">
+          Beveled Edge
+          <button aria-label="Remove Beveled edge filter" class="w-4 h-4 rounded-full flex items-center justify-center text-zinc-400 hover:text-white">
+<span class="material-symbols-outlined text-[13px]">close</span>
+</button>
+</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 text-zinc-300 text-[11px] font-medium flex-shrink-0 hover:text-white">
+<span class="text-zinc-400">Sort:</span>
+<span class="text-white font-semibold">Popular</span>
+<span class="material-symbols-outlined text-[15px]">expand_more</span>
+</button>
+</div>
+<!-- 2-Column Translucent Product Grid -->
+<div class="grid grid-cols-2 gap-3 mb-6">
+<!-- Item 1 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<!-- Warm ambient radial glow behind the coin image -->
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Institutional commemorative coin for Federal Air Marshal Service Department of Homeland Security" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xQ5c9kc67kGnfTDz-3alixAgBCK-WBgcizu-FIocjC8FXIk8xvll-FjOaPdo06oh3v21n1Iv7QTDxHFWctuJ5dbsjSR_WjjJNnf2xcL5N7bkIgnwEgGEnkFcfxCnnrLbJLqG5tfGLkwnuHBtTUQF4qSaOXH8Vrne5Y3wCOCk2FJS2okdQCh1JFKiVzEhJhUWFQB6xuacpz1clwPc9m-dCZPsrvP-P06jpTYMhEc"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold text-[9px] uppercase tracking-wider shadow">FREE MOLD</span>
+<button aria-label="Save Federal Air Marshal coin to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(48)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">Federal Air Marshal Coin</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">Dual gold/silver plating</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$3.95</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 50</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Law enforcement solid polished brass duty star shield badge for Huntersville Sheriff Police department" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWH7Vnhtvt05yyYkaqKj_D-MgHMvkJI8Zjbp9t93DJJeoXORHLGBeYQ1btu-Dsf5QgE5ug9mAPIx52rd3ogIaK72qbNyINXfQB2U7dC7mVjqtmQGWz1Ix5byOlN4GsXdnJSKEAo7WHE85CTXD63zzxSHddb9tyTK-vaKPuc4AfnOWJkAZAWFS-ar-wyRxODcJpYLaZroIc8t5O-zJLDtesSXyQpv_9biDVFRewAKs"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white font-extrabold text-[9px] uppercase tracking-wider">DUTY GRADE</span>
+<button aria-label="Save Sheriff Dept Duty Star Badge to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(34)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">Sheriff Dept Duty Star Badge</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">Die-cast zinc, high relief</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$18.50</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 25</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Heavy 3D sculpted antique silver military challenge coin depicting German Shepherd K9 patrol dog head" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx3sYAiV3dnnH6744lCOsKPdN8SatzNE2WOizkTiKpUXEKfav9I7gcAbyrRVZl1LLAbzhzXLfx9lxrvXq_-BKkE5rBkx7f2STk2oueUJGHygHGYrcpbVL69kGiDwEaGtQCWW7poddjn4rN3RqPhk-jhbqHkR9j2WRmZcMCivGWaIrIxq1iTe71d9IJv4O8BMEfRKEMFPv2n06ug8zceO4_BwthdjVb4FfCAXrYEaw"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-amber-300 font-extrabold text-[9px] uppercase tracking-wider">3D RELIEF</span>
+<button aria-label="Save K9 Coin to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(91)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">K9 Explosive Detection Coin</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">3D antique silver relief</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$4.20</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 50</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Circular tactical lapel pin for First Responder Society" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1l5Kj4KhQf66S0-ArXpblbPFre9rUgqhuK62JOImVCVKc9U82nzsHUE135Ew3qA3kecQ1xKoA3A8A45ahVGMZ63Wmu_6iTiimjfQpvxlj5JxXkOrluqY_h7yU16xmepm4a9Tn092hIiKtD63fSledBPOg8k_sl2gX-Mm9ezysDD6I-lugFVzgCcs1cdBW07kO1VSMd-qu7tLH4kvIIMtQ7I6UIBXWmmEcLg_kHrc"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold text-[9px] uppercase tracking-wider shadow">FREE MOLD</span>
+<button aria-label="Save Lapel Pin to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]">star_half</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(56)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">First Responder Lapel Pin</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">Soft enamel, military clutch</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$1.85</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 100</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Heavyweight tactical metal coin bottle opener" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9z5Pm5QLMnnIva5LuP-HDcL5TWWFWpq1ZsQWjfPYArtHVfdiyWjJnmMOd8R-GXBew0F0fRrTrcgUJJ7BAu9F-Pq1JbiIPYPiuxFFdysykkf0WvLQacJHNmar9cf3vBggeOqMPYb0-r27gKBeciCN0xkV-tAlgG3hR6LeDVJqZzwyrpAQ1BDMEVqurM7N-2-TUfEvhaGaUXzSsdoRge17xHgRKYYMOb3PBjinOeZc"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white font-extrabold text-[9px] uppercase tracking-wider">DUTY GRADE</span>
+<button aria-label="Save Bottle Opener to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(27)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">Tactical Bottle Opener</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">Steel laser cut, dual-edge</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$4.75</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 50</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="flex flex-col bg-[#14141a]/80 backdrop-blur-xl border border-white/[0.08] hover:border-amber-400/40 rounded-3xl overflow-hidden group shadow-[0_8px_24px_rgba(0,0,0,0.5)] transition-all">
+<div class="relative w-full aspect-square bg-gradient-to-b from-[#201c1c] via-[#16151a] to-[#0e0e12] flex items-center justify-center p-3 overflow-hidden">
+<div class="absolute inset-0 bg-radial-gradient from-amber-500/20 via-orange-600/5 to-transparent pointer-events-none"></div>
+<img class="w-[84%] h-[84%] object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-300" data-alt="Heavy ceremonial military neck medallion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpeS6P3iKhbmCMNpKSd9H1C7dRt5Q6XvPUIo4oK8Ytt1nW0TUWryzdwpM9Q-yr7yEddy3gWMO80MOzfJV9tU651jtziuC4m-D84Nj9qDJWK8CNIR83huhQ1NteVoD7tuMNh0s_dyisSiNB5Jb4KbcEvJN1ndsOajcKa7xusgtZkMSu-Ew0e8WXkMVJXi_xMQiQun8Dmpst3ionWP5eeQgnXlqHPSn4gCA1cLTwirM"/>
+<span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-amber-300 font-extrabold text-[9px] uppercase tracking-wider">3D RELIEF</span>
+<button aria-label="Save Armed Forces Medallion to wishlist" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-white flex items-center justify-center hover:text-brand-amber transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1 justify-between gap-2.5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-zinc-400 text-[11px]">(42)</span>
+</div>
+<h2 class="font-bold text-[13px] text-white line-clamp-2 leading-tight">Armed Forces Medallion</h2>
+<p class="text-zinc-400 text-[11px] line-clamp-1">Neck drapery included</p>
+</div>
+<div>
+<div class="flex items-baseline justify-between gap-1 mb-2">
+<div class="flex items-baseline gap-0.5">
+<span class="font-bold text-[17px] text-amber-400">$5.10</span>
+<span class="text-zinc-400 text-[10px]">/ea</span>
+</div>
+<span class="text-[10px] text-zinc-400 font-medium">Min 50</span>
+</div>
+<button class="w-full h-8 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 font-semibold text-[11px] tracking-wide flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[14px]">request_quote</span>Quick Quote
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Sleek Floating Island Bottom Nav from Kinix Reference -->
+<div class="fixed bottom-5 inset-x-0 z-50 flex justify-center items-center px-4 pointer-events-none">
+<div class="flex items-center gap-2 pointer-events-auto">
+<!-- Main pill container -->
+<nav class="h-14 px-3 rounded-full bg-[#18181f]/85 backdrop-blur-2xl border border-white/[0.12] shadow-[0_12px_32px_rgba(0,0,0,0.7)] flex items-center gap-1">
+<a aria-label="Home" class="w-10 h-10 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors" data-path="home" href="#">
+<span class="material-symbols-outlined text-[20px]">home</span>
+</a>
+<a aria-current="page" aria-label="Catalog" class="h-10 px-3.5 rounded-full bg-white text-black flex items-center justify-center gap-1.5 font-bold text-[12px] shadow-sm transition-all" data-path="catalog" href="#">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+<span>Catalog</span>
+</a>
+<a aria-label="Quote Calculator" class="w-10 h-10 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors" data-path="instant-quote" href="#">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+</a>
+<a aria-label="Orders" class="w-10 h-10 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors" data-path="orders" href="#">
+<span class="material-symbols-outlined text-[20px]">token</span>
+</a>
+<a aria-label="Profile" class="w-10 h-10 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors" data-path="profile" href="#">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</a>
+</nav>
+<!-- Floating Action Plus Button matching Reference Pill -->
+<button aria-label="Add new coin order or quote" class="w-14 h-14 rounded-full bg-gradient-to-tr from-amber-400 to-amber-200 text-black flex items-center justify-center shadow-[0_6px_20px_rgba(251,191,36,0.35)] active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[26px] font-bold">add</span>
+</button>
+</div>
+</div>
+<script>
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const text = btn.innerText.trim();
+      if (text.includes('Quick Quote')) {
+        e.currentTarget.classList.add('scale-95');
+        setTimeout(() => e.currentTarget.classList.remove('scale-95'), 120);
+      }
+    });
+  });
+</script>
+</body></html>

@@ -1,0 +1,74 @@
+@import '@fontsource/oswald/500.css';
+@import '@fontsource/oswald/600.css';
+@import '@fontsource/oswald/700.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/700.css';
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E6E5DA;
+    color: #1B1C16;
+    font-family: 'DM Sans', sans-serif;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom Scrollbar suppression */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
+
+/* Subtle tactical camouflage background accent (light mode: very low opacity) */
+.camo-bg {
+  background-color: #E6E5DA;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(74, 90, 30, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(94, 99, 80, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(201, 205, 180, 0.15) 0%, transparent 60%);
+}
+
+/* Federal marquee ticker keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+/* Subtle diagonal diamond-plate texture */
+.diamond-plate-bg {
+  background-color: #1b1c16;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(58, 66, 40, 0.08),
+    rgba(58, 66, 40, 0.08) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+}
