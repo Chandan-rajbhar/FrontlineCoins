@@ -7,7 +7,7 @@ export const HeaderCard: React.FC = () => {
 
   return (
     <div
-      className="relative mx-3 mt-3 h-[196px] rounded-[12px] border border-[#D9DCC8] overflow-hidden select-none shrink-0"
+      className="relative mx-[12px] mt-[12px] h-[200px] rounded-[12px] border border-[#D9DCC8] overflow-hidden select-none shrink-0"
       style={{
         clipPath: 'polygon(0 0, calc(100% - 26px) 0, 100% 26px, 100% 100%, 0 100%)',
       }}
@@ -41,7 +41,7 @@ export const HeaderCard: React.FC = () => {
             </p>
           </div>
 
-          {/* Actions: Primary button + Underlined link */}
+          {/* Actions: Primary yellow button + Underlined link */}
           <div className="flex items-center gap-[18px]">
             <button
               type="button"
