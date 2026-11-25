@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontline Coins USA - Proposed Digital Experience</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 20mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2D3748;
+      background: #FFFFFF;
+      line-height: 1.5;
+      font-size: 13.5px;
+      padding: 30px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .header-block {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .title-primary {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1A365D;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .title-secondary {
+      font-size: 19px;
+      font-weight: 700;
+      color: #2B6CB0;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 13.5px;
+      font-style: italic;
+      color: #718096;
+    }
+    .intro-text {
+      font-size: 13.5px;
+      color: #4A5568;
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+    .feature-item {
+      margin-bottom: 18px;
+    }
+    .feature-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #1A202C;
+      margin-bottom: 4px;
+    }
+    .feature-desc {
+      font-size: 13px;
+      color: #4A5568;
+      line-height: 1.55;
+    }
+    .summary-text {
+      font-size: 13px;
+      color: #4A5568;
+      line-height: 1.55;
+      margin-top: 18px;
+      margin-bottom: 22px;
+    }
+    .modules-section {
+      border-top: 1px solid #E2E8F0;
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+    .modules-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1A202C;
+      margin-bottom: 8px;
+    }
+    .module-row {
+      font-size: 13px;
+      color: #4A5568;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .module-label {
+      font-weight: 700;
+      color: #2D3748;
+    }
+    .module-links {
+      color: #2B6CB0;
+    }
+    .live-app-row {
+      margin-top: 10px;
+      font-size: 13.5px;
+    }
+    .live-app-link {
+      color: #2B6CB0;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    /* Web toolbar with Download PDF button (hidden in print) */
+    .download-toolbar {
+      position: sticky;
+      top: 0;
+      background: #F4F3EA;
+      border: 1px solid #D9DCC8;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .toolbar-info {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1B1C16;
+    }
+    .download-btn {
+      background: #4A5A1E;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: #3D4C11;
+    }
+    @media print {
+      .download-toolbar {
+        display: none !important;
+      }
+      body {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Toolbar with Download PDF Button -->
+  <div class="download-toolbar">
+    <div class="toolbar-info">
+      📄 Frontline Coins USA — Proposed Digital Experience
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <a href="Frontline-Coins-USA-Proposed-Experience.pdf" download="Frontline-Coins-USA-Proposed-Experience.pdf" class="download-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
+      <button onclick="window.print()" class="download-btn" style="background: #1B1C16;">
+        Print / Save
+      </button>
+    </div>
+  </div>
+
+  <!-- Document Header -->
+  <header class="header-block">
+    <h1 class="title-primary">FRONTLINE COINS</h1>
+    <h2 class="title-secondary">Custom Challenge Coins &amp; Insignia App</h2>
+    <p class="subtitle">Proposed Digital Experience</p>
+  </header>
+
+  <p class="intro-text">
+    The proposed Frontline Coins USA mobile web application enhances law enforcement, military, and agency insignia procurement operations through:
+  </p>
+
+  <!-- Feature 1 -->
+  <div class="feature-item">
+    <h3 class="feature-title">Instant 4-Step Quote Builder &amp; Real-Time Pricing Intake</h3>
+    <p class="feature-desc">
+      Agency procurement officers and unit commanders can configure customized coin production runs by selecting diameter specifications (1.50" compact to 2.25" heavyweight), quantity tiers (50 to 500+ pieces), and premium metallic finishes (Antique Brass, Polished Gold, Antique Silver, and Dual Plating)—complete with real-time price estimation, transparent per-unit rates, and automatic zero mold fee eligibility.
+    </p>
+  </div>
+
+  <!-- Feature 2 -->
+  <div class="feature-item">
+    <h3 class="feature-title">Categorized Multi-Product Insignia Catalog &amp; Filtering</h3>
+    <p class="feature-desc">
+      Users can explore and filter professional specification-grade offerings across Challenge Coins, Lapel Pins, Law Enforcement Badges, Medals, Key Chains, Bottle Openers, Trail / Vehicle Badges, and Poker Chips with upfront tiered pricing, certified quality guarantees, high-relief 3D photography, and detailed metal core specifications.
+    </p>
+  </div>
+
+  <!-- Feature 3 -->
+  <div class="feature-item">
+    <h3 class="feature-title">Live 7-Stage Production Timeline &amp; Order Tracking</h3>
+    <p class="feature-desc">
+      Officers can monitor custom orders in real time across the full manufacturing lifecycle—from Quote and 3D Artwork Approval to Die Stamping, Hand-Inspection Quality Check, Defense Courier Dispatch, and Direct Station Delivery—with active step indicators, tracking references, and estimated delivery dates.
+    </p>
+  </div>
+
+  <!-- Feature 4 -->
+  <div class="feature-item">
+    <h3 class="feature-title">3D Artwork Proof Desk &amp; Direct Dispatch Support</h3>
+    <p class="feature-desc">
+      Clients can review photorealistic digital proof renderings, compare multi-version revision histories (v1.0 to v3.0 Active), collaborate directly with insignia designers through real-time feedback notes, and access one-tap 24/7 direct phone and email assistance operated by veteran peace officers.
+    </p>
+  </div>
+
+  <p class="summary-text">
+    Together, these mobile features simplify custom coin manufacturing, streamline agency procurement without mold fees, and provide active-duty units with complete production transparency from concept to delivery.
+  </p>
+
+  <!-- Core App Modules -->
+  <div class="modules-section">
+    <h4 class="modules-title">Core App Modules Included:</h4>
+    <div class="module-row">
+      <span class="module-label">Catalog &amp; Configuration:</span>
+      <span class="module-links"> Discovery Feed, Category Chips, Filterable Shop Catalog, Specification-Grade Product Detail, Interactive Quote Builder &amp; Tier Estimator</span>
+    </div>
+    <div class="module-row">
+      <span class="module-label">Order Lifecycle &amp; Support:</span>
+      <span class="module-links"> Active Order Timeline Dashboard, 3D Proof Approval Desk, Officer Profile &amp; Saved Armory Designs, 24/7 Operations Support &amp; FAQs</span>
+    </div>
+    <div class="live-app-row">
+      <span class="module-label">Live App:</span>
+      <a href="https://frontlinecoins.pages.dev/" target="_blank" rel="noopener noreferrer" class="live-app-link">https://frontlinecoins.pages.dev/</a>
+    </div>
+  </div>
+
+</body>
+</html>
