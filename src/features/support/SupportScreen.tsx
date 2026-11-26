@@ -1,201 +1,270 @@
 import React, { useState } from 'react';
-import { Phone, Mail, HelpCircle, Send, CheckCircle2, Bell, Clock } from 'lucide-react';
-import { mockFaqs } from '../../data/faqs';
-import { FaqItem } from '../../components/domain/FaqItem';
-import { Input } from '../../components/ui/Input';
+import { useNavigate } from 'react-router-dom';
+import {
+  Bell,
+  Clock,
+  Package,
+  Sparkles,
+  Truck,
+  ShieldCheck,
+  Archive,
+  CheckCheck,
+  ArrowRight,
+} from 'lucide-react';
 
-interface NotificationItem {
+interface AlertMessage {
   id: string;
   title: string;
+  category: 'Production' | 'Artwork' | 'Logistics' | 'Account' | 'Tooling';
   desc: string;
   time: string;
   isUnread: boolean;
+  actionText?: string;
+  actionRoute?: string;
+  iconType: 'production' | 'artwork' | 'logistics' | 'account' | 'tooling';
 }
 
-const mockNotifications: NotificationItem[] = [
+const initialAlerts: AlertMessage[] = [
   {
-    id: 'notif-1',
+    id: 'alert-1',
     title: 'Order FC-1042 in Production',
-    desc: 'Step 4 of 7 completed. Die stamping finished, plating underway.',
+    category: 'Production',
+    desc: 'Step 4 of 7 completed. Die stamping finished, antique bronze plating underway for 100 challenge coins.',
     time: '2 hours ago',
     isUnread: true,
+    actionText: 'Track Order',
+    actionRoute: '/orders',
+    iconType: 'production',
   },
   {
-    id: 'notif-2',
+    id: 'alert-2',
     title: 'Digital Artwork Proof Ready',
-    desc: '3D Proof for Sheriff Star Badge Crest ready for officer sign-off.',
+    category: 'Artwork',
+    desc: '3D Digital Proof for Sheriff Star Badge Crest is ready for commanding officer review and sign-off.',
+    time: '5 hours ago',
+    isUnread: true,
+    actionText: 'Review Proof',
+    actionRoute: '/design',
+    iconType: 'artwork',
+  },
+  {
+    id: 'alert-3',
+    title: 'Station Armory Delivery Tracking',
+    category: 'Logistics',
+    desc: 'Tracking USPS Priority Express #9405-5112 assigned for Austin Station Armory delivery.',
     time: '1 day ago',
     isUnread: false,
+    actionText: 'View Shipment',
+    actionRoute: '/orders',
+    iconType: 'logistics',
+  },
+  {
+    id: 'alert-4',
+    title: 'Tax Exemption Status Verified',
+    category: 'Account',
+    desc: 'Official Law Enforcement Procurement tax exemption (#TX-940219-LE) verified for active fiscal year.',
+    time: '3 days ago',
+    isUnread: false,
+    iconType: 'account',
+  },
+  {
+    id: 'alert-5',
+    title: 'Master Die Tooling Archived in Vault',
+    category: 'Tooling',
+    desc: 'Custom master die for K9 Explosive Detection Coin archived in armory vault for instant reorders.',
+    time: '1 week ago',
+    isUnread: false,
+    actionText: 'View Saved Dies',
+    actionRoute: '/account',
+    iconType: 'tooling',
+  },
+  {
+    id: 'alert-6',
+    title: 'Batch Reorder Queued for Minting',
+    category: 'Production',
+    desc: 'Reorder batch of 250 DHS Air Marshal Service Coins received and queued for fabrication.',
+    time: '2 weeks ago',
+    isUnread: false,
+    iconType: 'production',
   },
 ];
 
 export const SupportScreen: React.FC = () => {
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
+  const [alerts, setAlerts] = useState<AlertMessage[]>(initialAlerts);
+  const [activeFilter, setActiveFilter] = useState<'All' | 'Unread' | 'Production' | 'Artwork' | 'Logistics'>('All');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (subject.trim() && message.trim()) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        setSubject('');
-        setMessage('');
-      }, 4000);
+  const unreadCount = alerts.filter((a) => a.isUnread).length;
+
+  const handleMarkAllRead = () => {
+    setAlerts((prev) => prev.map((a) => ({ ...a, isUnread: false })));
+  };
+
+  const handleToggleRead = (id: string) => {
+    setAlerts((prev) =>
+      prev.map((a) => (a.id === id ? { ...a, isUnread: !a.isUnread } : a))
+    );
+  };
+
+  const filteredAlerts = alerts.filter((alert) => {
+    if (activeFilter === 'Unread') return alert.isUnread;
+    if (activeFilter === 'Production') return alert.category === 'Production';
+    if (activeFilter === 'Artwork') return alert.category === 'Artwork';
+    if (activeFilter === 'Logistics') return alert.category === 'Logistics';
+    return true;
+  });
+
+  const getAlertIcon = (iconType: AlertMessage['iconType']) => {
+    switch (iconType) {
+      case 'production':
+        return <Package className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />;
+      case 'artwork':
+        return <Sparkles className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />;
+      case 'logistics':
+        return <Truck className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />;
+      case 'account':
+        return <ShieldCheck className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />;
+      case 'tooling':
+        return <Archive className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />;
     }
   };
 
   return (
     <div className="px-[12px] pt-[16px] pb-[20px] flex flex-col gap-[16px] w-full bg-[#F4F3EA]">
-      {/* Page Title & Header */}
+      {/* Header Section */}
       <div className="flex flex-col gap-[4px]">
-        <span className="font-display text-[10px] text-[#3D4C11] uppercase tracking-wider font-bold bg-[#E7ECD2] px-[8px] py-[2px] rounded-[4px] border border-[#C9CDB4] self-start">
-          24/7 Operations Desk
-        </span>
+        <div className="flex items-center justify-between">
+          <span className="font-display text-[10px] text-[#3D4C11] uppercase tracking-wider font-bold bg-[#E7ECD2] px-[8px] py-[2px] rounded-[4px] border border-[#C9CDB4]">
+            Agency Alerts
+          </span>
+          {unreadCount > 0 && (
+            <button
+              type="button"
+              onClick={handleMarkAllRead}
+              className="flex items-center gap-[4px] font-sans text-[11.5px] text-[#4A5A1E] font-medium hover:underline cursor-pointer"
+            >
+              <CheckCheck className="w-[14px] h-[14px] stroke-[2]" />
+              <span>Mark all as read</span>
+            </button>
+          )}
+        </div>
+
         <h1 className="font-display font-bold text-[28px] leading-[32px] uppercase tracking-[0.02em] text-[#1B1C16] mt-[2px]">
-          Agency Support &amp; FAQs
+          Notifications
         </h1>
         <p className="font-sans text-[13px] leading-[18px] text-[#5E6350]">
-          Law enforcement operated support lines, dispatch alerts, and answers.
+          Official order dispatches, production milestones, and agency alerts.
         </p>
       </div>
 
-      {/* Direct Contact Actions: Phone and Email */}
-      <div className="grid grid-cols-2 gap-[8px]">
-        <a
-          href="tel:4433243900"
-          className="p-[12px] bg-white border border-[#D9DCC8] rounded-[10px] flex items-center gap-[10px] hover:border-[#4A5A1E]/50 transition-colors"
-        >
-          <div className="w-[36px] h-[36px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
-            <Phone className="w-[16px] h-[16px] stroke-[2]" />
-          </div>
-          <div className="flex flex-col min-w-0">
-            <span className="font-display text-[13px] uppercase font-semibold text-[#1B1C16]">
-              Call Direct
-            </span>
-            <span className="font-sans text-[11.5px] text-[#4A5A1E] font-semibold truncate">
-              (443) 324-3900
-            </span>
-          </div>
-        </a>
-
-        <a
-          href="mailto:info@frontlinecoinsusa.com"
-          className="p-[12px] bg-white border border-[#D9DCC8] rounded-[10px] flex items-center gap-[10px] hover:border-[#4A5A1E]/50 transition-colors"
-        >
-          <div className="w-[36px] h-[36px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
-            <Mail className="w-[16px] h-[16px] stroke-[2]" />
-          </div>
-          <div className="flex flex-col min-w-0">
-            <span className="font-display text-[13px] uppercase font-semibold text-[#1B1C16]">
-              Email Desk
-            </span>
-            <span className="font-sans text-[11.5px] text-[#4A5A1E] font-semibold truncate">
-              info@frontline...
-            </span>
-          </div>
-        </a>
-      </div>
-
-      {/* Recent Agency Alerts / Notifications */}
-      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col gap-[10px]">
-        <div className="flex items-center gap-[8px] pb-[6px] border-b border-[#D9DCC8]/60">
-          <Bell className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
-          <h2 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
-            Recent Agency Alerts
-          </h2>
-        </div>
-
-        <div className="flex flex-col gap-[8px]">
-          {mockNotifications.map((notif) => (
-            <div
-              key={notif.id}
-              className="p-[10px] rounded-[8px] bg-[#F4F3EA]/60 border border-[#D9DCC8] flex flex-col gap-[2px]"
+      {/* Filter Tabs */}
+      <div className="flex items-center gap-[6px] overflow-x-auto pb-[2px] no-scrollbar">
+        {(['All', 'Unread', 'Production', 'Artwork', 'Logistics'] as const).map((tab) => {
+          const isActive = activeFilter === tab;
+          return (
+            <button
+              key={tab}
+              type="button"
+              onClick={() => setActiveFilter(tab)}
+              className={`h-[30px] px-[12px] rounded-full font-display text-[11.5px] uppercase font-semibold tracking-[0.03em] whitespace-nowrap transition-all cursor-pointer ${
+                isActive
+                  ? 'bg-[#4A5A1E] text-white border border-[#4A5A1E]'
+                  : 'bg-white text-[#5E6350] border border-[#D9DCC8] hover:border-[#4A5A1E]/40'
+              }`}
             >
-              <div className="flex items-center justify-between">
-                <span className="font-display font-semibold text-[13px] uppercase text-[#1B1C16]">
-                  {notif.title}
+              {tab}
+              {tab === 'Unread' && unreadCount > 0 && (
+                <span className="ml-[5px] px-[5px] py-[0.5px] rounded-full text-[9px] bg-[#FFCC00] text-[#1B1C16] font-bold">
+                  {unreadCount}
                 </span>
-                {notif.isUnread && (
-                  <span className="font-display text-[9.5px] font-bold uppercase tracking-wider bg-[#FFF3BF] text-[#1B1C16] px-[6px] py-[1px] rounded-[3px] border border-[#B38F00]/25">
-                    New
-                  </span>
-                )}
-              </div>
-              <p className="font-sans text-[11.5px] leading-[15px] text-[#5E6350]">
-                {notif.desc}
-              </p>
-              <div className="flex items-center gap-[4px] text-[10.5px] text-[#5E6350] mt-[2px]">
-                <Clock className="w-[11px] h-[11px]" />
-                <span>{notif.time}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+              )}
+            </button>
+          );
+        })}
       </div>
 
-      {/* FAQ Accordion */}
+      {/* Alert Messages List */}
       <div className="flex flex-col gap-[10px]">
-        <div className="flex items-center gap-[8px]">
-          <HelpCircle className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
-          <h2 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
-            Frequently Asked Questions
-          </h2>
-        </div>
-
-        <div className="flex flex-col gap-[8px]">
-          {mockFaqs.map((faq, idx) => (
-            <FaqItem key={faq.id} faq={faq} defaultOpen={idx === 0} />
-          ))}
-        </div>
-      </div>
-
-      {/* Official Dispatch Support Request Form */}
-      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col gap-[12px]">
-        <div className="flex items-center gap-[8px] pb-[6px] border-b border-[#D9DCC8]/60">
-          <Send className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
-          <h2 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
-            Dispatch Support Request
-          </h2>
-        </div>
-
-        {submitted ? (
-          <div className="p-[14px] bg-[#E7ECD2] rounded-[8px] border border-[#C9CDB4] flex items-center gap-[10px] text-[13px] text-[#1B1C16]">
-            <CheckCircle2 className="w-[20px] h-[20px] text-[#4A5A1E] shrink-0" />
-            <span className="font-sans font-medium">
-              Support dispatch received. A law enforcement representative will contact your agency shortly.
+        {filteredAlerts.length === 0 ? (
+          <div className="p-[24px] bg-white rounded-[10px] border border-[#D9DCC8] text-center flex flex-col items-center gap-[8px]">
+            <Bell className="w-[32px] h-[32px] text-[#5E6350]/40 stroke-[1.5]" />
+            <span className="font-display uppercase font-semibold text-[14px] text-[#1B1C16]">
+              No Alerts Found
             </span>
+            <p className="font-sans text-[12px] text-[#5E6350]">
+              There are no notifications matching your selected filter.
+            </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-[12px]">
-            <Input
-              label="Subject / Agency Order Number"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              placeholder="e.g. Order FC-1042 or Custom Inquiry"
-              required
-            />
-            <div className="flex flex-col gap-1 text-left">
-              <label className="font-sans text-[11px] font-semibold text-[#5E6350] uppercase tracking-wider">
-                Message / Details
-              </label>
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="State your question or request..."
-                rows={3}
-                required
-                className="p-3 bg-white border border-[#D9DCC8] rounded-[6px] text-[#1B1C16] text-[13px] font-sans placeholder:text-[#5E6350] focus:outline-none focus:border-[#4A5A1E] resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full h-[44px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[14px] uppercase tracking-[0.08em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center cursor-pointer mt-1"
+          filteredAlerts.map((alert) => (
+            <div
+              key={alert.id}
+              onClick={() => handleToggleRead(alert.id)}
+              className={`p-[14px] rounded-[10px] bg-white border transition-all cursor-pointer flex gap-[12px] ${
+                alert.isUnread
+                  ? 'border-[#C9CDB4] shadow-[0_2px_8px_rgba(74,90,30,0.06)]'
+                  : 'border-[#D9DCC8] opacity-90 hover:opacity-100'
+              }`}
             >
-              Send Dispatch
-            </button>
-          </form>
+              {/* Left Icon Badge */}
+              <div
+                className={`w-[40px] h-[40px] rounded-[8px] flex items-center justify-center shrink-0 border ${
+                  alert.isUnread
+                    ? 'bg-[#E7ECD2] border-[#C9CDB4]'
+                    : 'bg-[#F4F3EA] border-[#D9DCC8]'
+                }`}
+              >
+                {getAlertIcon(alert.iconType)}
+              </div>
+
+              {/* Alert Content */}
+              <div className="flex-1 min-w-0 flex flex-col gap-[3px]">
+                {/* Header row: category badge, title & new badge */}
+                <div className="flex items-start justify-between gap-[8px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-display text-[9.5px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[5px] py-[1px] rounded-[3px] border border-[#C9CDB4]">
+                      {alert.category}
+                    </span>
+                    <h2 className="font-display font-semibold text-[14px] leading-[18px] uppercase text-[#1B1C16]">
+                      {alert.title}
+                    </h2>
+                  </div>
+                  {alert.isUnread && (
+                    <span className="font-display text-[9.5px] font-bold uppercase tracking-wider bg-[#FFF3BF] text-[#1B1C16] px-[6px] py-[1px] rounded-[3px] border border-[#B38F00]/25 shrink-0">
+                      New
+                    </span>
+                  )}
+                </div>
+
+                {/* Description */}
+                <p className="font-sans text-[12.5px] leading-[17px] text-[#5E6350] mt-[1px]">
+                  {alert.desc}
+                </p>
+
+                {/* Footer row: Timestamp & action link */}
+                <div className="flex items-center justify-between pt-[4px] mt-[2px] border-t border-[#D9DCC8]/40">
+                  <div className="flex items-center gap-[4px] text-[11px] text-[#5E6350]">
+                    <Clock className="w-[12px] h-[12px] stroke-[1.8]" />
+                    <span>{alert.time}</span>
+                  </div>
+
+                  {alert.actionText && alert.actionRoute && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate(alert.actionRoute!);
+                      }}
+                      className="flex items-center gap-[4px] font-display text-[11px] uppercase font-bold text-[#4A5A1E] hover:underline cursor-pointer"
+                    >
+                      <span>{alert.actionText}</span>
+                      <ArrowRight className="w-[12px] h-[12px] stroke-[2.5]" />
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))
         )}
       </div>
     </div>

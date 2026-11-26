@@ -6,11 +6,20 @@ import {
   Settings,
   Plus,
   CheckCircle2,
+  HelpCircle,
+  ChevronDown,
+  Phone,
+  Mail,
+  Send,
+  LogOut,
 } from 'lucide-react';
 import { useAuthStore } from '../../store/useAuthStore';
 import { mockSavedDesigns } from '../../data/designs';
+import { mockFaqs } from '../../data/faqs';
+import { FaqItem } from '../../components/domain/FaqItem';
 import { Modal } from '../../components/ui/Modal';
 import { Input } from '../../components/ui/Input';
+import { cn } from '../../utils/cn';
 
 export const AccountScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -20,6 +29,31 @@ export const AccountScreen: React.FC = () => {
   const [newCity, setNewCity] = useState('');
   const [newState, setNewState] = useState('TX');
   const [newZip, setNewZip] = useState('');
+
+  // 3 Independent dropdown card states
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isFaqOpen, setIsFaqOpen] = useState(false);
+  const [isDispatchOpen, setIsDispatchOpen] = useState(false);
+
+  // Dispatch form state
+  const [supportSubject, setSupportSubject] = useState('');
+  const [supportMessage, setSupportMessage] = useState('');
+  const [supportSubmitted, setSupportSubmitted] = useState(false);
+
+  // Logout modal state
+  const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
+
+  const handleSupportSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (supportSubject.trim() && supportMessage.trim()) {
+      setSupportSubmitted(true);
+      setTimeout(() => {
+        setSupportSubmitted(false);
+        setSupportSubject('');
+        setSupportMessage('');
+      }, 4000);
+    }
+  };
 
   const handleAddAddress = (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,8 +74,13 @@ export const AccountScreen: React.FC = () => {
     }
   };
 
+  const handleConfirmLogout = () => {
+    setIsLogoutModalOpen(false);
+    navigate('/');
+  };
+
   return (
-    <div className="px-[12px] pt-[16px] pb-[20px] flex flex-col gap-[16px] w-full bg-[#F4F3EA]">
+    <div className="px-[12px] pt-[16px] pb-[28px] flex flex-col gap-[16px] w-full bg-[#F4F3EA]">
       {/* Page Title */}
       <h1 className="font-display font-bold text-[28px] leading-[32px] uppercase tracking-[0.02em] text-[#1B1C16]">
         Account
@@ -196,6 +235,231 @@ export const AccountScreen: React.FC = () => {
         </div>
       </div>
 
+      {/* 4. SEPARATE CARD: Agency Support Lines (Dropdown) */}
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col transition-all">
+        <button
+          type="button"
+          onClick={() => setIsContactOpen(!isContactOpen)}
+          className="w-full flex items-center justify-between text-left cursor-pointer group"
+          aria-expanded={isContactOpen}
+        >
+          <div className="flex items-center gap-[10px] min-w-0">
+            <div className="w-[36px] h-[36px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
+              <Phone className="w-[18px] h-[18px] stroke-[2]" />
+            </div>
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-[6px]">
+                <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em] group-hover:text-[#4A5A1E] transition-colors truncate">
+                  Agency Support Lines
+                </h3>
+                <span className="font-display text-[9.5px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[6px] py-[1px] rounded-[3px] border border-[#C9CDB4] shrink-0">
+                  24/7 Desk
+                </span>
+              </div>
+              <span className="font-sans text-[12px] text-[#5E6350] mt-[1px] truncate">
+                Direct phone line &amp; official agency email desk
+              </span>
+            </div>
+          </div>
+
+          <div className="w-[30px] h-[30px] rounded-[6px] bg-[#F4F3EA] border border-[#D9DCC8] flex items-center justify-center shrink-0 ml-[8px] group-hover:border-[#4A5A1E]/40 transition-colors">
+            <ChevronDown
+              className={cn(
+                'w-[16px] h-[16px] text-[#4A5A1E] stroke-[2.5] transition-transform duration-200',
+                isContactOpen && 'rotate-180'
+              )}
+            />
+          </div>
+        </button>
+
+        {isContactOpen && (
+          <div className="flex flex-col gap-[12px] pt-[14px] mt-[12px] border-t border-[#D9DCC8]/60">
+            <div className="p-[10px] rounded-[8px] bg-[#F4F3EA]/70 border border-[#D9DCC8] flex flex-col gap-[3px]">
+              <span className="font-display text-[10px] text-[#3D4C11] uppercase tracking-wider font-bold bg-[#E7ECD2] px-[7px] py-[1.5px] rounded-[4px] border border-[#C9CDB4] self-start">
+                24/7 Operations Desk
+              </span>
+              <p className="font-sans text-[12px] leading-[16px] text-[#5E6350]">
+                Law enforcement operated support lines, instant answers, and fast agency dispatches.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-[8px]">
+              <a
+                href="tel:4433243900"
+                className="p-[12px] bg-white border border-[#D9DCC8] rounded-[8px] flex items-center gap-[10px] hover:border-[#4A5A1E]/50 transition-colors"
+              >
+                <div className="w-[34px] h-[34px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
+                  <Phone className="w-[16px] h-[16px] stroke-[2]" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="font-display text-[12.5px] uppercase font-semibold text-[#1B1C16]">
+                    Call Direct
+                  </span>
+                  <span className="font-sans text-[11px] text-[#4A5A1E] font-semibold truncate">
+                    (443) 324-3900
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="mailto:info@frontlinecoinsusa.com"
+                className="p-[12px] bg-white border border-[#D9DCC8] rounded-[8px] flex items-center gap-[10px] hover:border-[#4A5A1E]/50 transition-colors"
+              >
+                <div className="w-[34px] h-[34px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
+                  <Mail className="w-[16px] h-[16px] stroke-[2]" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="font-display text-[12.5px] uppercase font-semibold text-[#1B1C16]">
+                    Email Desk
+                  </span>
+                  <span className="font-sans text-[11px] text-[#4A5A1E] font-semibold truncate">
+                    info@frontline...
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 5. SEPARATE CARD: Frequently Asked Questions (Dropdown) */}
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col transition-all">
+        <button
+          type="button"
+          onClick={() => setIsFaqOpen(!isFaqOpen)}
+          className="w-full flex items-center justify-between text-left cursor-pointer group"
+          aria-expanded={isFaqOpen}
+        >
+          <div className="flex items-center gap-[10px] min-w-0">
+            <div className="w-[36px] h-[36px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
+              <HelpCircle className="w-[18px] h-[18px] stroke-[2]" />
+            </div>
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-[6px]">
+                <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em] group-hover:text-[#4A5A1E] transition-colors truncate">
+                  Frequently Asked Questions
+                </h3>
+                <span className="font-display text-[9.5px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[6px] py-[1px] rounded-[3px] border border-[#C9CDB4] shrink-0">
+                  {mockFaqs.length} Answers
+                </span>
+              </div>
+              <span className="font-sans text-[12px] text-[#5E6350] mt-[1px] truncate">
+                Instant answers for custom coins, mold fees &amp; shipping
+              </span>
+            </div>
+          </div>
+
+          <div className="w-[30px] h-[30px] rounded-[6px] bg-[#F4F3EA] border border-[#D9DCC8] flex items-center justify-center shrink-0 ml-[8px] group-hover:border-[#4A5A1E]/40 transition-colors">
+            <ChevronDown
+              className={cn(
+                'w-[16px] h-[16px] text-[#4A5A1E] stroke-[2.5] transition-transform duration-200',
+                isFaqOpen && 'rotate-180'
+              )}
+            />
+          </div>
+        </button>
+
+        {isFaqOpen && (
+          <div className="flex flex-col gap-[8px] pt-[14px] mt-[12px] border-t border-[#D9DCC8]/60">
+            {mockFaqs.map((faq, idx) => (
+              <FaqItem key={faq.id} faq={faq} defaultOpen={idx === 0} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* 6. SEPARATE CARD: Dispatch Support Request (Dropdown) */}
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col transition-all">
+        <button
+          type="button"
+          onClick={() => setIsDispatchOpen(!isDispatchOpen)}
+          className="w-full flex items-center justify-between text-left cursor-pointer group"
+          aria-expanded={isDispatchOpen}
+        >
+          <div className="flex items-center gap-[10px] min-w-0">
+            <div className="w-[36px] h-[36px] rounded-[6px] bg-[#E7ECD2] flex items-center justify-center text-[#4A5A1E] shrink-0">
+              <Send className="w-[18px] h-[18px] stroke-[2]" />
+            </div>
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-[6px]">
+                <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em] group-hover:text-[#4A5A1E] transition-colors truncate">
+                  Dispatch Support Request
+                </h3>
+                <span className="font-display text-[9.5px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[6px] py-[1px] rounded-[3px] border border-[#C9CDB4] shrink-0">
+                  Fast Response
+                </span>
+              </div>
+              <span className="font-sans text-[12px] text-[#5E6350] mt-[1px] truncate">
+                State your question or custom request to operations
+              </span>
+            </div>
+          </div>
+
+          <div className="w-[30px] h-[30px] rounded-[6px] bg-[#F4F3EA] border border-[#D9DCC8] flex items-center justify-center shrink-0 ml-[8px] group-hover:border-[#4A5A1E]/40 transition-colors">
+            <ChevronDown
+              className={cn(
+                'w-[16px] h-[16px] text-[#4A5A1E] stroke-[2.5] transition-transform duration-200',
+                isDispatchOpen && 'rotate-180'
+              )}
+            />
+          </div>
+        </button>
+
+        {isDispatchOpen && (
+          <div className="flex flex-col gap-[12px] pt-[14px] mt-[12px] border-t border-[#D9DCC8]/60">
+            {supportSubmitted ? (
+              <div className="p-[14px] bg-[#E7ECD2] rounded-[8px] border border-[#C9CDB4] flex items-center gap-[10px] text-[13px] text-[#1B1C16]">
+                <CheckCircle2 className="w-[20px] h-[20px] text-[#4A5A1E] shrink-0" />
+                <span className="font-sans font-medium">
+                  Support dispatch received. A law enforcement representative will contact your agency shortly.
+                </span>
+              </div>
+            ) : (
+              <form onSubmit={handleSupportSubmit} className="flex flex-col gap-[10px]">
+                <Input
+                  label="Subject / Agency Order Number"
+                  value={supportSubject}
+                  onChange={(e) => setSupportSubject(e.target.value)}
+                  placeholder="e.g. Order FC-1042 or Custom Inquiry"
+                  required
+                />
+                <div className="flex flex-col gap-1 text-left">
+                  <label className="font-sans text-[11px] font-semibold text-[#5E6350] uppercase tracking-wider">
+                    Message / Details
+                  </label>
+                  <textarea
+                    value={supportMessage}
+                    onChange={(e) => setSupportMessage(e.target.value)}
+                    placeholder="State your question or request..."
+                    rows={3}
+                    required
+                    className="p-3 bg-white border border-[#D9DCC8] rounded-[6px] text-[#1B1C16] text-[13px] font-sans placeholder:text-[#5E6350] focus:outline-none focus:border-[#4A5A1E] resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full h-[42px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[13.5px] uppercase tracking-[0.08em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center cursor-pointer mt-1"
+                >
+                  Send Dispatch
+                </button>
+              </form>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* 7. LOGOUT BUTTON */}
+      <div className="pt-[4px] pb-[8px]">
+        <button
+          type="button"
+          onClick={() => setIsLogoutModalOpen(true)}
+          className="w-full h-[46px] rounded-[10px] bg-white border border-[#E8C4C0] text-[#B92B27] hover:bg-[#FFF5F5] font-display font-bold text-[13px] uppercase tracking-[0.08em] flex items-center justify-center gap-[8px] transition-all cursor-pointer shadow-sm active:translate-y-[1px]"
+        >
+          <LogOut className="w-[17px] h-[17px] stroke-[2.2]" />
+          <span>Log Out of Agency Session</span>
+        </button>
+      </div>
+
       {/* Add Address Modal */}
       <Modal
         isOpen={isAddressModalOpen}
@@ -240,6 +504,36 @@ export const AccountScreen: React.FC = () => {
             Save Station Address
           </button>
         </form>
+      </Modal>
+
+      {/* Logout Confirmation Modal */}
+      <Modal
+        isOpen={isLogoutModalOpen}
+        onClose={() => setIsLogoutModalOpen(false)}
+        title="Log Out Confirmation"
+      >
+        <div className="flex flex-col gap-[14px]">
+          <p className="font-sans text-[13px] text-[#5E6350] leading-relaxed">
+            Are you sure you want to end this procurement session for{' '}
+            <strong className="text-[#1B1C16]">{user.name}</strong> ({user.agency})?
+          </p>
+          <div className="grid grid-cols-2 gap-[10px] mt-1">
+            <button
+              type="button"
+              onClick={() => setIsLogoutModalOpen(false)}
+              className="h-[42px] rounded-[6px] border border-[#D9DCC8] bg-white text-[#1B1C16] font-display text-[12.5px] uppercase font-bold tracking-[0.06em] hover:bg-[#F4F3EA] transition-colors cursor-pointer"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              onClick={handleConfirmLogout}
+              className="h-[42px] rounded-[6px] bg-[#B92B27] text-white font-display text-[12.5px] uppercase font-bold tracking-[0.06em] hover:bg-[#9E2420] transition-colors cursor-pointer"
+            >
+              Log Out
+            </button>
+          </div>
+        </div>
       </Modal>
     </div>
   );

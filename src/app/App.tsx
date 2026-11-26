@@ -22,6 +22,7 @@ export const AppRoutes: React.FC = () => (
     <Route path="/orders" element={<OrdersScreen />} />
     <Route path="/account" element={<AccountScreen />} />
     <Route path="/support" element={<SupportScreen />} />
+    <Route path="/notifications" element={<SupportScreen />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
 );

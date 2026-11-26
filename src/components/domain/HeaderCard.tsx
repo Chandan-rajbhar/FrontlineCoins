@@ -25,7 +25,7 @@ export const HeaderCard: React.FC = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(90deg, rgba(244,243,234,0.97) 0%, rgba(244,243,234,0.88) 48%, rgba(244,243,234,0.1) 100%)',
+            'linear-gradient(90deg, #F4F3EA 0%, rgba(244,243,234,0.98) 60%, rgba(244,243,234,0.80) 75%, rgba(244,243,234,0) 100%)',
         }}
       />
 
@@ -36,7 +36,7 @@ export const HeaderCard: React.FC = () => {
             <h1 className="font-display font-bold text-[30px] leading-[34px] uppercase tracking-[0.02em] text-[#1B1C16] max-w-[260px]">
               Custom challenge coins
             </h1>
-            <p className="font-sans text-[13px] leading-[18px] text-[#3A3D2E] mt-1">
+            <p className="font-sans text-[13.5px] leading-[18px] font-medium text-[#1B1C16] mt-1">
               Free design, no mold fees, and fast production.
             </p>
           </div>
