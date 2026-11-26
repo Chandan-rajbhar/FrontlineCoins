@@ -10,6 +10,7 @@ import {
   Archive,
   CheckCheck,
   ArrowRight,
+  ChevronDown,
 } from 'lucide-react';
 
 interface AlertMessage {
@@ -92,6 +93,7 @@ const initialAlerts: AlertMessage[] = [
 export const SupportScreen: React.FC = () => {
   const navigate = useNavigate();
   const [alerts, setAlerts] = useState<AlertMessage[]>(initialAlerts);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const [activeFilter, setActiveFilter] = useState<'All' | 'Unread' | 'Production' | 'Artwork' | 'Logistics'>('All');
 
   const unreadCount = alerts.filter((a) => a.isUnread).length;
@@ -100,9 +102,10 @@ export const SupportScreen: React.FC = () => {
     setAlerts((prev) => prev.map((a) => ({ ...a, isUnread: false })));
   };
 
-  const handleToggleRead = (id: string) => {
+  const handleCardClick = (id: string) => {
+    setExpandedId((prev) => (prev === id ? null : id));
     setAlerts((prev) =>
-      prev.map((a) => (a.id === id ? { ...a, isUnread: !a.isUnread } : a))
+      prev.map((a) => (a.id === id ? { ...a, isUnread: false } : a))
     );
   };
 
@@ -196,75 +199,89 @@ export const SupportScreen: React.FC = () => {
             </p>
           </div>
         ) : (
-          filteredAlerts.map((alert) => (
-            <div
-              key={alert.id}
-              onClick={() => handleToggleRead(alert.id)}
-              className={`p-[14px] rounded-[10px] bg-white border transition-all cursor-pointer flex gap-[12px] ${
-                alert.isUnread
-                  ? 'border-[#C9CDB4] shadow-[0_2px_8px_rgba(74,90,30,0.06)]'
-                  : 'border-[#D9DCC8] opacity-90 hover:opacity-100'
-              }`}
-            >
-              {/* Left Icon Badge */}
+          filteredAlerts.map((alert) => {
+            const isExpanded = expandedId === alert.id;
+            return (
               <div
-                className={`w-[40px] h-[40px] rounded-[8px] flex items-center justify-center shrink-0 border ${
+                key={alert.id}
+                onClick={() => handleCardClick(alert.id)}
+                className={`rounded-[10px] bg-white border transition-all cursor-pointer overflow-hidden ${
                   alert.isUnread
-                    ? 'bg-[#E7ECD2] border-[#C9CDB4]'
-                    : 'bg-[#F4F3EA] border-[#D9DCC8]'
+                    ? 'border-[#C9CDB4] shadow-[0_2px_8px_rgba(74,90,30,0.06)]'
+                    : 'border-[#D9DCC8] opacity-95 hover:opacity-100 hover:border-[#4A5A1E]/30'
                 }`}
               >
-                {getAlertIcon(alert.iconType)}
-              </div>
-
-              {/* Alert Content */}
-              <div className="flex-1 min-w-0 flex flex-col gap-[3px]">
-                {/* Header row: category badge, title & new badge */}
-                <div className="flex items-start justify-between gap-[8px]">
-                  <div className="flex items-center gap-[6px] flex-wrap">
-                    <span className="font-display text-[9.5px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[5px] py-[1px] rounded-[3px] border border-[#C9CDB4]">
-                      {alert.category}
-                    </span>
-                    <h2 className="font-display font-semibold text-[14px] leading-[18px] uppercase text-[#1B1C16]">
-                      {alert.title}
-                    </h2>
-                  </div>
-                  {alert.isUnread && (
-                    <span className="font-display text-[9.5px] font-bold uppercase tracking-wider bg-[#FFF3BF] text-[#1B1C16] px-[6px] py-[1px] rounded-[3px] border border-[#B38F00]/25 shrink-0">
-                      New
-                    </span>
-                  )}
-                </div>
-
-                {/* Description */}
-                <p className="font-sans text-[12.5px] leading-[17px] text-[#5E6350] mt-[1px]">
-                  {alert.desc}
-                </p>
-
-                {/* Footer row: Timestamp & action link */}
-                <div className="flex items-center justify-between pt-[4px] mt-[2px] border-t border-[#D9DCC8]/40">
-                  <div className="flex items-center gap-[4px] text-[11px] text-[#5E6350]">
-                    <Clock className="w-[12px] h-[12px] stroke-[1.8]" />
-                    <span>{alert.time}</span>
+                {/* Minimal Card Header Row */}
+                <div className="p-[12px] flex items-center gap-[10px]">
+                  {/* Left Icon Badge */}
+                  <div
+                    className={`w-[36px] h-[36px] rounded-[8px] flex items-center justify-center shrink-0 border ${
+                      alert.isUnread
+                        ? 'bg-[#E7ECD2] border-[#C9CDB4]'
+                        : 'bg-[#F4F3EA] border-[#D9DCC8]'
+                    }`}
+                  >
+                    {getAlertIcon(alert.iconType)}
                   </div>
 
-                  {alert.actionText && alert.actionRoute && (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        navigate(alert.actionRoute!);
-                      }}
-                      className="flex items-center gap-[4px] font-display text-[11px] uppercase font-bold text-[#4A5A1E] hover:underline cursor-pointer"
-                    >
-                      <span>{alert.actionText}</span>
-                      <ArrowRight className="w-[12px] h-[12px] stroke-[2.5]" />
-                    </button>
-                  )}
+                  {/* Minimal Content: Category Tag, Title & Timestamp */}
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <div className="flex items-center gap-[6px] min-w-0">
+                      <span className="font-display text-[9px] uppercase font-bold text-[#3D4C11] bg-[#E7ECD2] px-[5px] py-[0.5px] rounded-[3px] border border-[#C9CDB4] shrink-0">
+                        {alert.category}
+                      </span>
+                      <h2 className="font-display font-semibold text-[13.5px] leading-[17px] uppercase text-[#1B1C16] truncate">
+                        {alert.title}
+                      </h2>
+                    </div>
+                    <div className="flex items-center gap-[4px] text-[11px] text-[#5E6350] mt-[2px]">
+                      <Clock className="w-[11px] h-[11px] stroke-[1.8]" />
+                      <span>{alert.time}</span>
+                    </div>
+                  </div>
+
+                  {/* Right: New Badge & Dropdown Chevron */}
+                  <div className="flex items-center gap-[6px] shrink-0">
+                    {alert.isUnread && (
+                      <span className="font-display text-[9px] font-bold uppercase tracking-wider bg-[#FFF3BF] text-[#1B1C16] px-[5px] py-[1px] rounded-[3px] border border-[#B38F00]/25">
+                        New
+                      </span>
+                    )}
+                    <ChevronDown
+                      className={`w-[16px] h-[16px] text-[#5E6350] transition-transform duration-200 ${
+                        isExpanded ? 'rotate-180 text-[#4A5A1E]' : ''
+                      }`}
+                    />
+                  </div>
                 </div>
+
+                {/* Expanded Details Drawer */}
+                {isExpanded && (
+                  <div className="px-[12px] pb-[12px] pt-[4px] border-t border-[#D9DCC8]/50 flex flex-col gap-[8px] bg-[#FAF9F5]">
+                    <p className="font-sans text-[12.5px] leading-[18px] text-[#5E6350]">
+                      {alert.desc}
+                    </p>
+
+                    {alert.actionText && alert.actionRoute && (
+                      <div className="flex justify-end pt-[2px]">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(alert.actionRoute!);
+                          }}
+                          className="inline-flex items-center gap-[4px] font-display text-[11px] uppercase font-bold text-[#4A5A1E] hover:underline cursor-pointer bg-[#E7ECD2]/70 px-[9px] py-[3.5px] rounded-[4px] border border-[#C9CDB4]"
+                        >
+                          <span>{alert.actionText}</span>
+                          <ArrowRight className="w-[12px] h-[12px] stroke-[2.5]" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
-          ))
+            );
+          })
         )}
       </div>
     </div>
