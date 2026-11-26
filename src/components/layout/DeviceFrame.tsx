@@ -10,8 +10,9 @@ interface DeviceFrameProps {
 const SCREEN_WIDTH = 412;
 const SCREEN_HEIGHT = 892;
 const BEZEL = 10;
-const FRAME_WIDTH = SCREEN_WIDTH + BEZEL * 2; // 432
-const FRAME_HEIGHT = SCREEN_HEIGHT + BEZEL * 2; // 912
+const BORDER = 3;
+const FRAME_WIDTH = SCREEN_WIDTH + (BEZEL + BORDER) * 2; // 438
+const FRAME_HEIGHT = SCREEN_HEIGHT + (BEZEL + BORDER) * 2; // 918
 
 export const DeviceFrame: React.FC<DeviceFrameProps> = ({ children }) => {
   const { isDesktop } = useBreakpoint();
@@ -29,7 +30,7 @@ export const DeviceFrame: React.FC<DeviceFrameProps> = ({ children }) => {
   // Desktop (>= 1024px): Centered Galaxy S26 hardware frame with scale-to-fit
   return (
     <div
-      className="fixed inset-0 w-full h-[100dvh] grid place-items-center overflow-hidden bg-[#E6E5DA] select-none"
+      className="fixed inset-0 w-full h-[100dvh] overflow-y-auto overflow-x-hidden flex items-center justify-center p-3 sm:p-4 bg-[#E6E5DA] select-none"
       role="region"
       aria-label="Samsung Galaxy S26 Phone Frame Viewport"
     >
@@ -39,7 +40,7 @@ export const DeviceFrame: React.FC<DeviceFrameProps> = ({ children }) => {
 
       {/* Scale-to-fit outer box: width & height equal scaled size */}
       <div
-        className="relative shrink-0 overflow-visible"
+        className="relative shrink-0 my-auto overflow-visible"
         style={{
           width: `${FRAME_WIDTH * scale}px`,
           height: `${FRAME_HEIGHT * scale}px`,
@@ -47,19 +48,19 @@ export const DeviceFrame: React.FC<DeviceFrameProps> = ({ children }) => {
       >
         {/* Hardware Bezel Container */}
         <div
-          className="relative bg-[#1A1A1A] rounded-[48px] shadow-[0_24px_64px_rgba(0,0,0,0.18),0_4px_16px_rgba(0,0,0,0.10)] border-[3px] border-[#333333]"
+          className="relative bg-[#1A1A1A] rounded-[48px] shadow-[0_24px_64px_rgba(0,0,0,0.18),0_4px_16px_rgba(0,0,0,0.10)] border-[3px] border-[#333333] flex items-center justify-center"
           style={{
             width: `${FRAME_WIDTH}px`,
             height: `${FRAME_HEIGHT}px`,
-            padding: `${BEZEL}px`,
             boxSizing: 'border-box',
             transform: `scale(${scale})`,
             transformOrigin: 'top left',
+            willChange: 'transform',
           }}
         >
           {/* Inner Screen Viewport */}
           <div
-            className="relative w-[412px] h-[892px] overflow-hidden rounded-[40px] bg-[#F4F3EA] flex flex-col border border-black/20"
+            className="relative w-[412px] h-[892px] overflow-hidden rounded-[40px] bg-[#F4F3EA] flex flex-col border border-black/20 shrink-0"
             style={{
               contain: 'paint layout size',
             }}

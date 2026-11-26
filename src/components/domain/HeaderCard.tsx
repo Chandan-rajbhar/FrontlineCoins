@@ -46,7 +46,7 @@ export const HeaderCard: React.FC = () => {
             <button
               type="button"
               onClick={() => navigate('/quote')}
-              className="h-[44px] px-[20px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[14px] uppercase tracking-[0.1em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center shrink-0 select-none cursor-pointer"
+              className="h-[32px] px-[14px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[11.5px] uppercase tracking-[0.08em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center shrink-0 select-none cursor-pointer"
             >
               Get a quote
             </button>

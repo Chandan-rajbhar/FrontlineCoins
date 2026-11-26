@@ -1,6 +1,7 @@
 import React from 'react';
-import { Bell, Shield } from 'lucide-react';
+import { Bell } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import logoImg from '../../assets/frontline-crest.png';
 
 interface TopBarProps {
   title?: string;
@@ -37,10 +38,10 @@ export const TopBar: React.FC<TopBarProps> = ({
           ) : (
             <button
               onClick={() => navigate('/')}
-              className="w-9 h-9 rounded-lg bg-primary-container/80 flex items-center justify-center text-tactical-yellow ring-1 ring-border-tactical shadow-inner"
+              className="w-9 h-9 rounded-lg bg-white border border-[#D9DCC8] flex items-center justify-center p-1"
               aria-label="Frontline Coins Home"
             >
-              <Shield className="w-5 h-5 fill-tactical-yellow/20" />
+              <img src={logoImg} alt="Frontline Coins Logo" className="w-full h-full object-contain" />
             </button>
           )}
 

@@ -35,7 +35,7 @@ export const BottomTabBar: React.FC = () => {
               to={tab.path}
               className={({ isActive }) =>
                 `flex flex-col items-center justify-center flex-1 h-[64px] transition-colors relative select-none gap-[4px] ${
-                  isActive ? 'text-[#4A5A1E]' : 'text-[#5E6350] hover:text-[#1B1C16]'
+                  isActive ? 'text-[#D49B00]' : 'text-[#5E6350] hover:text-[#1B1C16]'
                 }`
               }
             >
@@ -46,12 +46,14 @@ export const BottomTabBar: React.FC = () => {
                     <span className="absolute top-0 left-1/2 -translate-x-1/2 w-[32px] h-[3px] bg-[#FFCC00]" />
                   )}
                   <Icon
-                    className="w-[22px] h-[22px] shrink-0"
-                    strokeWidth={1.8}
+                    className={`w-[22px] h-[22px] shrink-0 transition-colors ${
+                      isActive ? 'text-[#D49B00]' : 'text-[#5E6350]'
+                    }`}
+                    strokeWidth={isActive ? 2.2 : 1.8}
                   />
                   <span
-                    className={`font-sans text-[11px] leading-tight whitespace-nowrap ${
-                      isActive ? 'font-bold text-[#4A5A1E]' : 'font-medium text-[#5E6350]'
+                    className={`font-sans text-[11px] leading-tight whitespace-nowrap transition-colors ${
+                      isActive ? 'font-bold text-[#D49B00]' : 'font-medium text-[#5E6350]'
                     }`}
                   >
                     {tab.name}
