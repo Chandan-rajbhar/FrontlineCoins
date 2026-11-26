@@ -27,7 +27,7 @@ export const ProductDetailScreen: React.FC = () => {
   return (
     <div className="flex flex-col w-full text-on-surface relative">
       {/* Scrollable Product Details Content */}
-      <div className="flex flex-col w-full pb-[104px]">
+      <div className="flex flex-col w-full pb-[72px]">
         {/* Product Image Gallery with Zoom */}
         <div className="relative w-full aspect-square max-h-[360px] bg-surface-charcoal border-b border-border-tactical overflow-hidden select-none">
           <img

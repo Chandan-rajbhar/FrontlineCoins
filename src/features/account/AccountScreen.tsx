@@ -5,11 +5,10 @@ import {
   RefreshCw,
   Settings,
   Plus,
+  CheckCircle2,
 } from 'lucide-react';
 import { useAuthStore } from '../../store/useAuthStore';
 import { mockSavedDesigns } from '../../data/designs';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
 import { Modal } from '../../components/ui/Modal';
 import { Input } from '../../components/ui/Input';
 
@@ -42,10 +41,15 @@ export const AccountScreen: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full px-4 pt-3 pb-2 gap-4 text-on-surface">
+    <div className="px-[12px] pt-[16px] pb-[20px] flex flex-col gap-[16px] w-full bg-[#F4F3EA]">
+      {/* Page Title */}
+      <h1 className="font-display font-bold text-[28px] leading-[32px] uppercase tracking-[0.02em] text-[#1B1C16]">
+        Account
+      </h1>
+
       {/* Officer / Commander Profile Badge */}
-      <div className="p-4 rounded-[8px] bg-surface-elevated border border-border-tactical shadow-md flex items-center gap-3.5">
-        <div className="w-12 h-12 rounded-full overflow-hidden p-0.5 bg-border-tactical ring-2 ring-tactical-yellow shrink-0">
+      <div className="p-[14px] rounded-[10px] bg-white border border-[#D9DCC8] flex items-center gap-[12px]">
+        <div className="w-[48px] h-[48px] rounded-full overflow-hidden border border-[#D9DCC8] shrink-0 bg-[#F4F3EA]">
           <img
             alt="Profile avatar"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83_uYc9qjE270vtbgZunF_2cjvcAX2IdaWewrXUUKsoVavUX5KsOBUKieMq0MG_m8Rfw9WiPwkdHIOzg4Z3tdpXfoGdp8g4f0CI7G_tYBQiR2XdA62E7IG-JGNEHgJFmgmyjTYEgdl7xcEMKKV6LfJlC6JNtFn4lG7-720d2rIUWMKLQEXomxo5sAG5X2-Fz5g1zLn9pATs2L0eJ_FlYYB2XxyDpxArSzY2pgKbc"
@@ -54,42 +58,42 @@ export const AccountScreen: React.FC = () => {
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5">
-            <span className="font-display text-[10px] text-tactical-yellow uppercase tracking-widest font-bold bg-background-deep px-1.5 py-0.5 rounded border border-border-tactical">
+          <div className="flex items-center gap-[6px]">
+            <span className="font-display text-[10px] font-bold text-[#3D4C11] uppercase tracking-wider bg-[#E7ECD2] px-[7px] py-[1.5px] rounded-[4px] border border-[#C9CDB4]">
               {user.customerType}
             </span>
           </div>
-          <h2 className="font-display text-base font-bold text-text-crisp uppercase truncate mt-0.5">
+          <h2 className="font-display text-[18px] leading-[22px] font-bold text-[#1B1C16] uppercase truncate mt-[3px]">
             {user.name}
           </h2>
-          <p className="font-sans text-xs text-text-muted truncate">
-            {user.agency} • {user.badgeNumber}
+          <p className="font-sans text-[12px] leading-[16px] text-[#5E6350] truncate mt-[1px]">
+            {user.agency} · {user.badgeNumber}
           </p>
         </div>
       </div>
 
       {/* 1. Saved Approved Designs (One-Tap Reorder) */}
-      <Card padding="md">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1.5">
-            <RefreshCw className="w-4 h-4 text-tactical-yellow" />
-            <h3 className="font-display text-xs uppercase font-bold text-text-crisp tracking-wider">
-              Saved Approved Dies (Reorder)
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col gap-[12px]">
+        <div className="flex items-center justify-between pb-[6px] border-b border-[#D9DCC8]/60">
+          <div className="flex items-center gap-[8px]">
+            <RefreshCw className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
+            <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
+              Saved Approved Dies
             </h3>
           </div>
-          <span className="font-sans text-[11px] text-text-muted">
+          <span className="font-sans text-[12px] text-[#5E6350]">
             {mockSavedDesigns.length} Active Dies
           </span>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-[8px]">
           {mockSavedDesigns.map((des) => (
             <div
               key={des.id}
-              className="p-2.5 rounded-[6px] bg-surface-charcoal border border-border-tactical flex items-center justify-between gap-2"
+              className="p-[10px] rounded-[8px] bg-white border border-[#D9DCC8] flex items-center justify-between gap-[10px] hover:border-[#4A5A1E]/40 transition-colors"
             >
-              <div className="flex items-center gap-2.5 min-w-0">
-                <div className="w-10 h-10 rounded bg-surface-container overflow-hidden shrink-0">
+              <div className="flex items-center gap-[10px] min-w-0">
+                <div className="w-[44px] h-[44px] rounded-[6px] bg-[#F4F3EA] border border-[#D9DCC8] overflow-hidden shrink-0">
                   <img
                     src={des.image}
                     alt={des.name}
@@ -97,89 +101,100 @@ export const AccountScreen: React.FC = () => {
                   />
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="font-display text-xs uppercase font-bold text-text-crisp truncate">
+                  <span className="font-display text-[13.5px] uppercase font-semibold text-[#1B1C16] truncate">
                     {des.name}
                   </span>
-                  <span className="font-sans text-[10px] text-text-muted truncate">
-                    Approved: {des.approvedDate} • ${des.unitPrice.toFixed(2)}/ea
+                  <span className="font-sans text-[11px] leading-[15px] text-[#5E6350] truncate mt-[1px]">
+                    Approved: {des.approvedDate} · ${des.unitPrice.toFixed(2)}/ea
                   </span>
                 </div>
               </div>
 
               <button
+                type="button"
                 onClick={() =>
                   navigate(`/quote?product=prod-1&qty=${des.lastQuantity}`)
                 }
-                className="h-8 px-2.5 rounded bg-tactical-yellow text-surface-charcoal font-display text-[10px] uppercase font-bold tracking-wider hover:bg-tactical-yellow-hover shrink-0"
+                className="h-[32px] px-[14px] rounded-[6px] bg-[#FFCC00] text-[#1B1C16] font-display text-[11px] uppercase font-bold tracking-[0.08em] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all shrink-0 cursor-pointer"
               >
                 Reorder
               </button>
             </div>
           ))}
         </div>
-      </Card>
+      </div>
 
       {/* 2. Station Delivery Addresses */}
-      <Card padding="md">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-4 h-4 text-tactical-yellow" />
-            <h3 className="font-display text-xs uppercase font-bold text-text-crisp tracking-wider">
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col gap-[12px]">
+        <div className="flex items-center justify-between pb-[6px] border-b border-[#D9DCC8]/60">
+          <div className="flex items-center gap-[8px]">
+            <MapPin className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
+            <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
               Station Delivery Addresses
             </h3>
           </div>
           <button
+            type="button"
             onClick={() => setIsAddressModalOpen(true)}
-            className="text-tactical-yellow font-display text-xs uppercase font-bold hover:underline flex items-center gap-1"
+            className="text-[#4A5A1E] font-sans text-[13px] font-medium hover:underline flex items-center gap-[4px] cursor-pointer"
           >
-            <Plus className="w-3.5 h-3.5" /> Add
+            <Plus className="w-[15px] h-[15px] stroke-[2.5]" />
+            <span>Add</span>
           </button>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-[8px]">
           {user.savedAddresses.map((addr) => (
             <div
               key={addr.id}
-              className="p-2.5 bg-surface-charcoal rounded-[6px] border border-border-tactical text-xs flex items-center justify-between"
+              className="p-[10px] bg-white rounded-[8px] border border-[#D9DCC8] flex items-center justify-between gap-[10px]"
             >
               <div className="flex flex-col">
-                <span className="font-display uppercase font-bold text-text-crisp">
+                <span className="font-display uppercase font-semibold text-[13.5px] text-[#1B1C16]">
                   {addr.label}
                 </span>
-                <span className="font-sans text-text-muted text-[11px] mt-0.5">
+                <span className="font-sans text-[#5E6350] text-[11.5px] mt-[1px]">
                   {addr.street}, {addr.city}, {addr.state} {addr.zip}
                 </span>
               </div>
               {addr.isDefault && (
-                <span className="font-sans text-[9px] uppercase font-bold bg-primary-container text-tactical-yellow px-1 py-0.5 rounded">
+                <span className="font-display text-[10px] uppercase font-bold tracking-wider bg-[#FFF3BF] text-[#1B1C16] px-[7px] py-[2px] rounded-[4px] border border-[#B38F00]/25 shrink-0">
                   Default
                 </span>
               )}
             </div>
           ))}
         </div>
-      </Card>
+      </div>
 
       {/* 3. Agency Settings & Tax Exemption */}
-      <Card padding="md">
-        <div className="flex items-center gap-1.5 mb-2">
-          <Settings className="w-4 h-4 text-tactical-yellow" />
-          <h3 className="font-display text-xs uppercase font-bold text-text-crisp tracking-wider">
+      <div className="rounded-[10px] bg-white border border-[#D9DCC8] p-[14px] flex flex-col gap-[12px]">
+        <div className="flex items-center gap-[8px] pb-[6px] border-b border-[#D9DCC8]/60">
+          <Settings className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[2]" />
+          <h3 className="font-display text-[15px] uppercase font-semibold text-[#1B1C16] tracking-[0.04em]">
             Agency Account Settings
           </h3>
         </div>
-        <div className="p-3 bg-surface-charcoal rounded-[6px] border border-border-tactical text-xs flex flex-col gap-1">
-          <span className="font-display uppercase font-bold text-text-crisp">
+
+        <div className="p-[12px] bg-white rounded-[8px] border border-[#D9DCC8] flex flex-col gap-[6px]">
+          <span className="font-display uppercase font-semibold text-[14px] text-[#1B1C16]">
             Tax Exemption Registration
           </span>
-          <span className="font-sans text-text-muted">
-            Number: <strong className="text-primary">{user.taxExemptNumber}</strong>
+          <span className="font-sans text-[12px] text-[#5E6350]">
+            Number:{' '}
+            <strong className="text-[#1B1C16] font-medium font-mono text-[13px]">
+              {user.taxExemptNumber}
+            </strong>
           </span>
-          <span className="font-sans text-[11px] text-text-muted">
-            Official Law Enforcement Procurement Status: Active
-          </span>
+
+          <div className="flex items-center gap-[6px] bg-[#E7ECD2] border border-[#C9CDB4] px-[8px] py-[4px] rounded-[4px] self-start mt-1">
+            <CheckCircle2 className="w-[14px] h-[14px] text-[#4A5A1E] stroke-[2.5]" />
+            <span className="font-sans text-[11px] font-semibold text-[#3D4C11]">
+              Official Law Enforcement Procurement Status: Active
+            </span>
+          </div>
         </div>
-      </Card>
+      </div>
 
       {/* Add Address Modal */}
       <Modal
@@ -187,7 +202,7 @@ export const AccountScreen: React.FC = () => {
         onClose={() => setIsAddressModalOpen(false)}
         title="Add Station Delivery Address"
       >
-        <form onSubmit={handleAddAddress} className="flex flex-col gap-3">
+        <form onSubmit={handleAddAddress} className="flex flex-col gap-[12px]">
           <Input
             label="Street Address"
             value={newStreet}
@@ -195,7 +210,7 @@ export const AccountScreen: React.FC = () => {
             placeholder="e.g. 101 E 11th St, Precinct 4"
             required
           />
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-[8px]">
             <Input
               label="City"
               value={newCity}
@@ -218,9 +233,12 @@ export const AccountScreen: React.FC = () => {
             placeholder="78701"
             required
           />
-          <Button type="submit" variant="primary" fullWidth className="mt-2">
+          <button
+            type="submit"
+            className="w-full h-[44px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[14px] uppercase tracking-[0.08em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center mt-2 cursor-pointer"
+          >
             Save Station Address
-          </Button>
+          </button>
         </form>
       </Modal>
     </div>

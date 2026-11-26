@@ -18,15 +18,10 @@ export const StatusBar: React.FC = () => {
 
   return (
     <div
-      className="w-full h-9 bg-surface px-6 flex items-center justify-between text-text-muted font-sans text-xs select-none z-50 shrink-0"
+      className="w-full h-9 bg-transparent px-6 flex items-center justify-between text-text-muted font-sans text-xs select-none z-50 shrink-0"
       aria-hidden="true"
     >
       <span className="font-semibold text-text-crisp text-[11px]">{time}</span>
-
-      {/* Centered punch-hole camera */}
-      <div className="w-3.5 h-3.5 rounded-full bg-black ring-1 ring-[#2a2a24] shadow-inner flex items-center justify-center">
-        <div className="w-1.5 h-1.5 rounded-full bg-[#0a101d]/90 ring-1 ring-[#1b253b]/50" />
-      </div>
 
       <div className="flex items-center gap-1.5 text-[11px]">
         <span className="font-bold text-[9px] text-tactical-yellow">5G</span>

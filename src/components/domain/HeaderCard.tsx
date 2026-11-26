@@ -41,21 +41,14 @@ export const HeaderCard: React.FC = () => {
             </p>
           </div>
 
-          {/* Actions: Primary yellow button + Underlined link */}
-          <div className="flex items-center gap-[18px]">
+          {/* Actions: Primary yellow button */}
+          <div className="flex items-center">
             <button
               type="button"
               onClick={() => navigate('/quote')}
               className="h-[44px] px-[20px] bg-[#FFCC00] text-[#1B1C16] font-display font-bold text-[14px] uppercase tracking-[0.1em] rounded-[6px] border-b-2 border-b-[#B38F00] hover:bg-[#E6B800] active:translate-y-[1px] transition-all flex items-center justify-center shrink-0 select-none cursor-pointer"
             >
               Get a quote
-            </button>
-            <button
-              type="button"
-              onClick={() => navigate('/shop')}
-              className="font-sans text-[13px] font-medium text-[#1B1C16] underline underline-offset-[3px] hover:text-[#4A5A1E] transition-colors shrink-0 cursor-pointer"
-            >
-              Browse the shop
             </button>
           </div>
         </div>

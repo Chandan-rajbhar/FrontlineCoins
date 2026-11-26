@@ -17,22 +17,22 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-[8px] bg-surface-elevated border border-border-tactical overflow-hidden transition-all">
+    <div className="rounded-[10px] bg-white border border-[#D9DCC8] overflow-hidden transition-all">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-4 flex items-center justify-between text-left font-display uppercase tracking-wider text-xs font-bold text-text-crisp min-h-[44px] hover:text-tactical-yellow transition-colors"
+        className="w-full p-[14px] flex items-center justify-between text-left font-display uppercase tracking-[0.03em] text-[13.5px] font-semibold text-[#1B1C16] min-h-[44px] hover:text-[#4A5A1E] transition-colors"
       >
         <span>{title}</span>
         <ChevronDown
           className={cn(
-            'w-4 h-4 text-tactical-yellow transition-transform duration-200 shrink-0',
+            'w-[16px] h-[16px] text-[#4A5A1E] stroke-[2.5] transition-transform duration-200 shrink-0',
             isOpen && 'rotate-180'
           )}
         />
       </button>
       {isOpen && (
-        <div className="px-4 pb-4 font-sans text-xs text-text-muted leading-relaxed border-t border-border-tactical/50 pt-3">
+        <div className="px-[14px] pb-[14px] font-sans text-[12.5px] text-[#5E6350] leading-relaxed border-t border-[#D9DCC8]/60 pt-[10px]">
           {children}
         </div>
       )}

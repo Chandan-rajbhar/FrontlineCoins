@@ -3,7 +3,7 @@ import React from 'react';
 export const StarTicker: React.FC = () => {
   return (
     <div
-      className="w-full h-[32px] bg-[#4A5A1E] flex items-center justify-center gap-[8px] select-none px-[8px] overflow-hidden shrink-0"
+      className="mx-[12px] h-[34px] rounded-[8px] bg-[#4A5A1E] flex items-center justify-center gap-[8px] select-none px-[10px] overflow-hidden shrink-0"
       aria-label="Verified federal vendor announcement"
     >
       <span className="text-[#FFCC00] text-[11px] leading-none shrink-0">★</span>

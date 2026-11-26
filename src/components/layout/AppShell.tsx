@@ -23,8 +23,8 @@ export const AppShell: React.FC<AppShellProps> = ({
       <AppHeader />
 
       {/* 2. Main content: only scrollable area */}
-      <main className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden no-scrollbar w-full max-w-full relative">
-        <div className="w-full max-w-[640px] mx-auto min-h-full">
+      <main className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden no-scrollbar w-full max-w-full relative flex flex-col">
+        <div className="w-full max-w-[640px] mx-auto flex-1 flex flex-col min-h-full">
           {children}
         </div>
       </main>

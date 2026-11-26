@@ -61,24 +61,24 @@ export const HomeScreen: React.FC = () => {
   const featuredCoins = mockProducts.slice(0, 4);
 
   return (
-    <div className="flex flex-col w-full bg-[#F4F3EA] pb-[88px]">
+    <div className="flex flex-col w-full bg-[#F4F3EA] pb-[20px]">
       {/* 1. HeaderCard */}
       <HeaderCard />
 
-      {/* 2. Star Ticker (Margin-top 14px) */}
-      <div className="mt-[14px] w-full">
+      {/* 2. Star Ticker: Inset matching header card size */}
+      <div className="mt-[12px] w-full">
         <StarTicker />
       </div>
 
-      {/* 3. Quick Actions: 3-column grid, 8px gap, padding 16px 12px 0 */}
-      <section className="pt-[16px] px-[12px] grid grid-cols-3 gap-[8px]" aria-label="Quick actions">
+      {/* 3. Quick Actions: 3-column grid, reduced height */}
+      <section className="pt-[14px] px-[12px] grid grid-cols-3 gap-[8px]" aria-label="Quick actions">
         <button
           type="button"
           onClick={() => navigate('/quote')}
-          className="bg-white border border-[#D9DCC8] rounded-[10px] p-[12px] flex flex-col items-start gap-[8px] text-left hover:border-[#4A5A1E] transition-colors min-h-[44px] cursor-pointer"
+          className="bg-white border border-[#D9DCC8] rounded-[10px] px-[10px] py-[8px] flex flex-col items-start gap-[6px] text-left hover:border-[#4A5A1E] transition-colors cursor-pointer"
         >
-          <FileText className="w-[22px] h-[22px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
-          <span className="font-sans font-bold text-[13px] leading-[17px] text-[#1B1C16]">
+          <FileText className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
+          <span className="font-sans font-bold text-[12px] leading-[15px] text-[#1B1C16]">
             Start a quote
           </span>
         </button>
@@ -86,10 +86,10 @@ export const HomeScreen: React.FC = () => {
         <button
           type="button"
           onClick={() => navigate('/orders')}
-          className="bg-white border border-[#D9DCC8] rounded-[10px] p-[12px] flex flex-col items-start gap-[8px] text-left hover:border-[#4A5A1E] transition-colors min-h-[44px] cursor-pointer"
+          className="bg-white border border-[#D9DCC8] rounded-[10px] px-[10px] py-[8px] flex flex-col items-start gap-[6px] text-left hover:border-[#4A5A1E] transition-colors cursor-pointer"
         >
-          <Package className="w-[22px] h-[22px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
-          <span className="font-sans font-bold text-[13px] leading-[17px] text-[#1B1C16]">
+          <Package className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
+          <span className="font-sans font-bold text-[12px] leading-[15px] text-[#1B1C16]">
             Track an order
           </span>
         </button>
@@ -97,21 +97,21 @@ export const HomeScreen: React.FC = () => {
         <button
           type="button"
           onClick={() => navigate('/account')}
-          className="bg-white border border-[#D9DCC8] rounded-[10px] p-[12px] flex flex-col items-start gap-[8px] text-left hover:border-[#4A5A1E] transition-colors min-h-[44px] cursor-pointer"
+          className="bg-white border border-[#D9DCC8] rounded-[10px] px-[10px] py-[8px] flex flex-col items-start gap-[6px] text-left hover:border-[#4A5A1E] transition-colors cursor-pointer"
         >
-          <RotateCcw className="w-[22px] h-[22px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
-          <span className="font-sans font-bold text-[13px] leading-[17px] text-[#1B1C16]">
+          <RotateCcw className="w-[18px] h-[18px] text-[#4A5A1E] stroke-[1.8] shrink-0" />
+          <span className="font-sans font-bold text-[12px] leading-[15px] text-[#1B1C16]">
             Reorder a design
           </span>
         </button>
       </section>
 
       {/* 4. Active Order Card */}
-      <section className="pt-[24px] px-[12px]">
+      <section className="pt-[16px] px-[12px]">
         <ActiveOrderCard />
       </section>
 
-      {/* 5. Shop by Category: section title with "View all" link; wrapping chips with 8px gap */}
+      {/* 5. Shop by Category: section title with "View all" link; single row with horizontal scrolling */}
       <section className="pt-[24px] px-[12px] flex flex-col gap-[12px]">
         <div className="flex items-baseline justify-between w-full">
           <h2 className="font-display font-semibold text-[20px] leading-[26px] uppercase tracking-[0.02em] text-[#1B1C16]">
@@ -126,7 +126,7 @@ export const HomeScreen: React.FC = () => {
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-[8px]">
+        <div className="flex flex-nowrap gap-[8px] overflow-x-auto no-scrollbar scroll-smooth -mx-[12px] px-[12px] pb-1">
           {categoryChips.map((chip) => {
             const isSelected = selectedCategory === chip.slug;
             return (
@@ -142,7 +142,7 @@ export const HomeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Featured Coins: title with "View portfolio" link; horizontal scroll row */}
+      {/* 6. Featured Coins: 2 cards in a row and another two in the row below + view button to view all */}
       <section className="pt-[24px] px-[12px] flex flex-col gap-[12px]">
         <div className="flex items-baseline justify-between w-full">
           <h2 className="font-display font-semibold text-[20px] leading-[26px] uppercase tracking-[0.02em] text-[#1B1C16]">
@@ -153,22 +153,22 @@ export const HomeScreen: React.FC = () => {
             onClick={() => navigate('/shop')}
             className="font-sans text-[13px] font-medium text-[#4A5A1E] hover:underline cursor-pointer"
           >
-            View portfolio
+            View all
           </button>
         </div>
 
-        <div className="flex gap-[10px] overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-1 -mx-[12px] px-[12px]">
+        <div className="grid grid-cols-2 gap-[10px]">
           {featuredCoins.map((coin) => (
             <button
               key={coin.id}
               type="button"
               onClick={() => navigate(`/product/${coin.id}`)}
-              className="w-[156px] shrink-0 snap-start bg-white border border-[#D9DCC8] rounded-[10px] overflow-hidden text-left hover:border-[#4A5A1E] transition-colors cursor-pointer group flex flex-col"
+              className="bg-white border border-[#D9DCC8] rounded-[10px] overflow-hidden text-left hover:border-[#4A5A1E] transition-colors cursor-pointer group flex flex-col"
             >
               <img
                 src={coin.images[0]}
                 alt={coin.name}
-                className="w-full h-[104px] object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                className="w-full h-[108px] object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="p-[10px] flex flex-col flex-1">
                 <div className="h-[34px] flex items-start">
@@ -269,37 +269,6 @@ export const HomeScreen: React.FC = () => {
             <span>Start a campaign</span>
             <ChevronRight className="w-4 h-4" />
           </button>
-        </div>
-      </section>
-
-      {/* 10. Help Card */}
-      <section className="pt-[24px] px-[12px]">
-        <div className="bg-white border border-[#D9DCC8] rounded-[10px] p-[14px] flex flex-col gap-[12px]">
-          <div className="flex flex-col">
-            <h3 className="font-sans font-bold text-[16px] leading-[20px] text-[#1B1C16]">
-              Need help?
-            </h3>
-            <p className="font-sans text-[12.5px] leading-[16px] text-[#5E6350] mt-[2px]">
-              We are available 24/7.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-[8px]">
-            <a
-              href="tel:+14433243900"
-              aria-label="Call Frontline Coins at 443-324-3900"
-              className="h-[44px] bg-white border border-[#4A5A1E] rounded-[6px] text-[#4A5A1E] font-display font-semibold text-[13px] uppercase tracking-[0.08em] flex items-center justify-center hover:bg-[#E7ECD2] transition-colors select-none cursor-pointer"
-            >
-              Call us
-            </a>
-            <a
-              href="mailto:info@frontlinecoinsusa.com"
-              aria-label="Email Frontline Coins"
-              className="h-[44px] bg-white border border-[#4A5A1E] rounded-[6px] text-[#4A5A1E] font-display font-semibold text-[13px] uppercase tracking-[0.08em] flex items-center justify-center hover:bg-[#E7ECD2] transition-colors select-none cursor-pointer"
-            >
-              Email us
-            </a>
-          </div>
         </div>
       </section>
     </div>
